@@ -55,15 +55,31 @@ export default async function DetailPage(props: {
           <aside className="space-y-10">
             <div>
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="inline-block px-2 py-1 border border-border-strong font-mono text-[10px] uppercase tracking-[0.14em]">
+                <span className="inline-block px-2 py-1 bg-fg text-bg font-mono text-[10px] uppercase tracking-[0.14em]">
                   {entry.categoryLabel}
                 </span>
+                {entry.domains?.map((d) => (
+                  <span
+                    key={d}
+                    className="inline-block px-2 py-1 border border-border-strong font-mono text-[10px] uppercase tracking-[0.14em]"
+                  >
+                    {d}
+                  </span>
+                ))}
+                {entry.formats?.map((f) => (
+                  <span
+                    key={f}
+                    className="inline-block px-2 py-1 border border-border-subtle font-mono text-[10px] uppercase tracking-[0.14em] text-fg-70"
+                  >
+                    {f.replace("ar-", "").replace("-", ":")}
+                  </span>
+                ))}
                 {entry.model && (
-                  <span className="inline-block px-2 py-1 border border-border-strong font-mono text-[10px] uppercase tracking-[0.14em]">
+                  <span className="inline-block px-2 py-1 border border-border-subtle font-mono text-[10px] uppercase tracking-[0.14em] text-fg-70">
                     {entry.model}
                   </span>
                 )}
-                <span className="inline-block px-2 py-1 border border-border-strong font-mono text-[10px] uppercase tracking-[0.14em] text-fg-50">
+                <span className="inline-block px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-fg-50 ml-auto">
                   {entry.id}
                 </span>
               </div>

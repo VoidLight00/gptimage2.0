@@ -31,6 +31,19 @@ export function ImageCard({ entry }: { entry: PromptEntry }) {
           {entry.prompt}
         </div>
       </div>
+      {/* 상단 우측: 도메인 뱃지 */}
+      {entry.domains && entry.domains.length > 0 && (
+        <div className="absolute top-2 right-2 flex flex-wrap gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          {entry.domains.slice(0, 2).map((d) => (
+            <span
+              key={d}
+              className="inline-block bg-bg/80 backdrop-blur-sm border border-border-strong px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.12em]"
+            >
+              {d}
+            </span>
+          ))}
+        </div>
+      )}
     </Link>
   );
 }

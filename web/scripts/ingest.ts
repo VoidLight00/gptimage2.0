@@ -14,7 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import * as XLSX from "xlsx";
-import { classify, extractTags } from "./categorize";
+import { classify, extractTags, DOMAINS, FORMATS } from "./categorize";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -351,6 +351,8 @@ async function main() {
     negativePrompt?: string;
     category: string;
     categoryLabel: string;
+    domains: string[];
+    formats: string[];
     tags: string[];
     model?: string;
     sourceFolder: string;
@@ -373,14 +375,17 @@ async function main() {
         const override = overrides[safeId] ?? overrides[e.id];
         const prompt = override?.prompt ?? e.prompt;
         const tags = override?.tags ?? extractTags(prompt);
+        const classified = classify(prompt);
         const cat = override?.category
           ? { slug: override.category, label: override.category }
-          : classify(prompt);
+          : classified.category;
 
         outEntries.push({
           id: safeId,
           prompt,
           negativePrompt: e.negativePrompt,
+          domains: classified.domains,
+          formats: classified.formats,
           category: cat.slug,
           categoryLabel: cat.label,
           tags,
@@ -403,16 +408,31 @@ async function main() {
   // outEntries 정렬 (id 오름차순)
   outEntries.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 
-  /* ------- 카테고리 집계 ------- */
+  /* ------- 집계 (카테고리·도메인·포맷) ------- */
+  const DOMAIN_LABELS = Object.fromEntries(DOMAINS.map((d) => [d.slug, d.label]));
+  const FORMAT_LABELS = Object.fromEntries(FORMATS.map((f) => [f.slug, f.label]));
+
   const categoryCounts: Record<string, { label: string; count: number; cover?: string }> = {};
+  const domainCounts: Record<string, number> = {};
+  const formatCounts: Record<string, number> = {};
+
   for (const e of outEntries) {
     if (!categoryCounts[e.category]) {
       categoryCounts[e.category] = { label: e.categoryLabel, count: 0, cover: e.images.thumb };
     }
     categoryCounts[e.category].count++;
+    for (const d of e.domains) domainCounts[d] = (domainCounts[d] || 0) + 1;
+    for (const f of e.formats) formatCounts[f] = (formatCounts[f] || 0) + 1;
   }
+
   const categories = Object.entries(categoryCounts)
     .map(([slug, v]) => ({ slug, label: v.label, count: v.count, cover: v.cover }))
+    .sort((a, b) => b.count - a.count);
+  const domains = Object.entries(domainCounts)
+    .map(([slug, count]) => ({ slug, label: DOMAIN_LABELS[slug] ?? slug, count }))
+    .sort((a, b) => b.count - a.count);
+  const formats = Object.entries(formatCounts)
+    .map(([slug, count]) => ({ slug, label: FORMAT_LABELS[slug] ?? slug, count }))
     .sort((a, b) => b.count - a.count);
 
   const manifest = {
@@ -420,6 +440,8 @@ async function main() {
     totalEntries: outEntries.length,
     skippedCount: skipped.length,
     categories,
+    domains,
+    formats,
     entries: outEntries,
   };
 

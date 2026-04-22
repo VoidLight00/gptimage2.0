@@ -2,9 +2,11 @@ export type PromptEntry = {
   id: string;
   prompt: string;
   negativePrompt?: string;
-  category: string;
+  category: string;          // primary — Purpose slug
   categoryLabel: string;
-  tags: string[];
+  domains: string[];         // Domain slugs (Beauty, Hospitality, …)
+  formats: string[];         // Format slugs (ar-4-5, ar-9-16, …)
+  tags: string[];            // extracted keyword tags
   model?: string;
   sourceFolder?: string;
   images: {
@@ -27,10 +29,18 @@ export type CategoryMeta = {
   cover?: string;
 };
 
+export type TagMeta = {
+  slug: string;
+  label: string;
+  count: number;
+};
+
 export type ArchiveManifest = {
   generatedAt: string;
   totalEntries: number;
   skippedCount: number;
   categories: CategoryMeta[];
+  domains: TagMeta[];
+  formats: TagMeta[];
   entries: PromptEntry[];
 };

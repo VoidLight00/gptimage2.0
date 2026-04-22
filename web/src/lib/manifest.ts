@@ -1,12 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { ArchiveManifest, PromptEntry, CategoryMeta } from "./types";
+import type { ArchiveManifest, PromptEntry, CategoryMeta, TagMeta } from "./types";
 
 const EMPTY_MANIFEST: ArchiveManifest = {
   generatedAt: new Date(0).toISOString(),
   totalEntries: 0,
   skippedCount: 0,
   categories: [],
+  domains: [],
+  formats: [],
   entries: [],
 };
 
@@ -34,6 +36,14 @@ export function getEntry(id: string): PromptEntry | undefined {
 
 export function getEntriesByCategory(slug: string): PromptEntry[] {
   return getManifest().entries.filter((e) => e.category === slug);
+}
+
+export function getDomains(): TagMeta[] {
+  return getManifest().domains ?? [];
+}
+
+export function getFormats(): TagMeta[] {
+  return getManifest().formats ?? [];
 }
 
 export function getLatest(n: number): PromptEntry[] {

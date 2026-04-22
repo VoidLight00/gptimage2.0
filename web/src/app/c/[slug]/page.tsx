@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 import {
   getCategories,
   getEntriesByCategory,
+  getDomains,
+  getFormats,
   getManifest,
 } from "@/lib/manifest";
-import { ImageCard } from "@/components/ImageCard";
+import { CategoryFilter } from "./CategoryFilter";
 
 export function generateStaticParams() {
   return getCategories().map((c) => ({ slug: c.slug }));
@@ -20,6 +22,22 @@ export default async function CategoryPage(props: {
   const entries = getEntriesByCategory(slug);
 
   if (!meta) notFound();
+
+  // 이 카테고리 안에서만 도메인/포맷 카운트 재집계
+  const domainCounts: Record<string, number> = {};
+  const formatCounts: Record<string, number> = {};
+  for (const e of entries) {
+    for (const d of e.domains) domainCounts[d] = (domainCounts[d] || 0) + 1;
+    for (const f of e.formats) formatCounts[f] = (formatCounts[f] || 0) + 1;
+  }
+  const allDomains = getDomains();
+  const allFormats = getFormats();
+  const domains = allDomains
+    .filter((d) => domainCounts[d.slug])
+    .map((d) => ({ ...d, count: domainCounts[d.slug] }));
+  const formats = allFormats
+    .filter((f) => formatCounts[f.slug])
+    .map((f) => ({ ...f, count: formatCounts[f.slug] }));
 
   return (
     <div className="px-6 md:px-12 py-16 md:py-24">
@@ -48,11 +66,7 @@ export default async function CategoryPage(props: {
             No entries in this category.
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {entries.map((e) => (
-              <ImageCard key={e.id} entry={e} />
-            ))}
-          </div>
+          <CategoryFilter entries={entries} domains={domains} formats={formats} />
         )}
       </div>
     </div>

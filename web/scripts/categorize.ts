@@ -1,311 +1,390 @@
 /**
- * 키워드 기반 자동 카테고리 분류.
- * 한국어 AI 이미지 프롬프트(광고·썸네일·카드뉴스 등 콘텐츠 크리에이터 용도)에 최적화.
- * content/overrides.json 이 있으면 id→category 매핑이 우선 적용된다.
+ * 2축 분류 체계
+ *   Primary:  Purpose (용도)  — 사용자가 찾는 "어떤 콘텐츠?" 축
+ *   Tags:     Domain (업종) + Format (비율) + Auto keywords
+ *
+ * 한국어 콘텐츠 크리에이터/마케팅 프롬프트에 맞춤.
  */
+
 export type CategoryDef = {
   slug: string;
   label: string;
   description?: string;
   keywords: RegExp[];
-  weight?: number; // 동점일 때의 tiebreaker (높을수록 우선)
+  weight?: number;
 };
 
-export const CATEGORIES: CategoryDef[] = [
+/* ─── PURPOSE (메뉴 구조의 기준) ───────────────────────────────────────── */
+export const PURPOSES: CategoryDef[] = [
   {
-    slug: "ad",
-    label: "AD",
-    description: "광고·캠페인·키비주얼",
+    slug: "ad-key-visual",
+    label: "Ad Key Visual",
+    description: "광고 캠페인 키비주얼 · 브랜드 커머셜",
     weight: 10,
     keywords: [
       /광고/,
       /캠페인/,
       /키비주얼/,
-      /브랜드/,
-      /런칭/,
+      /key\s*visual/i,
+      /커머셜/,
+      /브랜드\s*(비주얼|이미지)/,
       /프로모션/,
-      /프리미엄\s*(이미지|비주얼)/,
-      /\b(campaign|advertising|commercial|brand\s*visual)\b/i,
+      /런칭\s*(이미지|비주얼|캠페인)/,
     ],
   },
   {
-    slug: "thumbnail",
-    label: "Thumbnail",
-    description: "릴스·숏폼·유튜브 썸네일",
-    weight: 11,
+    slug: "reels-thumbnail",
+    label: "Reels / Shorts Thumbnail",
+    description: "릴스 · 쇼츠 · 틱톡 · 유튜브 썸네일",
+    weight: 12,
     keywords: [
-      /썸네일/,
       /릴스/,
       /숏폼/,
       /쇼츠/,
-      /유튜브/,
       /틱톡/,
-      /커버\s*이미지/,
+      /유튜브/,
+      /썸네일/,
       /9:16/,
-      /세로형/,
-      /\b(thumbnail|reels|shorts|youtube|tiktok|cover)\b/i,
+      /세로형\s*썸네일/,
+      /커버\s*이미지/,
     ],
   },
   {
-    slug: "cardnews",
-    label: "Card News",
-    description: "카드뉴스·캐러셀·인포그래픽",
+    slug: "crm-email",
+    label: "CRM Email",
+    description: "CRM · 이메일 · 리텐션 · 리워드",
     weight: 11,
+    keywords: [
+      /CRM/i,
+      /이메일\s*(이미지|히어로|콘텐츠)?/,
+      /메일\s*이미지/,
+      /재방문/,
+      /재구매/,
+      /리텐션/,
+      /웰컴\s*메일/,
+      /리워드/,
+      /retention/i,
+      /onboarding\s*email/i,
+    ],
+  },
+  {
+    slug: "detail-page",
+    label: "Detail Page",
+    description: "상세 페이지 · 상품 디테일",
+    weight: 10,
+    keywords: [
+      /상세\s*페이지/,
+      /상세\s*이미지/,
+      /디테일\s*페이지/,
+      /detail\s*page/i,
+      /상품\s*상세/,
+    ],
+  },
+  {
+    slug: "banner-landing",
+    label: "Banner / Landing",
+    description: "배너 · 히어로 · 랜딩 이미지",
+    weight: 9,
+    keywords: [
+      /배너/,
+      /banner/i,
+      /히어로\s*이미지/,
+      /hero\s*image/i,
+      /랜딩/,
+      /landing/i,
+      /메인\s*비주얼/,
+    ],
+  },
+  {
+    slug: "card-news",
+    label: "Card News",
+    description: "카드뉴스 · 캐러셀 · 인포그래픽",
+    weight: 10,
     keywords: [
       /카드뉴스/,
       /캐러셀/,
       /인포그래픽/,
-      /인포/,
-      /정보\s*이미지/,
-      /가이드\s*카드/,
-      /\b(carousel|infographic|info card)\b/i,
+      /인포\s*카드/,
+      /정보\s*카드/,
+      /카드\s*슬라이드/,
     ],
   },
   {
     slug: "poster",
     label: "Poster",
-    description: "포스터·타이포그래피",
-    weight: 9,
-    keywords: [
-      /포스터/,
-      /타이포/,
-      /매거진/,
-      /편집\s*디자인/,
-      /에디토리얼/,
-      /\b(poster|typography|editorial|magazine|layout)\b/i,
-    ],
-  },
-  {
-    slug: "product",
-    label: "Product",
-    description: "제품·패키지 클로즈업",
+    description: "포스터 · 핀업 · 키아트",
     weight: 8,
     keywords: [
-      /제품\s*이미지/,
-      /패키지/,
-      /용기/,
-      /세럼/,
-      /앰플/,
-      /스킨케어/,
-      /뷰티/,
-      /화장품/,
-      /K-?뷰티/i,
-      /클렌징/,
-      /런칭/,
-      /\b(product|packaging|skincare|beauty|bottle|cosmetic)\b/i,
+      /포스터/,
+      /핀업/,
+      /키아트/,
+      /key\s*art/i,
+      /poster/i,
     ],
   },
   {
-    slug: "space",
-    label: "Space",
-    description: "공간·호텔·매장·인테리어",
-    weight: 7,
+    slug: "selfie",
+    label: "Selfie",
+    description: "셀피 · 셀카 · OOTD",
+    weight: 9,
     keywords: [
-      /호텔/,
-      /객실/,
-      /테라스/,
-      /로비/,
-      /인테리어/,
-      /매장/,
-      /카페\s*공간/,
-      /건축/,
-      /공간/,
-      /라운지/,
-      /레지던스/,
-      /부티크/,
-      /\b(hotel|interior|architecture|lobby|suite|residence)\b/i,
+      /셀카/,
+      /셀피/,
+      /selfie/i,
+      /OOTD/i,
+      /미러\s*셀카/,
     ],
   },
   {
-    slug: "food",
-    label: "Food",
-    description: "음식·F&B·카페",
+    slug: "webtoon-illustration",
+    label: "Webtoon / Illustration",
+    description: "웹툰 · 일러스트 · 만화",
     weight: 7,
     keywords: [
-      /음식/,
-      /요리/,
-      /디저트/,
-      /베이커리/,
-      /빵/,
-      /케이크/,
-      /커피/,
-      /라떼/,
-      /아메리카노/,
-      /음료/,
-      /맥주/,
-      /와인/,
-      /식당/,
-      /레스토랑/,
-      /카페/,
-      /편의점/,
-      /집밥/,
-      /F&B/,
-      /\b(food|dish|cuisine|coffee|bakery|beverage|cafe|restaurant)\b/i,
+      /웹툰/,
+      /일러스트/,
+      /만화\s*컷/,
+      /illustration/i,
+      /webtoon/i,
+      /캐릭터\s*(설정화|시트|디자인)/,
+      /복식\s*설정화/,
+      /의상\s*설정화/,
     ],
+  },
+  {
+    slug: "editorial",
+    label: "Editorial",
+    description: "매거진 · 에디토리얼 · 룩북",
+    weight: 6,
+    keywords: [
+      /매거진/,
+      /에디토리얼/,
+      /editorial/i,
+      /룩북/,
+      /lookbook/i,
+      /화보/,
+    ],
+  },
+  {
+    slug: "product-shot",
+    label: "Product Shot",
+    description: "제품 클로즈업 · 패키지샷",
+    weight: 6,
+    keywords: [
+      /제품\s*샷/,
+      /product\s*shot/i,
+      /패키지\s*샷/,
+      /용기\s*클로즈업/,
+      /제품\s*클로즈업/,
+    ],
+  },
+  {
+    slug: "logo",
+    label: "Logo",
+    description: "로고 · 엠블럼 · 심볼",
+    weight: 5,
+    keywords: [/로고/, /엠블럼/, /심볼/, /logo/i, /emblem/i],
+  },
+  {
+    slug: "onboarding",
+    label: "Onboarding",
+    description: "온보딩 · 튜토리얼 · 가이드 카드",
+    weight: 5,
+    keywords: [/온보딩/, /튜토리얼/, /가이드\s*카드/, /첫\s*사용/, /첫\s*방문/],
+  },
+];
+
+/* ─── DOMAIN (업종 태그) ───────────────────────────────────────────────── */
+export const DOMAINS: CategoryDef[] = [
+  {
+    slug: "beauty",
+    label: "Beauty",
+    keywords: [/뷰티/, /스킨케어/, /세럼/, /앰플/, /화장품/, /K-?뷰티/i, /클렌징/, /크림/, /로션/, /마스크팩/],
+  },
+  {
+    slug: "hospitality",
+    label: "Hospitality",
+    keywords: [/호텔/, /객실/, /리조트/, /펜션/, /스테이/, /게스트하우스/, /레지던스/, /부티크\s*호텔/],
   },
   {
     slug: "travel",
     label: "Travel",
-    description: "여행·관광·로컬",
-    weight: 7,
-    keywords: [
-      /여행/,
-      /관광/,
-      /제주/,
-      /서울/,
-      /부산/,
-      /해외/,
-      /국내여행/,
-      /로컬/,
-      /액티비티/,
-      /투어/,
-      /\b(travel|tourism|trip|vacation|getaway)\b/i,
-    ],
-  },
-  {
-    slug: "portrait",
-    label: "Portrait",
-    description: "인물·셀피·모델",
-    weight: 6,
-    keywords: [
-      /인물/,
-      /얼굴/,
-      /초상/,
-      /셀카/,
-      /셀피/,
-      /모델/,
-      /크리에이터/,
-      /인플루언서/,
-      /\b(portrait|selfie|headshot|influencer|model|woman|man|face)\b/i,
-    ],
+    keywords: [/여행/, /관광/, /투어/, /여행지/, /트립/, /휴양/, /바캉스/],
   },
   {
     slug: "fashion",
     label: "Fashion",
-    description: "패션·스타일링·룩북",
-    weight: 7,
     keywords: [
       /패션/,
       /의상/,
-      /룩북/,
-      /스타일링/,
-      /코디/,
-      /옷/,
+      /아우터/,
       /블레이저/,
       /원피스/,
+      /데님/,
+      /코트/,
+      /스타일링/,
+      /코디/,
+      /룩북/,
       /스트릿/,
-      /런웨이/,
-      /\b(fashion|outfit|styling|lookbook|streetwear|runway)\b/i,
     ],
   },
   {
-    slug: "character",
-    label: "Character",
-    description: "캐릭터·웹툰·일러스트",
-    weight: 6,
+    slug: "fnb",
+    label: "F&B",
     keywords: [
-      /캐릭터/,
-      /웹툰/,
-      /만화/,
-      /애니/,
-      /캐릭\b/,
-      /의상\s*설정화/,
-      /설정화/,
-      /복식\s*디자인/,
-      /일러스트/,
-      /\b(character|webtoon|comic|anime|illustration|manga)\b/i,
+      /카페/,
+      /커피/,
+      /라떼/,
+      /아메리카노/,
+      /베이커리/,
+      /디저트/,
+      /음료/,
+      /레스토랑/,
+      /식당/,
+      /편의점/,
+      /집밥/,
+      /와인/,
+      /맥주/,
+      /요리/,
+      /빵/,
     ],
   },
   {
-    slug: "landscape",
-    label: "Landscape",
-    description: "풍경·자연",
-    weight: 5,
+    slug: "healthcare",
+    label: "Healthcare",
     keywords: [
-      /풍경/,
-      /자연/,
-      /산/,
-      /바다/,
-      /해변/,
-      /하늘/,
-      /노을/,
-      /일출/,
-      /\b(landscape|scenery|mountain|ocean|sea|beach|sky|sunset|sunrise)\b/i,
-    ],
-  },
-  {
-    slug: "crm",
-    label: "CRM",
-    description: "이메일·CRM·리텐션",
-    weight: 8,
-    keywords: [
-      /CRM/i,
-      /이메일/,
-      /메일\s*이미지/,
-      /재방문/,
-      /재구매/,
-      /리텐션/,
-      /웰컴/,
-      /온보딩/,
-      /리워드/,
-      /\b(email|crm|onboarding|retention|reward)\b/i,
+      /병원/,
+      /의료/,
+      /재활/,
+      /운동/,
+      /헬스/,
+      /피트니스/,
+      /요가/,
+      /필라테스/,
+      /건강/,
+      /통증/,
+      /웰니스/,
+      /치과/,
+      /피부과/,
+      /성형/,
+      /약국/,
+      /한의원/,
     ],
   },
   {
     slug: "education",
     label: "Education",
-    description: "교육·강의·가이드",
-    weight: 6,
-    keywords: [
-      /강의/,
-      /강좌/,
-      /교육/,
-      /가이드/,
-      /튜토리얼/,
-      /학습/,
-      /\b(tutorial|course|guide|lesson|class|education)\b/i,
-    ],
+    keywords: [/강의/, /강좌/, /교육/, /학원/, /튜터/, /클래스/, /온라인\s*강좌/, /러닝/, /learning/i],
   },
   {
-    slug: "health",
-    label: "Health",
-    description: "건강·운동·웰니스",
-    weight: 6,
-    keywords: [
-      /운동/,
-      /재활/,
-      /헬스/,
-      /피트니스/,
-      /요가/,
-      /필라테스/,
-      /스트레칭/,
-      /통증/,
-      /웰니스/,
-      /건강/,
-      /\b(fitness|workout|wellness|yoga|pilates|rehabilitation|stretching)\b/i,
-    ],
+    slug: "real-estate",
+    label: "Real Estate",
+    keywords: [/부동산/, /매물/, /분양/, /아파트/, /빌라/, /오피스텔/, /주거/],
+  },
+  {
+    slug: "finance",
+    label: "Finance",
+    keywords: [/금융/, /투자/, /적금/, /펀드/, /보험/, /카드\s*혜택/, /리워드\s*적립/, /월급/],
+  },
+  {
+    slug: "digital",
+    label: "Digital / App",
+    keywords: [/\bapp\b/i, /앱\s/, /플랫폼/, /서비스\s*런칭/, /SaaS/i, /구독\s*서비스/],
+  },
+  {
+    slug: "b2b",
+    label: "B2B",
+    keywords: [/B2B/i, /솔루션/, /엔터프라이즈/, /기업용/, /오퍼레이션/],
+  },
+  {
+    slug: "commerce",
+    label: "Commerce",
+    keywords: [/쇼핑몰/, /커머스/, /이커머스/, /유통/, /온라인\s*스토어/],
+  },
+  {
+    slug: "ip-content",
+    label: "IP / Content",
+    keywords: [/캐릭터/, /웹툰/, /\bIP\b/, /애니메이션/, /콘텐츠\s*IP/],
+  },
+  {
+    slug: "mobility",
+    label: "Mobility",
+    keywords: [/자동차/, /모빌리티/, /\bEV\b/, /전기차/, /오토바이/],
+  },
+  {
+    slug: "tech",
+    label: "Tech / Electronics",
+    keywords: [/전자제품/, /가전/, /스마트홈/, /AI\s+트렌드/, /IT\s+트렌드/, /테크/],
+  },
+  {
+    slug: "pet",
+    label: "Pet",
+    keywords: [/반려동물/, /반려견/, /반려묘/, /\b펫\b/, /강아지/, /고양이/],
   },
 ];
 
-export function classify(prompt: string): { slug: string; label: string } {
-  const scores: Record<string, number> = {};
-  for (const cat of CATEGORIES) {
-    let score = 0;
-    for (const rx of cat.keywords) {
+/* ─── FORMAT (비율 태그) ───────────────────────────────────────────────── */
+export const FORMATS: CategoryDef[] = [
+  { slug: "ar-9-16", label: "9:16", keywords: [/9:16/, /세로형/] },
+  { slug: "ar-4-5", label: "4:5", keywords: [/4:5/, /4\s*:\s*5/] },
+  { slug: "ar-3-4", label: "3:4", keywords: [/3:4/, /3\s*:\s*4/] },
+  { slug: "ar-1-1", label: "1:1", keywords: [/1:1/, /정사각/, /square/i] },
+  { slug: "ar-3-2", label: "3:2", keywords: [/3:2/] },
+  { slug: "ar-16-9", label: "16:9", keywords: [/16:9/, /가로형/] },
+  { slug: "ar-21-9", label: "21:9", keywords: [/21:9/, /와이드스크린/, /시네마스코프/] },
+];
+
+/* ─── Scoring & Classification ─────────────────────────────────────────── */
+
+function scoreAgainst(prompt: string, cats: CategoryDef[]): CategoryDef | null {
+  const scores: { cat: CategoryDef; score: number }[] = [];
+  for (const c of cats) {
+    let hits = 0;
+    for (const rx of c.keywords) {
       const flags = rx.flags.includes("g") ? rx.flags : rx.flags + "g";
-      const globalRx = new RegExp(rx.source, flags);
-      const m = prompt.match(globalRx);
-      if (m) score += m.length;
+      const g = new RegExp(rx.source, flags);
+      const m = prompt.match(g);
+      if (m) hits += m.length;
     }
-    if (score > 0) scores[cat.slug] = score * 100 + (cat.weight ?? 0);
+    if (hits > 0) scores.push({ cat: c, score: hits * 100 + (c.weight ?? 0) });
   }
-  const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-  if (ranked.length === 0) {
-    return { slug: "etc", label: "Etc" };
-  }
-  const top = CATEGORIES.find((c) => c.slug === ranked[0][0])!;
-  return { slug: top.slug, label: top.label };
+  scores.sort((a, b) => b.score - a.score);
+  return scores[0]?.cat ?? null;
 }
+
+function scoreAll(prompt: string, cats: CategoryDef[]): CategoryDef[] {
+  const hits: { cat: CategoryDef; score: number }[] = [];
+  for (const c of cats) {
+    let count = 0;
+    for (const rx of c.keywords) {
+      const flags = rx.flags.includes("g") ? rx.flags : rx.flags + "g";
+      const m = prompt.match(new RegExp(rx.source, flags));
+      if (m) count += m.length;
+    }
+    if (count > 0) hits.push({ cat: c, score: count * 100 + (c.weight ?? 0) });
+  }
+  hits.sort((a, b) => b.score - a.score);
+  return hits.map((h) => h.cat);
+}
+
+export function classify(prompt: string): {
+  category: { slug: string; label: string };
+  domains: string[];
+  formats: string[];
+} {
+  const purpose = scoreAgainst(prompt, PURPOSES);
+  const domains = scoreAll(prompt, DOMAINS);
+  const formats = scoreAll(prompt, FORMATS);
+  return {
+    category: purpose
+      ? { slug: purpose.slug, label: purpose.label }
+      : { slug: "other", label: "Other" },
+    domains: domains.slice(0, 3).map((d) => d.slug),
+    formats: formats.slice(0, 2).map((f) => f.slug),
+  };
+}
+
+/* ─── Tag extraction ───────────────────────────────────────────────────── */
 
 const STOP_WORDS_EN = new Set([
   "the",
@@ -352,12 +431,16 @@ const STOP_WORDS_KR = new Set([
   "브랜드",
   "디자인",
   "컨셉",
+  "프롬프트",
+  "이미지를",
+  "구성을",
+  "느낌이",
+  "분위기의",
+  "스타일로",
 ]);
 
 export function extractTags(prompt: string): string[] {
   const tags = new Set<string>();
-
-  // 영문 단어 빈도
   const words = (prompt.toLowerCase().match(/[a-z][a-z-]{2,19}/g) || []).filter(
     (w) => !STOP_WORDS_EN.has(w)
   );
@@ -365,10 +448,9 @@ export function extractTags(prompt: string): string[] {
   words.forEach((w) => (freq[w] = (freq[w] || 0) + 1));
   Object.entries(freq)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 4)
+    .slice(0, 3)
     .forEach(([w]) => tags.add(w));
 
-  // 한글 2~4자 명사 후보
   const korean = prompt.match(/[가-힣]{2,4}/g) || [];
   const kFreq: Record<string, number> = {};
   korean.forEach((w) => {
@@ -381,3 +463,21 @@ export function extractTags(prompt: string): string[] {
 
   return Array.from(tags).slice(0, 8);
 }
+
+/* ─── Label lookups for UI ─────────────────────────────────────────────── */
+
+const DOMAIN_LABEL: Record<string, string> = Object.fromEntries(
+  DOMAINS.map((d) => [d.slug, d.label])
+);
+const FORMAT_LABEL: Record<string, string> = Object.fromEntries(
+  FORMATS.map((f) => [f.slug, f.label])
+);
+const PURPOSE_LABEL: Record<string, string> = Object.fromEntries(
+  PURPOSES.map((p) => [p.slug, p.label])
+);
+
+export const LABELS = {
+  domain: DOMAIN_LABEL,
+  format: FORMAT_LABEL,
+  purpose: PURPOSE_LABEL,
+};
