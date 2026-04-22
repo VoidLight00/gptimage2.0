@@ -25,7 +25,8 @@ def parse_log():
     items = []
     seen = set()
     for line in LOG.read_text().splitlines():
-        m = re.search(r"Processing file (\S+)\s+((?:P|C)-\d+\.png)", line)
+        # P-001.png / P-461-2.png / P-283x.png / C-003.png / J-001.png 모두 매칭
+        m = re.search(r"Processing file (\S+)\s+((?:[A-Z]-\d+[A-Za-z0-9-]*)\.png)", line)
         if not m:
             continue
         fid, name = m.group(1), m.group(2)
@@ -36,8 +37,13 @@ def parse_log():
     return items
 
 
+def is_copy_dup(name: str) -> bool:
+    # "P-053 (1).png" 같은 Google Drive 중복본은 스킵
+    return " (" in name
+
+
 def target(name):
-    if name.startswith("P-"):
+    if name.startswith("P-") or name.startswith("J-"):
         return P_DIR / name
     return C_DIR / name
 
@@ -101,7 +107,9 @@ def download_one(session, fid, name, retries=2):
 
 def main():
     items = parse_log()
-    items.sort(key=lambda x: (0 if x[1].startswith("P-") else 1, x[1]))
+    # 복사본 "(1)" 제외
+    items = [it for it in items if not is_copy_dup(it[1])]
+    items.sort(key=lambda x: (0 if (x[1].startswith("P-") or x[1].startswith("J-")) else 1, x[1]))
     todo = [it for it in items if not already_ok(target(it[1]))]
     print(f"total={len(items)} done={len(items) - len(todo)} todo={len(todo)}")
 
