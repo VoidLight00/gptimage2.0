@@ -14,7 +14,7 @@ let cached: ArchiveManifest | null = null;
 
 export function getManifest(): ArchiveManifest {
   if (cached) return cached;
-  const filePath = path.join(process.cwd(), "..", "content", "prompts.json");
+  const filePath = path.join(process.cwd(), "content", "prompts.json");
   if (!fs.existsSync(filePath)) {
     cached = EMPTY_MANIFEST;
     return cached;

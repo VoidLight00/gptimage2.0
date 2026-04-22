@@ -17,4 +17,4 @@ web/public/images/medium/
 web/public/images/thumb/
 
 # logs
-content/skipped.log
+web/content/skipped.log

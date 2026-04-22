@@ -18,10 +18,11 @@ import { classify, extractTags } from "./categorize";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ROOT = path.resolve(__dirname, "..", "..");
+const WEB_ROOT = path.resolve(__dirname, "..");
+const ROOT = path.resolve(WEB_ROOT, "..");
 const RAW_DIR = path.join(ROOT, "raw");
-const CONTENT_DIR = path.join(ROOT, "content");
-const PUBLIC_IMAGES = path.join(ROOT, "web", "public", "images");
+const CONTENT_DIR = path.join(WEB_ROOT, "content");
+const PUBLIC_IMAGES = path.join(WEB_ROOT, "public", "images");
 const OVERRIDES_PATH = path.join(CONTENT_DIR, "overrides.json");
 
 type OverrideMap = Record<string, { category?: string; prompt?: string; tags?: string[] }>;
