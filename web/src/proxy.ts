@@ -13,7 +13,7 @@ function expected(): string | null {
   return process.env.SITE_PASSWORD?.trim() || null;
 }
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const { nextUrl } = req;
   const pass = expected();
   if (!pass) return NextResponse.next(); // 미설정 시 우회
