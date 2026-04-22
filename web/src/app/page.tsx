@@ -41,28 +41,22 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl font-mono text-[12px] uppercase tracking-[0.14em]">
+          <div className="mt-24 grid grid-cols-2 md:grid-cols-3 gap-10 max-w-3xl font-mono uppercase">
             <div>
-              <div className="text-fg-50">Total</div>
-              <div className="text-fg text-2xl mt-2 tracking-tight">
-                {manifest.totalEntries}
+              <div className="text-fg-50 text-[11px] tracking-[0.2em]">Entries</div>
+              <div className="text-fg text-5xl md:text-6xl mt-3 font-light tracking-tight">
+                {manifest.totalEntries.toLocaleString()}
               </div>
             </div>
             <div>
-              <div className="text-fg-50">Categories</div>
-              <div className="text-fg text-2xl mt-2 tracking-tight">
+              <div className="text-fg-50 text-[11px] tracking-[0.2em]">Categories</div>
+              <div className="text-fg text-5xl md:text-6xl mt-3 font-light tracking-tight">
                 {categories.length}
               </div>
             </div>
             <div>
-              <div className="text-fg-50">Skipped</div>
-              <div className="text-fg text-2xl mt-2 tracking-tight">
-                {manifest.skippedCount}
-              </div>
-            </div>
-            <div>
-              <div className="text-fg-50">Updated</div>
-              <div className="text-fg text-[11px] mt-3">
+              <div className="text-fg-50 text-[11px] tracking-[0.2em]">Updated</div>
+              <div className="text-fg text-lg md:text-xl mt-5 tracking-tight">
                 {manifest.generatedAt.slice(0, 10)}
               </div>
             </div>

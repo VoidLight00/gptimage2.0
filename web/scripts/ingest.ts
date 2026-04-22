@@ -136,15 +136,28 @@ function parseWorkbook(filePath: string): ExtractedRow[] {
       continue;
     }
 
+    // "P-001 - prompt..." 처럼 한 컬럼에 id+prompt가 같이 있는 경우 분리
+    const INLINE_ID = /^\s*([A-Z]+-\d{1,4})\s*[-–—:.|]\s*([\s\S]+)$/;
+
     data.forEach((row, i) => {
       const rawPrompt = String(row[promptCol] ?? "").trim();
       if (!rawPrompt) return;
       const idFromCol = idCol ? String(row[idCol] ?? "").trim() : "";
-      // id 후보: id column → 첫번째 non-empty cell → 인덱스
-      const id = idFromCol || `${sheetName}-${i + 2}`;
+
+      let id = idFromCol;
+      let prompt = rawPrompt;
+      if (!id) {
+        const m = rawPrompt.match(INLINE_ID);
+        if (m) {
+          id = m[1].trim();
+          prompt = m[2].trim();
+        }
+      }
+      if (!id) id = `${sheetName}-${i + 2}`;
+
       rows.push({
         id,
-        prompt: rawPrompt,
+        prompt,
         negativePrompt: negCol ? String(row[negCol] ?? "").trim() || undefined : undefined,
         model: modelCol ? String(row[modelCol] ?? "").trim() || undefined : undefined,
         source: { file: path.basename(filePath), sheet: sheetName, row: i + 2 },
@@ -302,11 +315,13 @@ async function main() {
 
   log(`  total prompt rows: ${rows.length}`);
 
-  /* ------- ID 매칭: image → row ------- */
+  /* ------- ID 매칭: image → row (동일 id는 먼저 등장한 것 우선 = 시트1 우선) ------- */
   log("▸ Matching images to prompts");
   const rowIndex = new Map<string, ExtractedRow>();
   for (const r of rows) {
-    for (const v of normalizeId(r.id)) rowIndex.set(v, r);
+    for (const v of normalizeId(r.id)) {
+      if (!rowIndex.has(v)) rowIndex.set(v, r);
+    }
   }
 
   const skipped: { file: string; reason: string }[] = [];
@@ -328,39 +343,65 @@ async function main() {
   log(`  ✓ matched: ${entries.length}`);
   log(`  ✗ skipped (no prompt): ${skipped.length}`);
 
-  /* ------- 리사이즈 + 결과 entry 생성 ------- */
-  log("▸ Processing images (resize + blur)");
-  const outEntries = [];
-  let i = 0;
-  for (const e of entries) {
-    i++;
-    const safeId = e.id.replace(/[^a-zA-Z0-9-_]/g, "_");
-    try {
-      const images = await processImage(e.srcPath, safeId);
-      const override = overrides[safeId] ?? overrides[e.id];
-      const prompt = override?.prompt ?? e.prompt;
-      const tags = override?.tags ?? extractTags(prompt);
-      const cat = override?.category
-        ? { slug: override.category, label: override.category }
-        : classify(prompt);
+  /* ------- 리사이즈 + 결과 entry 생성 (병렬) ------- */
+  log(`▸ Processing images (resize + blur) — parallelism=8`);
+  const outEntries: Array<{
+    id: string;
+    prompt: string;
+    negativePrompt?: string;
+    category: string;
+    categoryLabel: string;
+    tags: string[];
+    model?: string;
+    sourceFolder: string;
+    images: Awaited<ReturnType<typeof processImage>>;
+    createdAt: string;
+  }> = [];
 
-      outEntries.push({
-        id: safeId,
-        prompt,
-        negativePrompt: e.negativePrompt,
-        category: cat.slug,
-        categoryLabel: cat.label,
-        tags,
-        model: e.model,
-        sourceFolder: path.relative(RAW_DIR, path.dirname(e.srcPath)),
-        images,
-        createdAt: new Date().toISOString(),
-      });
-      if (i % 20 === 0) log(`  ... ${i}/${entries.length}`);
-    } catch (err) {
-      skipped.push({ file: e.srcPath, reason: `process error: ${(err as Error).message}` });
+  const CONCURRENCY = 8;
+  let cursor = 0;
+  let done = 0;
+  const startedAt = Date.now();
+
+  async function worker() {
+    while (cursor < entries.length) {
+      const my = cursor++;
+      const e = entries[my];
+      const safeId = e.id.replace(/[^a-zA-Z0-9-_]/g, "_");
+      try {
+        const imageAssets = await processImage(e.srcPath, safeId);
+        const override = overrides[safeId] ?? overrides[e.id];
+        const prompt = override?.prompt ?? e.prompt;
+        const tags = override?.tags ?? extractTags(prompt);
+        const cat = override?.category
+          ? { slug: override.category, label: override.category }
+          : classify(prompt);
+
+        outEntries.push({
+          id: safeId,
+          prompt,
+          negativePrompt: e.negativePrompt,
+          category: cat.slug,
+          categoryLabel: cat.label,
+          tags,
+          model: e.model,
+          sourceFolder: path.relative(RAW_DIR, path.dirname(e.srcPath)),
+          images: imageAssets,
+          createdAt: new Date().toISOString(),
+        });
+      } catch (err) {
+        skipped.push({ file: e.srcPath, reason: `process error: ${(err as Error).message}` });
+      }
+      done++;
+      if (done % 25 === 0 || done === entries.length) {
+        const elapsed = ((Date.now() - startedAt) / 1000).toFixed(1);
+        log(`  ... ${done}/${entries.length}  (${elapsed}s)`);
+      }
     }
   }
+  await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+  // outEntries 정렬 (id 오름차순)
+  outEntries.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 
   /* ------- 카테고리 집계 ------- */
   const categoryCounts: Record<string, { label: string; count: number; cover?: string }> = {};
