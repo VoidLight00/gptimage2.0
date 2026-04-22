@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-04-22T03:54:55.437Z",
+  "totalEntries": 3,
+  "skippedCount": 34,
+  "categories": [
+    {
+      "slug": "portrait",
+      "label": "Portrait",
+      "count": 1,
+      "cover": "/images/thumb/C-001.webp"
+    },
+    {
+      "slug": "cyberpunk",
+      "label": "Cyberpunk",
+      "count": 1,
+      "cover": "/images/thumb/C-002.webp"
+    },
+    {
+      "slug": "product",
+      "label": "Product",
+      "count": 1,
+      "cover": "/images/thumb/C-003.webp"
+    }
+  ],
+  "entries": [
+    {
+      "id": "C-001",
+      "prompt": "A cinematic portrait of a young Korean woman with soft backlight, golden hour sunlight streaming through window blinds, shot on 85mm lens with shallow depth of field, moody atmosphere, editorial photography style.",
+      "category": "portrait",
+      "categoryLabel": "Portrait",
+      "tags": [
+        "cinematic",
+        "portrait",
+        "young",
+        "korean",
+        "woman"
+      ],
+      "sourceFolder": "덕테이프 이미지 생성 및 시트/CODEX제작",
+      "images": {
+        "original": "/images/original/C-001.webp",
+        "large": "/images/large/C-001.webp",
+        "medium": "/images/medium/C-001.webp",
+        "thumb": "/images/thumb/C-001.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQAwCdASoLABAAA4BaJbACdH8EwAbyWREZinCr2pG4uAAA/gqD3oujYHEbb6OYIgBToOPikVTTtE5GOtl0Wctmj9EF/qxusnrbbWK6FJ6NFZYsf/kGHwfuxan56hV1q6SqwS7lL7tTK32/F0/JDJkkRQdnP8Uoay4EnN9mf+kjqCNC17ZWcIewMxQxJ44G6RcAAA==",
+        "width": 1024,
+        "height": 1536
+      },
+      "createdAt": "2026-04-22T03:54:54.878Z"
+    },
+    {
+      "id": "C-002",
+      "prompt": "Neon-drenched cyberpunk alley in Seoul Hongdae, rain-soaked pavement reflecting holographic signs, a lone figure in a translucent raincoat walking away, 3am atmosphere, blade runner aesthetic.",
+      "category": "cyberpunk",
+      "categoryLabel": "Cyberpunk",
+      "tags": [
+        "neon-drenched",
+        "cyberpunk",
+        "alley",
+        "seoul",
+        "hongdae"
+      ],
+      "sourceFolder": "덕테이프 이미지 생성 및 시트/CODEX제작",
+      "images": {
+        "original": "/images/original/C-002.webp",
+        "large": "/images/large/C-002.webp",
+        "medium": "/images/medium/C-002.webp",
+        "thumb": "/images/thumb/C-002.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwAgCdASoLABAAA4BaJbACdAELT3ympr7AgADOOPwYTdX/EM0HlOSX+Y3xQB7GA745553QmTIwHBwEncNXAarv474/zrUaCYzbJZVASX8k5dPWuyB3pppT8i+LN3I+PeSHXTFPAGLuAAAA",
+        "width": 1024,
+        "height": 1536
+      },
+      "createdAt": "2026-04-22T03:54:55.179Z"
+    },
+    {
+      "id": "C-003",
+      "prompt": "Minimalist product shot of a skincare serum bottle on a textured stone surface, soft diffused daylight, muted earth tones, editorial beauty photography, commercial packaging design.",
+      "category": "product",
+      "categoryLabel": "Product",
+      "tags": [
+        "minimalist",
+        "product",
+        "shot",
+        "skincare",
+        "serum"
+      ],
+      "sourceFolder": "덕테이프 이미지 생성 및 시트/CODEX제작",
+      "images": {
+        "original": "/images/original/C-003.webp",
+        "large": "/images/large/C-003.webp",
+        "medium": "/images/medium/C-003.webp",
+        "thumb": "/images/thumb/C-003.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAsAA4BaJZwAAvrfbldHIAD+9dnigKRRmf0VPyXOafPNCvfmuItgsrmb/o1OUFAAAA==",
+        "width": 1536,
+        "height": 1024
+      },
+      "createdAt": "2026-04-22T03:54:55.437Z"
+    }
+  ]
+}

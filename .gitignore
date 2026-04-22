@@ -1,0 +1,20 @@
+node_modules/
+.next/
+out/
+.env
+.env.local
+.DS_Store
+
+# raw downloads — do not commit originals
+raw/
+tools/.venv/
+tools/__pycache__/
+
+# generated images (regenerable from raw/)
+web/public/images/original/
+web/public/images/large/
+web/public/images/medium/
+web/public/images/thumb/
+
+# logs
+content/skipped.log
