@@ -13,16 +13,16 @@ export function DetailView({
   lang: "ko" | "en";
 }) {
   return (
-    <div className="px-6 md:px-12 py-12 md:py-16">
+    <div className="px-4 md:px-12 py-8 md:py-16">
       <div className="mx-auto max-w-[1400px]">
         <Link
           href={`/${lang}/c/${entry.category}`}
-          className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50 hover:text-fg"
+          className="inline-flex items-center min-h-[40px] font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50 hover:text-fg"
         >
           ← {entry.categoryLabel}
         </Link>
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10">
+        <div className="mt-6 md:mt-8 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-6 md:gap-10">
           <div className="relative w-full bg-surface border border-border-subtle">
             <div
               className="relative w-full"
@@ -41,9 +41,9 @@ export function DetailView({
             </div>
           </div>
 
-          <aside className="space-y-10">
+          <aside className="space-y-8 md:space-y-10">
             <div>
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap items-center gap-1.5 md:gap-2 mb-5 md:mb-6">
                 <span className="inline-block px-2 py-1 bg-fg text-bg font-mono text-[10px] uppercase tracking-[0.14em]">
                   {entry.categoryLabel}
                 </span>
@@ -67,23 +67,22 @@ export function DetailView({
                   {entry.id}
                 </span>
               </div>
-              <h1 className="font-sans text-2xl md:text-3xl leading-tight tracking-tight">
-                {entry.title ?? (entry.prompt.length > 100 ? entry.prompt.slice(0, 100) + "…" : entry.prompt)}
+              <h1 className="font-sans text-xl md:text-3xl leading-tight tracking-tight">
+                {entry.title ??
+                  (entry.prompt.length > 100 ? entry.prompt.slice(0, 100) + "…" : entry.prompt)}
               </h1>
             </div>
 
             <PromptBlock label="Prompt" value={entry.prompt} />
 
-            {entry.negativePrompt && (
-              <PromptBlock label="Negative" value={entry.negativePrompt} />
-            )}
+            {entry.negativePrompt && <PromptBlock label="Negative" value={entry.negativePrompt} />}
 
             {entry.tags.length > 0 && (
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-fg-50 mb-3">
                   Tags
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {entry.tags.map((t) => (
                     <span
                       key={t}
@@ -105,7 +104,7 @@ export function DetailView({
                   href={entry.sourceUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="font-mono text-[12px] text-fg-70 hover:text-fg break-all border-b border-border-subtle"
+                  className="inline-block min-h-[40px] py-2 font-mono text-[12px] text-fg-70 hover:text-fg break-all border-b border-border-subtle"
                 >
                   {entry.sourceUrl}
                 </a>
@@ -122,17 +121,17 @@ export function DetailView({
         </div>
 
         {related.length > 0 && (
-          <section className="mt-24 pt-16 border-t border-border-subtle">
-            <div className="flex items-end justify-between mb-10">
-              <h2 className="font-sans text-2xl tracking-tight">Related</h2>
+          <section className="mt-16 md:mt-24 pt-10 md:pt-16 border-t border-border-subtle">
+            <div className="flex items-end justify-between mb-8 md:mb-10 gap-3 flex-wrap">
+              <h2 className="font-sans text-xl md:text-2xl tracking-tight">Related</h2>
               <Link
                 href={`/${lang}/c/${entry.category}`}
-                className="font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50 hover:text-fg"
+                className="font-mono text-[11px] md:text-[12px] uppercase tracking-[0.14em] text-fg-50 hover:text-fg"
               >
-                More in {entry.categoryLabel} →
+                More →
               </Link>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
               {related.slice(0, 4).map((e) => (
                 <Link
                   key={e.id}
@@ -147,7 +146,7 @@ export function DetailView({
                       src={e.images.thumb}
                       alt=""
                       fill
-                      sizes="300px"
+                      sizes="(max-width: 640px) 50vw, 300px"
                       placeholder="blur"
                       blurDataURL={e.images.blurDataURL}
                       className="object-cover"

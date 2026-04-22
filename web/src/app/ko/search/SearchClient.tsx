@@ -46,15 +46,22 @@ export function SearchClient({ items, lang }: { items: Item[]; lang: "ko" | "en"
         type="search"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="Search prompts, tags, categories..."
-        className="w-full bg-transparent border-b border-border-strong px-0 py-5 font-sans text-2xl md:text-3xl text-fg placeholder:text-fg-30 focus:outline-none focus:border-fg"
+        placeholder="Search prompts, tags..."
+        className="w-full bg-transparent border-b border-border-strong px-0 py-4 md:py-5 font-sans text-xl md:text-3xl text-fg placeholder:text-fg-30 focus:outline-none focus:border-fg"
         autoFocus
+        autoComplete="off"
+        autoCapitalize="off"
+        autoCorrect="off"
+        spellCheck={false}
+        inputMode="search"
       />
-      <div className="mt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50">
-        {q.trim() ? `${results.length} match${results.length === 1 ? "" : "es"}` : `${items.length} total`}
+      <div className="mt-5 md:mt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50">
+        {q.trim()
+          ? `${results.length} match${results.length === 1 ? "" : "es"}`
+          : `${items.length} total`}
       </div>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
         {results.map((e) => (
           <Link
             key={e.id}
@@ -69,15 +76,15 @@ export function SearchClient({ items, lang }: { items: Item[]; lang: "ko" | "en"
                 src={e.thumb}
                 alt=""
                 fill
-                sizes="(max-width: 640px) 100vw, 300px"
+                sizes="(max-width: 640px) 50vw, 300px"
                 placeholder="blur"
                 blurDataURL={e.blur}
                 className="object-cover"
               />
             </div>
-            <div className="p-3 font-mono text-[11px] uppercase tracking-[0.12em] text-fg-50">
+            <div className="p-2.5 md:p-3 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-fg-50">
               <div className="truncate">{e.categoryLabel}</div>
-              <div className="mt-1 line-clamp-2 text-fg-70 normal-case tracking-normal font-sans text-[12px]">
+              <div className="mt-1 line-clamp-2 text-fg-70 normal-case tracking-normal font-sans text-[11.5px] md:text-[12px]">
                 {e.prompt}
               </div>
             </div>
@@ -86,7 +93,7 @@ export function SearchClient({ items, lang }: { items: Item[]; lang: "ko" | "en"
       </div>
 
       {q.trim() && results.length === 0 && (
-        <div className="mt-12 border border-border-subtle bg-surface p-12 font-mono text-[13px] uppercase tracking-[0.14em] text-fg-50">
+        <div className="mt-10 md:mt-12 border border-border-subtle bg-surface p-10 md:p-12 font-mono text-[13px] uppercase tracking-[0.14em] text-fg-50">
           No results.
         </div>
       )}

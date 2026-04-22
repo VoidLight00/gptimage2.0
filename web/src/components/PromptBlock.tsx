@@ -23,19 +23,19 @@ export function PromptBlock({
 
   return (
     <div className="group">
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex items-center justify-between mb-3 gap-3">
         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-fg-50">
           {label}
         </span>
         <button
           type="button"
           onClick={copy}
-          className="font-mono text-[11px] tracking-[0.14em] px-3 py-1.5 border border-border-strong hover:bg-surface-hover"
+          className="font-mono text-[11px] tracking-[0.14em] px-4 py-2 min-h-[40px] border border-border-strong hover:bg-surface-hover active:bg-fg active:text-bg"
         >
           {copied ? "Copied" : "Copy"}
         </button>
       </div>
-      <pre className="font-mono text-[13px] leading-[1.7] text-fg whitespace-pre-wrap break-words bg-surface border border-border-subtle p-5">
+      <pre className="font-mono text-[12.5px] md:text-[13px] leading-[1.7] text-fg whitespace-pre-wrap break-words bg-surface border border-border-subtle p-4 md:p-5 select-all">
         {value}
       </pre>
     </div>
