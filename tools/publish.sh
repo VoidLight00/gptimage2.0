@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# Ingest → build → Vercel prod deploy → git push 원샷
+# Ingest KO (xlsx) + EN (awesome-gpt-image) → build → Vercel prod deploy → git push
 # Usage:  bash tools/publish.sh [commit-msg]
 
 cd "$(dirname "$0")/.."
 MSG="${1:-chore: re-ingest and redeploy}"
 
-echo "▸ INGEST"
+echo "▸ INGEST — KO"
 ( cd web && ./node_modules/.bin/tsx scripts/ingest.ts )
+
+if [ -d external/awesome-gpt-image ]; then
+  echo "▸ INGEST — EN"
+  ( cd web && ./node_modules/.bin/tsx scripts/ingest-en.ts )
+fi
 
 echo "▸ BUILD"
 ( cd web && npm run build )

@@ -18,10 +18,10 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:items-end gap-3 font-mono text-[12px] uppercase tracking-[0.1em] text-fg-50">
-          <div className="flex gap-6">
+          <div className="flex gap-6 flex-wrap">
             <Link href="/">Home</Link>
-            <Link href="/c">Categories</Link>
-            <Link href="/search">Search</Link>
+            <Link href="/ko">KO</Link>
+            <Link href="/en">EN</Link>
           </div>
           <div>© {new Date().getFullYear()} VOIDLIGHT · GPTIMAGE 2.0</div>
         </div>

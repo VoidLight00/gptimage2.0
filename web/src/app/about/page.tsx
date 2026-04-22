@@ -31,6 +31,8 @@ export default function About() {
 
           <div className="pt-8 border-t border-border-subtle font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50 space-y-2">
             <div>Curated by VOIDLIGHT</div>
+            <div>KO section: private dataset · 436 entries</div>
+            <div>EN section: sourced from github.com/ZeroLu/awesome-gpt-image</div>
             <div>Design inspired by xAI</div>
             <div>Built with Next.js</div>
           </div>

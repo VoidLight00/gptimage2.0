@@ -1,0 +1,1692 @@
+{
+  "language": "en",
+  "generatedAt": "2026-04-22T06:59:34.278Z",
+  "totalEntries": 52,
+  "skippedCount": 1,
+  "categories": [
+    {
+      "slug": "typography",
+      "label": "Typography & Poster",
+      "count": 13,
+      "cover": "/images-en/thumb/en-typography-1980s-propaganda-poster.webp"
+    },
+    {
+      "slug": "uiux",
+      "label": "UI/UX & Social Media",
+      "count": 9,
+      "cover": "/images-en/thumb/en-uiux-live-streaming-screenshot.webp"
+    },
+    {
+      "slug": "game",
+      "label": "Game & Entertainment",
+      "count": 8,
+      "cover": "/images-en/thumb/en-game-hitman-style-in-game-footage.webp"
+    },
+    {
+      "slug": "infographics",
+      "label": "Infographics & Education",
+      "count": 8,
+      "cover": "/images-en/thumb/en-infographics-world-time-analog-clock-wall.webp"
+    },
+    {
+      "slug": "photography",
+      "label": "Photography & Photorealism",
+      "count": 7,
+      "cover": "/images-en/thumb/en-photography-celebrity-in-real-life.webp"
+    },
+    {
+      "slug": "video",
+      "label": "Video & Animation",
+      "count": 3,
+      "cover": "/images-en/thumb/en-video-movie-collage.webp"
+    },
+    {
+      "slug": "character",
+      "label": "Character & Consistency",
+      "count": 2,
+      "cover": "/images-en/thumb/en-character-16-panel-anime-expression-grid.webp"
+    },
+    {
+      "slug": "editing",
+      "label": "Image Editing",
+      "count": 2,
+      "cover": "/images-en/thumb/en-editing-pet-brand-collaboration-poster.webp"
+    }
+  ],
+  "domains": [],
+  "formats": [
+    {
+      "slug": "ar-3-2",
+      "label": "3:2",
+      "count": 7
+    },
+    {
+      "slug": "ar-9-16",
+      "label": "9:16",
+      "count": 7
+    },
+    {
+      "slug": "ar-16-9",
+      "label": "16:9",
+      "count": 6
+    },
+    {
+      "slug": "ar-3-4",
+      "label": "3:4",
+      "count": 4
+    },
+    {
+      "slug": "ar-4-5",
+      "label": "4:5",
+      "count": 4
+    },
+    {
+      "slug": "ar-1-1",
+      "label": "1:1",
+      "count": 3
+    }
+  ],
+  "entries": [
+    {
+      "id": "en-photography-celebrity-in-real-life",
+      "language": "en",
+      "title": "Celebrity in real life",
+      "prompt": "Sam Altman, Donald Trump, and Elon Musk working behind the counter of a busy movie theater",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "sam",
+        "altman",
+        "donald",
+        "trump",
+        "elon",
+        "musk"
+      ],
+      "sourceUrl": "https://x.com/flowersslop/status/2044334054380552438",
+      "imageSourceUrl": "https://github.com/user-attachments/assets/45e4f24f-4f73-4426-947d-e6ed51291956",
+      "images": {
+        "original": "/images-en/original/en-photography-celebrity-in-real-life.webp",
+        "large": "/images-en/large/en-photography-celebrity-in-real-life.webp",
+        "medium": "/images-en/medium/en-photography-celebrity-in-real-life.webp",
+        "thumb": "/images-en/thumb/en-photography-celebrity-in-real-life.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoQAAsAA4BaJYgCdAYsjOUFq/liIAD0aHHvt8E+sEsm+QIK5zB6kHVQTEH4pY/Hk1F6AKUJaxPg4GhuTJ1OyBeV2sx72n8achTojxmSDiMcI4b1CfTXdlBS+NyuharYRgAAAA==",
+        "width": 1200,
+        "height": 799
+      },
+      "createdAt": "2026-04-22T06:58:17.789Z"
+    },
+    {
+      "id": "en-photography-convenience-store-night-scene",
+      "language": "en",
+      "title": "Convenience Store Night Scene",
+      "prompt": "Create an ultra-realistic urban street group photo at a convenience store entrance at 10 PM summer night. 3-4 young people briefly chatting at the entrance, someone holding drinks, someone sitting on plastic outdoor chairs, someone standing looking at their phone. Bright white light streaming through the glass doors and windows, warm yellow street lights and distant car headlights outside. Characters wearing everyday clothes: T-shirts, shirts, shorts, jeans, sneakers. No internet celebrity styling. Faces and postures must look like real pedestrians, not overly polished. Environment must include real convenience store elements: freezer stickers, promotional posters, trash cans, entrance mats, glass reflections, shared bikes on roadside, water droplets from drink bottles on ground. The image should look like a very authentic life slice captured by a photographer in the city. Focus on testing natural multi-person interactions, night convenience store lighting, glass reflections, and ordinary people's vibe restoration.",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [
+        "ar-3-4"
+      ],
+      "tags": [
+        "convenience",
+        "store",
+        "entrance",
+        "someone",
+        "glass",
+        "street"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/d529419b-8f8f-4dd4-a5f2-46d5fcbcf607",
+      "images": {
+        "original": "/images-en/original/en-photography-convenience-store-night-scene.webp",
+        "large": "/images-en/large/en-photography-convenience-store-night-scene.webp",
+        "medium": "/images-en/medium/en-photography-convenience-store-night-scene.webp",
+        "thumb": "/images-en/thumb/en-photography-convenience-store-night-scene.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwAgCdASoMABAAA4BaJbACdAD7Djo+afnEAAD+67DEEgJPaE0Apfpot88jpjBVqNhfS5rebiaJVX7FlW0XNx6I4eCeBcspMcINIL8Z2OhFrqXrMgLEzMVQ9AcATsjAbRX8NEuRehCf4BCgAAA=",
+        "width": 1080,
+        "height": 1446
+      },
+      "createdAt": "2026-04-22T06:58:19.078Z"
+    },
+    {
+      "id": "en-photography-raw-iphone-quality-subway-station",
+      "language": "en",
+      "title": "RAW iPhone Quality - Subway Station",
+      "prompt": "Create a completely RAW quality, unprocessed, unedited image with full iPhone camera quality. A subway station in USA, a momentary blur. The subway is in motion. In front of the subway, there is an elderly woman and man.",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "subway",
+        "quality",
+        "completely",
+        "raw",
+        "unprocessed",
+        "unedited"
+      ],
+      "sourceUrl": "https://x.com/WolfRiccardo/status/2041192232623972441",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HFPFd4ZbkAMW8ox?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-photography-raw-iphone-quality-subway-station.webp",
+        "large": "/images-en/large/en-photography-raw-iphone-quality-subway-station.webp",
+        "medium": "/images-en/medium/en-photography-raw-iphone-quality-subway-station.webp",
+        "thumb": "/images-en/thumb/en-photography-raw-iphone-quality-subway-station.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQAAkAA4BaJYwCsAYvXRT3FQAA/vFVPGH8I6tneg18ouK1s5h4QWfGanNAHghFxuv2YRDW2aznKrj8PvWRV2qkgySzN4bPN3cDvwHIYreWe8ExQAA=",
+        "width": 2048,
+        "height": 1143
+      },
+      "createdAt": "2026-04-22T06:58:20.061Z"
+    },
+    {
+      "id": "en-photography-apple-park-keynote-crowd-shot",
+      "language": "en",
+      "title": "Apple Park Keynote Crowd Shot",
+      "prompt": "Amateur iPhone photo at Apple Park during the iPhone 20 keynote, Tim Cook presenting on stage. Shot from the crowd at a distance",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "iphone",
+        "amateur",
+        "apple",
+        "park",
+        "during",
+        "keynote"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/apple-park-tim-cook-keynote",
+      "imageSourceUrl": "assets/opennana/apple-park-tim-cook-keynote.jpg",
+      "images": {
+        "original": "/images-en/original/en-photography-apple-park-keynote-crowd-shot.webp",
+        "large": "/images-en/large/en-photography-apple-park-keynote-crowd-shot.webp",
+        "medium": "/images-en/medium/en-photography-apple-park-keynote-crowd-shot.webp",
+        "thumb": "/images-en/thumb/en-photography-apple-park-keynote-crowd-shot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAgCdASoQAAwAA4BaJYwCdH8AFd8IZphS1OrwAAD+vhx6bmqqAzOPDHgSHuz/1Kpf9PC2BH469Pb9hH4kp6uYc3XgSX+1qMJGrgyhVHIsM+ZNiXOtokAA",
+        "width": 1200,
+        "height": 900
+      },
+      "createdAt": "2026-04-22T06:58:20.223Z"
+    },
+    {
+      "id": "en-photography-handwritten-notebook-photo",
+      "language": "en",
+      "title": "Handwritten Notebook Photo",
+      "prompt": "Amateur photo of an open notebook lying flat, filled with handwritten notes in black ballpoint pen. The handwriting is casual and slightly messy, like personnal notes, natural imperfections, crossed out words, underlined headings. Shot from slightly above, natural daylight from a window, no flash. Casual desk setting, shot on iPhone",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "notes",
+        "casual",
+        "slightly",
+        "natural",
+        "amateur",
+        "open"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/black-pen-handwritten-notes",
+      "imageSourceUrl": "assets/opennana/black-pen-handwritten-notes.jpg",
+      "images": {
+        "original": "/images-en/original/en-photography-handwritten-notebook-photo.webp",
+        "large": "/images-en/large/en-photography-handwritten-notebook-photo.webp",
+        "medium": "/images-en/medium/en-photography-handwritten-notebook-photo.webp",
+        "thumb": "/images-en/thumb/en-photography-handwritten-notebook-photo.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAwAA4BaJYwC7AEPBTVv6gAA/Dapt8L39V15pluzPZsnXgmh8T2wivO8mcvZb/rBzjHq7tGTVUmHOq+/rG87hkAAAA==",
+        "width": 1200,
+        "height": 900
+      },
+      "createdAt": "2026-04-22T06:58:20.379Z"
+    },
+    {
+      "id": "en-photography-rice-grain-micro-typography",
+      "language": "en",
+      "title": "Rice Grain Micro Typography",
+      "prompt": "A massive pile of rice, and on one single grain of rice there is tiny text that reads \"wOw\"",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "rice",
+        "massive",
+        "pile",
+        "one",
+        "single",
+        "grain"
+      ],
+      "sourceUrl": "https://x.com/adonis_singh/status/2046673729082560919",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGc-2eKWYAATrs9?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-photography-rice-grain-micro-typography.webp",
+        "large": "/images-en/large/en-photography-rice-grain-micro-typography.webp",
+        "medium": "/images-en/medium/en-photography-rice-grain-micro-typography.webp",
+        "thumb": "/images-en/thumb/en-photography-rice-grain-micro-typography.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAkAA4BaJZwAAt4sH1fgAPz/1PnhFqH2eOLobfxPcOLUNenTyPaUIAA=",
+        "width": 2048,
+        "height": 1152
+      },
+      "createdAt": "2026-04-22T06:58:20.876Z"
+    },
+    {
+      "id": "en-photography-360-equirectangular-panorama",
+      "language": "en",
+      "title": "360 Equirectangular Panorama",
+      "prompt": "360 equirectangular image of [place]",
+      "category": "photography",
+      "categoryLabel": "Photography & Photorealism",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "equirectangular",
+        "place"
+      ],
+      "sourceUrl": "https://x.com/LexnLin/status/2046725722320888313",
+      "imageSourceUrl": "https://pbs.twimg.com/amplify_video_thumb/2046725535439482880/img/v9e7898p1ynJv-xz.jpg",
+      "images": {
+        "original": "/images-en/original/en-photography-360-equirectangular-panorama.webp",
+        "large": "/images-en/large/en-photography-360-equirectangular-panorama.webp",
+        "medium": "/images-en/medium/en-photography-360-equirectangular-panorama.webp",
+        "thumb": "/images-en/thumb/en-photography-360-equirectangular-panorama.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQAAgAA4BaJZwAAubQu4WAAP7kOcaOLfgQJMuh7t25yN4CAAA=",
+        "width": 1199,
+        "height": 611
+      },
+      "createdAt": "2026-04-22T06:58:21.099Z"
+    },
+    {
+      "id": "en-game-hitman-style-in-game-footage",
+      "language": "en",
+      "title": "Hitman Style In-Game Footage",
+      "prompt": "A Hitman level where you are in the OpenAI HQ and your mission is to steal GPT-6 without getting caught",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "hitman",
+        "level",
+        "where",
+        "you",
+        "are",
+        "openai"
+      ],
+      "sourceUrl": "https://x.com/flowersslop/status/2044734896321532390",
+      "imageSourceUrl": "https://github.com/user-attachments/assets/e89dc393-653c-42e7-87f8-cd7741640f12",
+      "images": {
+        "original": "/images-en/original/en-game-hitman-style-in-game-footage.webp",
+        "large": "/images-en/large/en-game-hitman-style-in-game-footage.webp",
+        "medium": "/images-en/medium/en-game-hitman-style-in-game-footage.webp",
+        "thumb": "/images-en/thumb/en-game-hitman-style-in-game-footage.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADQAQCdASoQAAoAA4BaJZwAAlpdb6voAAD+8YIjY7CYhWZp9WatMBcIK/pzo2UzYlQDuAAA",
+        "width": 1200,
+        "height": 751
+      },
+      "createdAt": "2026-04-22T06:58:21.927Z"
+    },
+    {
+      "id": "en-game-black-myth-wukong-game-scene",
+      "language": "en",
+      "title": "Black Myth: Wukong Game Scene",
+      "prompt": "Generate a Black Myth: Wukong game scene where Wukong is knocked away by Erlang Shen",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "wukong",
+        "generate",
+        "black",
+        "myth",
+        "game",
+        "where"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/49e41036-4ad4-4908-a3a8-88a2f28f1148",
+      "images": {
+        "original": "/images-en/original/en-game-black-myth-wukong-game-scene.webp",
+        "large": "/images-en/large/en-game-black-myth-wukong-game-scene.webp",
+        "medium": "/images-en/medium/en-game-black-myth-wukong-game-scene.webp",
+        "thumb": "/images-en/thumb/en-game-black-myth-wukong-game-scene.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAkAA4BaJZQAAn3AGjJlAoAA/okxAc2GFnDFeNeLve9Rl97sPbQ+bbZQI5aGuB90extuRAO/AXv4LIzko0LIAG6fAAAA",
+        "width": 1080,
+        "height": 603
+      },
+      "createdAt": "2026-04-22T06:58:22.872Z"
+    },
+    {
+      "id": "en-game-gta-6-style-in-game-footage",
+      "language": "en",
+      "title": "GTA 6 Style In-Game Footage",
+      "prompt": "GTA 6 in-game footage, very detailed, very realistic. Close-up shot taken from a stationary 4k monitor. (There's a slight blurriness in the image, as it feels like it was taken handheld). A wide, bright environment. Realistic details. The character is walking on the beach with / :dog.",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "realistic",
+        "taken",
+        "gta",
+        "in-game",
+        "footage",
+        "detailed"
+      ],
+      "sourceUrl": "https://x.com/WolfRiccardo/status/2041187268711321735",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HFPAX19XMAAJ8V_?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-game-gta-6-style-in-game-footage.webp",
+        "large": "/images-en/large/en-game-gta-6-style-in-game-footage.webp",
+        "medium": "/images-en/medium/en-game-gta-6-style-in-game-footage.webp",
+        "thumb": "/images-en/thumb/en-game-gta-6-style-in-game-footage.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoQAAkAA4BaJQBWACFRJm6pKQAA/mFRZOoeAUtAGb34uFS+gU+xXxh7CJ20Txqdw4EmA4dFzcgoAltmw9osgVTEif+vZN7YNUylk6XiggA=",
+        "width": 2048,
+        "height": 1143
+      },
+      "createdAt": "2026-04-22T06:58:23.370Z"
+    },
+    {
+      "id": "en-game-gta-6-wedding-mission-screenshot",
+      "language": "en",
+      "title": "GTA 6 Wedding Mission Screenshot",
+      "prompt": "Generate a GTA 6 gameplay screenshot of [scene description]",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "generate",
+        "gta",
+        "gameplay",
+        "screenshot",
+        "description"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGU8siPXMAACZEd?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-game-gta-6-wedding-mission-screenshot.webp",
+        "large": "/images-en/large/en-game-gta-6-wedding-mission-screenshot.webp",
+        "medium": "/images-en/medium/en-game-gta-6-wedding-mission-screenshot.webp",
+        "thumb": "/images-en/thumb/en-game-gta-6-wedding-mission-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAgCdASoQAAkAA4BaJYwCdAEPDQKuiOxAAP71vMtkM/cNXcWaujfocrI8SzDun1MbLCocea5uCUAA",
+        "width": 1672,
+        "height": 941
+      },
+      "createdAt": "2026-04-22T06:58:23.772Z"
+    },
+    {
+      "id": "en-game-league-of-legends-mid-lane-screenshot",
+      "language": "en",
+      "title": "League of Legends Mid Lane Screenshot",
+      "prompt": "Help me generate a screenshot of Trump versus Khamenei in the mid lane in League of Legends",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "help",
+        "generate",
+        "screenshot",
+        "trump",
+        "versus",
+        "khamenei"
+      ],
+      "sourceUrl": "https://x.com/underwoodxie96/status/2046529342415790275",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGa7l2cbIAA_3nt?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-game-league-of-legends-mid-lane-screenshot.webp",
+        "large": "/images-en/large/en-game-league-of-legends-mid-lane-screenshot.webp",
+        "medium": "/images-en/medium/en-game-league-of-legends-mid-lane-screenshot.webp",
+        "thumb": "/images-en/thumb/en-game-league-of-legends-mid-lane-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAwAA4BaJYwAAuTNGcgAAP71j+zCUxET7NObN3+SnfI9/BGsqqV21EO+mXIHxR3/gAAA",
+        "width": 1448,
+        "height": 1086
+      },
+      "createdAt": "2026-04-22T06:58:24.255Z"
+    },
+    {
+      "id": "en-game-100-pixel-art-items-grid",
+      "language": "en",
+      "title": "100 Pixel Art Items Grid",
+      "prompt": "Create a single image containing a grid of 100 completely unique pixel art items, each with a meaningful label",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [
+        "ar-16-9"
+      ],
+      "tags": [
+        "single",
+        "containing",
+        "grid",
+        "completely",
+        "unique",
+        "pixel"
+      ],
+      "sourceUrl": "https://x.com/ProperPrompter/status/2046534215311970694",
+      "imageSourceUrl": "https://pbs.twimg.com/amplify_video_thumb/2046534148748451840/img/jbY5FyJJIEVLKH2J.jpg",
+      "images": {
+        "original": "/images-en/original/en-game-100-pixel-art-items-grid.webp",
+        "large": "/images-en/large/en-game-100-pixel-art-items-grid.webp",
+        "medium": "/images-en/medium/en-game-100-pixel-art-items-grid.webp",
+        "thumb": "/images-en/thumb/en-game-100-pixel-art-items-grid.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAkAA4BaJQBWAB6RUNSY+kAA/vM26wochoc5CA0bwKwffGOpdWtdHe1j17FQTtqFrMHOuLUCdwAA",
+        "width": 1200,
+        "height": 689
+      },
+      "createdAt": "2026-04-22T06:58:24.824Z"
+    },
+    {
+      "id": "en-game-zelda-tears-of-the-kingdom-style",
+      "language": "en",
+      "title": "Zelda: Tears of the Kingdom Style",
+      "prompt": "In the game Zelda totk link is in a e531 series train made by him",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "game",
+        "zelda",
+        "totk",
+        "link",
+        "series",
+        "train"
+      ],
+      "sourceUrl": "https://x.com/marmaduke091/status/2040820686751432990",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HFJzGO8WMAA_HBa?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-game-zelda-tears-of-the-kingdom-style.webp",
+        "large": "/images-en/large/en-game-zelda-tears-of-the-kingdom-style.webp",
+        "medium": "/images-en/medium/en-game-zelda-tears-of-the-kingdom-style.webp",
+        "thumb": "/images-en/thumb/en-game-zelda-tears-of-the-kingdom-style.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAACQAQCdASoQAAYAA4BaJQBOgBA99oAA9pF+fd3aHZM/tc7AfAu8EzVCdaF0Hxr1L0olYAN5gOXq3v6rZbxAHOE9sDR8LoCMmHwAAA==",
+        "width": 2048,
+        "height": 796
+      },
+      "createdAt": "2026-04-22T06:58:25.641Z"
+    },
+    {
+      "id": "en-game-gta-san-andreas-gameplay-screenshot",
+      "language": "en",
+      "title": "GTA San Andreas Gameplay Screenshot",
+      "prompt": "gameplay screenshot of a lion fighting against an npc in gta san andreas",
+      "category": "game",
+      "categoryLabel": "Game & Entertainment",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "gameplay",
+        "screenshot",
+        "lion",
+        "fighting",
+        "against",
+        "npc"
+      ],
+      "sourceUrl": "https://x.com/flowersslop/status/2040693687500341568",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HFH_lAIboAAG7Wi?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-game-gta-san-andreas-gameplay-screenshot.webp",
+        "large": "/images-en/large/en-game-gta-san-andreas-gameplay-screenshot.webp",
+        "medium": "/images-en/medium/en-game-gta-san-andreas-gameplay-screenshot.webp",
+        "thumb": "/images-en/thumb/en-game-gta-san-andreas-gameplay-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQAgCdASoQAAsAA4BaJaACdH8AgjhuLzAAAPk7A/xpfEQ7XTByvCsPtrcfh7+9o0BPhncMtUslPXmaDe84RETzzNGq3cPS9qxPdlZBim1/eQWdL5dvkESfgHSjY05JmH49fuu1zwK+N0j9COgAAA==",
+        "width": 1536,
+        "height": 1024
+      },
+      "createdAt": "2026-04-22T06:58:26.611Z"
+    },
+    {
+      "id": "en-uiux-live-streaming-screenshot",
+      "language": "en",
+      "title": "Live Streaming Screenshot",
+      "prompt": "Generate a screenshot of a TikTok live stream featuring a beautiful woman streaming.",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "generate",
+        "screenshot",
+        "tiktok",
+        "live",
+        "stream",
+        "featuring"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/be639d3b-617b-4332-98eb-4deb2484ac66",
+      "images": {
+        "original": "/images-en/original/en-uiux-live-streaming-screenshot.webp",
+        "large": "/images-en/large/en-uiux-live-streaming-screenshot.webp",
+        "medium": "/images-en/medium/en-uiux-live-streaming-screenshot.webp",
+        "thumb": "/images-en/thumb/en-uiux-live-streaming-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoJABAAA4BaJQBOgB5uiCkAAP7NxLqfoK0z8W5S6r09tS7K7X5/quYApmj4kHMd2hi9oWsEkrHWarnEgQqVZvRknTD/qwck6rAIL0AA",
+        "width": 675,
+        "height": 1199
+      },
+      "createdAt": "2026-04-22T06:58:32.990Z"
+    },
+    {
+      "id": "en-uiux-douyin-livestream-screenshot",
+      "language": "en",
+      "title": "Douyin Livestream Screenshot",
+      "prompt": "9:16 aspect ratio, generate a screenshot of a Douyin live stream, inside is Liu Yifei live streaming, Liu Yifei is holding a sign in her hand, the sign says Tonight's live stream, welcome to join Yifei for a chat!",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "live",
+        "yifei",
+        "stream",
+        "liu",
+        "sign",
+        "aspect"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/liu-yifei-douyin-live-chat",
+      "imageSourceUrl": "assets/opennana/liu-yifei-douyin-live-chat.jpg",
+      "images": {
+        "original": "/images-en/original/en-uiux-douyin-livestream-screenshot.webp",
+        "large": "/images-en/large/en-uiux-douyin-livestream-screenshot.webp",
+        "medium": "/images-en/medium/en-uiux-douyin-livestream-screenshot.webp",
+        "thumb": "/images-en/thumb/en-uiux-douyin-livestream-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoJABAAA4BaJaACdAYtByAQnaUZhgAA/LCsRlG4ybRXp8A7h3dPWKo+xJn85cn9HvQ57YwjYCSKtvA0d82KfvK1xugmOeFn5TVlhDveoL9VFXpsEfUAAA==",
+        "width": 675,
+        "height": 1199
+      },
+      "createdAt": "2026-04-22T06:58:33.154Z"
+    },
+    {
+      "id": "en-uiux-youtube-time-travel-screenshot",
+      "language": "en",
+      "title": "YouTube Time Travel Screenshot",
+      "prompt": "Screenshot of a YouTube video showing someone who time-traveled to the Middle Ages",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-1-1"
+      ],
+      "tags": [
+        "screenshot",
+        "youtube",
+        "video",
+        "showing",
+        "someone",
+        "who"
+      ],
+      "sourceUrl": "https://x.com/flowersslop/status/2040261168460108213",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HFByWu7bsAAxlJd?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-uiux-youtube-time-travel-screenshot.webp",
+        "large": "/images-en/large/en-uiux-youtube-time-travel-screenshot.webp",
+        "medium": "/images-en/medium/en-uiux-youtube-time-travel-screenshot.webp",
+        "thumb": "/images-en/thumb/en-uiux-youtube-time-travel-screenshot.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoQABAAA4BaJZQAAudNbKQpkwAA99+134BgkGMZmLZBk5kTupTharVjCBFi9xUOhs8PPcltO6uGY0WoDdzWEfJ1vF78lq7PX6/noX8lQjPKlrsgAAA=",
+        "width": 2048,
+        "height": 2048
+      },
+      "createdAt": "2026-04-22T06:58:35.080Z"
+    },
+    {
+      "id": "en-uiux-song-dynasty-social-media-feed",
+      "language": "en",
+      "title": "Song Dynasty Social Media Feed",
+      "prompt": "\"Song Dynasty People's Moments\"/\"SONG DYNASTY SOCIAL MEDIA FEED\", Ancient and modern time-travel humor fusion interface design style, The image simulates a mobile phone social media interface, but the content is entirely Song Dynasty scenes, The avatar is a portrait of a Song Dynasty literati, Username \"Su Dongpo SuShi_Official\", Post content \"Just arrived in Huangzhou, demoted but feeling okay. Made Dongpo pork myself today, tastes amazing, recipe attached:\", The attached image is a close-up of Dongpo pork in Gongbi painting style, Likes list \"Huang Tingjian, Qin Guan, Fo Yin etc. 126 people\", Comments section \"Wang Anshi: Hehe\" \"Sima Guang: Still the same taste\", Interface elements such as the like icon are replaced with Song Dynasty patterns, The status bar shows \"Great Song Mobile 5G\" and \"Third Year of Yuanfeng\", The color scheme is mobile phone dark mode paired with elegant Song Dynasty tones, A masterpiece of fun collision between history and social media",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "song",
+        "dynasty",
+        "social",
+        "media",
+        "interface",
+        "mobile"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/song-dynasty-cyber-social-feed",
+      "imageSourceUrl": "assets/opennana/song-dynasty-cyber-social-feed.jpg",
+      "images": {
+        "original": "/images-en/original/en-uiux-song-dynasty-social-media-feed.webp",
+        "large": "/images-en/large/en-uiux-song-dynasty-social-media-feed.webp",
+        "medium": "/images-en/medium/en-uiux-song-dynasty-social-media-feed.webp",
+        "thumb": "/images-en/thumb/en-uiux-song-dynasty-social-media-feed.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoFABAAA4BaJYwCdH8AFcJ4DAD+9HL9wWPTxspUEEFT34fhsR1biGoUrcz2JQZIrSUguo4AAAA=",
+        "width": 400,
+        "height": 1200
+      },
+      "createdAt": "2026-04-22T06:58:35.159Z"
+    },
+    {
+      "id": "en-uiux-ancient-figures-on-modern-social-platforms",
+      "language": "en",
+      "title": "Ancient Figures on Modern Social Platforms",
+      "prompt": "Generate a screenshot of [historical figure name] on [platform name]",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "name",
+        "generate",
+        "screenshot",
+        "historical",
+        "figure",
+        "platform"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGbtA0KagAADPAR?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-uiux-ancient-figures-on-modern-social-platforms.webp",
+        "large": "/images-en/large/en-uiux-ancient-figures-on-modern-social-platforms.webp",
+        "medium": "/images-en/medium/en-uiux-ancient-figures-on-modern-social-platforms.webp",
+        "thumb": "/images-en/thumb/en-uiux-ancient-figures-on-modern-social-platforms.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAQCdASoJABAAA4BaJZQAApygK8HsAAD+iUtQT1K4h3dlvs9wHIwP6vOtMJ/Ler76di+0ywTuLbDDkqOWydmqp75sJaAjhKwdpMZbACyAAA==",
+        "width": 941,
+        "height": 1672
+      },
+      "createdAt": "2026-04-22T06:58:35.661Z"
+    },
+    {
+      "id": "en-uiux-e-commerce-app-homepage",
+      "language": "en",
+      "title": "E-commerce App Homepage",
+      "prompt": "Generate a high-fidelity mobile e-commerce app homepage screenshot inspired by mainstream Chinese e-commerce apps in 2026. The interface should look fully realistic, with complete mobile-app UI logic and strong commercial design polish.\n\nLayout requirements:\n- status bar with time 9:41, 5G signal, and battery icon\n- search area with a city selector on the left, a rounded search box in the center, and message plus scan icons on the right\n- horizontal category tabs below the search area\n- top promotional carousel banner\n- 10-icon function grid\n- flash-sale module with countdown and three product cards\n- \"guess you like\" two-column product waterfall with at least 6 product cards\n- bottom tab bar with five tabs\n\nUse these exact Chinese labels where appropriate:\n- city: \"杭州\"\n- search placeholder: \"搜索耳机、咖啡机、运动鞋\"\n- category tabs: \"推荐、数码、家电、服饰、美妆、食品、运动、家居\"\n- top banner: \"618 预售开启\" and \"每满300减50\"\n- function grid: \"超市、百亿补贴、秒杀、直播、充值中心、到家、领券、品牌馆、全球购、排行榜\"\n- flash sale title: \"限时秒杀\"\n- recommendation section: \"猜你喜欢\"\n- bottom tabs: \"首页、分类、购物车、消息、我的\"\n\nAll Chinese text must be clear and readable with realistic fonts. Spacing, icon style, white space, shadows, rounded corners, dividers, and tag treatments should closely resemble a real app screenshot rather than concept art.",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "search",
+        "tabs",
+        "chinese",
+        "icon",
+        "product",
+        "e-commerce"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/6b709a24-b00a-4942-8c77-8f10ac03e8f8",
+      "images": {
+        "original": "/images-en/original/en-uiux-e-commerce-app-homepage.webp",
+        "large": "/images-en/large/en-uiux-e-commerce-app-homepage.webp",
+        "medium": "/images-en/medium/en-uiux-e-commerce-app-homepage.webp",
+        "thumb": "/images-en/thumb/en-uiux-e-commerce-app-homepage.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoJABAAA4BaJYwC7AELVUoAp8AA/u3u9ylFUWlR8khDWPvGiDO3S9Ulx/nGOhAwRJdd1sXF7t+Ai4AA",
+        "width": 1080,
+        "height": 1935
+      },
+      "createdAt": "2026-04-22T06:58:43.457Z"
+    },
+    {
+      "id": "en-uiux-music-player-interface",
+      "language": "en",
+      "title": "Music Player Interface",
+      "prompt": "Create a high-fidelity Chinese music app player interface screenshot in mobile portrait orientation, with refined visuals similar to a modern streaming player. Use dark mode, with the background derived from a blurred and diffused version of the album cover colors. Place a large square album cover in the center with subtle shadow and rounded corners.\n\nInterface requirements:\n- top status bar with time 18:26\n- navigation bar with a back arrow on the left, a centered title, and a more-options icon on the right\n- playback progress bar showing current time 01:42 and total duration 04:18\n- playback controls for shuffle, previous, play/pause, next, and repeat\n- lyrics section showing 5 to 7 scrolling lines, with the current line highlighted\n- action row with like, comment, download, add to playlist, and share\n- bottom area with device casting and playback queue entry\n\nUse these exact Chinese labels and names:\n- title: \"正在播放\"\n- song name: \"海边的晚风\"\n- artist: \"林秋\"\n- album: \"夏夜实验室\"\n\nThe lyrics layout, button icons, reflections, shadows, and dark-mode layering should feel like a real production interface rather than a Dribbble concept.",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "interface",
+        "album",
+        "bar",
+        "playback",
+        "chinese",
+        "player"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/88f33c6a-c307-4e7a-af7e-5f692cbf41a1",
+      "images": {
+        "original": "/images-en/original/en-uiux-music-player-interface.webp",
+        "large": "/images-en/large/en-uiux-music-player-interface.webp",
+        "medium": "/images-en/medium/en-uiux-music-player-interface.webp",
+        "thumb": "/images-en/thumb/en-uiux-music-player-interface.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoJABAAA4BaJQBOgB6RrumqQAD6ldShJpeB4MjflbKkWPOB5VxZe5MkgD1NefnRoMq8xAAA",
+        "width": 1080,
+        "height": 1935
+      },
+      "createdAt": "2026-04-22T06:58:47.245Z"
+    },
+    {
+      "id": "en-uiux-custom-style-ui-design-system",
+      "language": "en",
+      "title": "Custom Style UI Design System",
+      "prompt": "Generate a UI design system for me in xx style, including web pages, mobile, cards, controls, buttons, and others",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "generate",
+        "system",
+        "including",
+        "web",
+        "pages",
+        "mobile"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/custom-style-ui-system",
+      "imageSourceUrl": "assets/opennana/custom-style-ui-system.jpeg",
+      "images": {
+        "original": "/images-en/original/en-uiux-custom-style-ui-design-system.webp",
+        "large": "/images-en/large/en-uiux-custom-style-ui-design-system.webp",
+        "medium": "/images-en/medium/en-uiux-custom-style-ui-design-system.webp",
+        "thumb": "/images-en/thumb/en-uiux-custom-style-ui-design-system.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoOABAAA4BaJaQAA3AA/vTQHmwEXVmfc5dzfYWAAAA=",
+        "width": 621,
+        "height": 680
+      },
+      "createdAt": "2026-04-22T06:58:47.313Z"
+    },
+    {
+      "id": "en-uiux-t-800-taobao-product-detail-page",
+      "language": "en",
+      "title": "T-800 Taobao Product Detail Page",
+      "prompt": "Generate image:\nTaobao product detail page of a T-800 robot, showing:\nfront, side, and back three-view drawings of the robot,\nproduct price,\nproduct details,\nfunctions and usage scenarios",
+      "category": "uiux",
+      "categoryLabel": "UI/UX & Social Media",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "product",
+        "robot",
+        "generate",
+        "taobao",
+        "detail",
+        "page"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/terminator-taobao-page",
+      "imageSourceUrl": "assets/opennana/terminator-taobao-page.jpeg",
+      "images": {
+        "original": "/images-en/original/en-uiux-t-800-taobao-product-detail-page.webp",
+        "large": "/images-en/large/en-uiux-t-800-taobao-product-detail-page.webp",
+        "medium": "/images-en/medium/en-uiux-t-800-taobao-product-detail-page.webp",
+        "thumb": "/images-en/thumb/en-uiux-t-800-taobao-product-detail-page.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAgCdASoLABAAA4BaJZQCdAEO9ASXstQAAP70O6uAxVNvBuRiKlHeATg/bgPj31TH/ZeA5VQQKOpwt7Q8AA==",
+        "width": 632,
+        "height": 900
+      },
+      "createdAt": "2026-04-22T06:58:47.435Z"
+    },
+    {
+      "id": "en-video-movie-collage",
+      "language": "en",
+      "title": "Movie Collage",
+      "prompt": "entire superman movie image collage one shot in one output",
+      "category": "video",
+      "categoryLabel": "Video & Animation",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "one",
+        "entire",
+        "superman",
+        "movie",
+        "collage",
+        "output"
+      ],
+      "sourceUrl": "https://x.com/chetaslua/status/2044462992176386532",
+      "imageSourceUrl": "https://github.com/user-attachments/assets/68495d40-f558-4d7a-aacf-40ef36264679",
+      "images": {
+        "original": "/images-en/original/en-video-movie-collage.webp",
+        "large": "/images-en/large/en-video-movie-collage.webp",
+        "medium": "/images-en/medium/en-video-movie-collage.webp",
+        "thumb": "/images-en/thumb/en-video-movie-collage.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQAQCdASoQAAsAA4BaJYwCdAYrxHNy0AD+S60d2cXhDfyjFFKJ/7g2KSGBlzr7yfSHEWGbV9VvYkOCOsLMTQh9cFUne3FDxVFvKMEmbt76+AnMz16kzrzGojHGMlz2KvVf0euKXaddnZmet9yTYAAA",
+        "width": 1200,
+        "height": 800
+      },
+      "createdAt": "2026-04-22T06:58:52.949Z"
+    },
+    {
+      "id": "en-video-where-is-your-name-crowd-search-poster",
+      "language": "en",
+      "title": "Where Is [Your Name] Crowd Search Poster",
+      "prompt": "Create a \"Where is [Your Name]\" crowd search poster set in the city of your choosing",
+      "category": "video",
+      "categoryLabel": "Video & Animation",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "where",
+        "name",
+        "crowd",
+        "search",
+        "poster",
+        "set"
+      ],
+      "sourceUrl": "https://x.com/icreatelife/status/2046639884421550482",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGcgIHWWgAEph1p?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-video-where-is-your-name-crowd-search-poster.webp",
+        "large": "/images-en/large/en-video-where-is-your-name-crowd-search-poster.webp",
+        "medium": "/images-en/medium/en-video-where-is-your-name-crowd-search-poster.webp",
+        "thumb": "/images-en/thumb/en-video-where-is-your-name-crowd-search-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAsAA4BaJQBOgB5/0JcR4AD+lymlOcA0U8yDM/oGH/0PjZaSsptbs2MThWDmAMZNJZVITDAvugAA",
+        "width": 1536,
+        "height": 1024
+      },
+      "createdAt": "2026-04-22T06:58:54.016Z"
+    },
+    {
+      "id": "en-video-eight-panel-gpt-image-2-launch-manga",
+      "language": "en",
+      "title": "Eight-Panel GPT Image 2 Launch Manga",
+      "prompt": "Create an eight-panel manga about GPT-Image-2 launching today",
+      "category": "video",
+      "categoryLabel": "Video & Animation",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "eight-panel",
+        "manga",
+        "gpt-image-",
+        "launching",
+        "today"
+      ],
+      "sourceUrl": "https://x.com/venturetwins/status/2046620134933250409",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGcOKlnaYAAFJcW?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-video-eight-panel-gpt-image-2-launch-manga.webp",
+        "large": "/images-en/large/en-video-eight-panel-gpt-image-2-launch-manga.webp",
+        "medium": "/images-en/medium/en-video-eight-panel-gpt-image-2-launch-manga.webp",
+        "thumb": "/images-en/thumb/en-video-eight-panel-gpt-image-2-launch-manga.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoQAAgAA4BaJQBOkBw//AVm4FAAAP27k2Lp8d17eU0ZMjbR5+8qJQaFzu82THgqTsw2DB51cq/4S0p2URAYnZIV6kbBH7/DTDHLulCUdBAErNd0nAjZUeR4AAA=",
+        "width": 1672,
+        "height": 867
+      },
+      "createdAt": "2026-04-22T06:58:54.705Z"
+    },
+    {
+      "id": "en-typography-1980s-propaganda-poster",
+      "language": "en",
+      "title": "1980s Propaganda Poster",
+      "prompt": "Generate a 1980s propaganda poster. Use the exact slogan \"热烈庆祝GPT-Image-2全量开放\". Include Sam Altman, Dario Amodei, and Elon Musk, and give Dario Amodei a red scarf.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "dario",
+        "amodei",
+        "generate",
+        "propaganda",
+        "poster",
+        "use"
+      ],
+      "sourceUrl": "https://x.com/akokoi1/status/2046558658096738672",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGbWGhYaAAEtoTn?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-1980s-propaganda-poster.webp",
+        "large": "/images-en/large/en-typography-1980s-propaganda-poster.webp",
+        "medium": "/images-en/medium/en-typography-1980s-propaganda-poster.webp",
+        "thumb": "/images-en/thumb/en-typography-1980s-propaganda-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAA0AA4BaJbACdLoAAlQ3uhRC/SgA94aU1ogpOzWgcKqTIuBjtAf7RfEvJrCIzLO0DEARtKvBNX826a5G7SJewD3HYIEYPfNfX033ntup6Xxvy0qonsXFG4AAAA==",
+        "width": 1402,
+        "height": 1122
+      },
+      "createdAt": "2026-04-22T06:58:55.778Z"
+    },
+    {
+      "id": "en-typography-coffee-journey-infographic",
+      "language": "en",
+      "title": "Coffee Journey Infographic",
+      "prompt": "Create a Chinese infographic poster themed \"一杯咖啡 如何来到你手里\" (\"How a Cup of Coffee Reaches You\"). Use a premium information-design style with both educational clarity and commercial appeal. The layout should include directional flow, arrows, data boxes, icons, simple illustrations, and modular cards. Use coffee brown, milk white, ink black, and copper accents.\n\nThe infographic must include:\n- 01 Planting: elevation 1200-2200m, suitable temperature 18-24C, picking season Nov-March\n- 02 Processing: sun-dried, washed, honey process\n- 03 Roasting: light roast = brighter, medium roast = balanced, dark roast = richer\n- 04 Grinding: pour-over = coarse, espresso = fine, cold brew = medium-coarse\n- 05 Extraction: powder-water ratio, water temperature, and time all affect flavor\n- flavor keywords: floral / citrus / nutty / caramel / chocolate / smoky\n\nUse this exact fine print:\n\"适合用于咖啡入门科普与门店展示\"\n\nThe composition should balance text and visuals while keeping the design elegant. Focus on long infographic handling, numeric information, temperatures, numbered sections, concise descriptions, slash-separated flavor words, and modular layout. It should look like a premium display board, not a classroom slide deck.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "infographic",
+        "use",
+        "roast",
+        "flavor",
+        "coffee",
+        "premium"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/ac0ed885-5b27-46d5-a163-f9e3c15dca3b",
+      "images": {
+        "original": "/images-en/original/en-typography-coffee-journey-infographic.webp",
+        "large": "/images-en/large/en-typography-coffee-journey-infographic.webp",
+        "medium": "/images-en/medium/en-typography-coffee-journey-infographic.webp",
+        "thumb": "/images-en/thumb/en-typography-coffee-journey-infographic.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABQAgCdASoQAAsAA4BaJYwCdAYwd2VB0ieQ9fAA/vI5/igD17d0gz4p7b/PcvZDQpSCF/jniNcz0hHZSY3on0HV5hPkuNR/1eZ7uB1miZjFI7faLiqxkSvvCixvepzNz0AAAA==",
+        "width": 1080,
+        "height": 748
+      },
+      "createdAt": "2026-04-22T06:59:02.459Z"
+    },
+    {
+      "id": "en-typography-key-character-relationship-map",
+      "language": "en",
+      "title": "Key Character Relationship Map",
+      "prompt": "Please generate a key character relationship diagram for \"XXX\".",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "please",
+        "generate",
+        "key",
+        "character",
+        "relationship",
+        "diagram"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/key-character-relationship-map",
+      "imageSourceUrl": "assets/opennana/key-character-relationship-map.jpeg",
+      "images": {
+        "original": "/images-en/original/en-typography-key-character-relationship-map.webp",
+        "large": "/images-en/large/en-typography-key-character-relationship-map.webp",
+        "medium": "/images-en/medium/en-typography-key-character-relationship-map.webp",
+        "thumb": "/images-en/thumb/en-typography-key-character-relationship-map.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAQAgCdASoQAAsAA4BaJZACdAEPPoyVv9QAAP6H8m0uzKRMOxkvj/yDjwxps868hHoaLX/3Fvk1xDLXyJ0uebs98CgyI8Zl5VvltWTWlIaXAAAA",
+        "width": 680,
+        "height": 453
+      },
+      "createdAt": "2026-04-22T06:59:02.547Z"
+    },
+    {
+      "id": "en-typography-jingdezhen-blue-and-white-porcelain-diagram",
+      "language": "en",
+      "title": "Jingdezhen Blue-and-White Porcelain Diagram",
+      "prompt": "Generate a detailed explanatory diagram of Jingdezhen blue and white porcelain, accompanied by detailed Chinese knowledge analysis.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "detailed",
+        "generate",
+        "explanatory",
+        "diagram",
+        "jingdezhen",
+        "blue"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/jingdezhen-blue-white-porcelain-diagram",
+      "imageSourceUrl": "assets/opennana/jingdezhen-blue-white-porcelain-diagram.jpeg",
+      "images": {
+        "original": "/images-en/original/en-typography-jingdezhen-blue-and-white-porcelain-diagram.webp",
+        "large": "/images-en/large/en-typography-jingdezhen-blue-and-white-porcelain-diagram.webp",
+        "medium": "/images-en/medium/en-typography-jingdezhen-blue-and-white-porcelain-diagram.webp",
+        "thumb": "/images-en/thumb/en-typography-jingdezhen-blue-and-white-porcelain-diagram.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAQCdASoQAAsAA4BaJZQAApwd4tvV0AAA/utyum0pDae1vlHAeu/76J0tEDc3SAQ/LmB27XlkImehWbHzfpMc1JJbtG3Yq1RpGubQ61e+WgAA",
+        "width": 1200,
+        "height": 800
+      },
+      "createdAt": "2026-04-22T06:59:02.769Z"
+    },
+    {
+      "id": "en-typography-museum-catalog-style-chinese-disassembly-infographic",
+      "language": "en",
+      "title": "Museum Catalog-Style Chinese Disassembly Infographic",
+      "prompt": "Please automatically generate a \"museum catalog-style Chinese disassembly infographic\" based on the [Subject].\n\nThe entire image is required to combine a realistic main visual, structural disassembly, Chinese annotations, material descriptions, pattern meanings, color meanings, and core feature summaries. You need to automatically determine the most appropriate main subject, clothing system, artifact structure, era style, key components, material craftsmanship, color scheme, and layout structure based on the [Subject], and the user does not need to provide any other information.\n\nThe overall style should be: national museum exhibition boards, historical clothing catalogs, and cultural/museum thematic infographics, rather than ordinary posters, ancient-style portraits, e-commerce detail pages, or anime illustrations. The background uses paper textures such as off-white, silk white, and light tea color, making the overall look premium, restrained, professional, and collectible.\n\nThe layout is fixed as:\n- Top: Chinese main title + subtitle + introduction\n- Left: Structural disassembly area, with Chinese lead lines annotating key components, accompanied by close-up details\n- Upper right: Material / craftsmanship / texture area, displaying real texture samples with descriptions\n- Middle right: Pattern / color / meaning area, displaying the main color palette, pattern samples, and cultural explanations\n- Bottom: Dressing order / composition flowchart + core feature summary\n\nIf the subject is suitable for character display, use a full-body standing posture of a real person as the central subject; if it is more suitable for artifacts or single structures, change it to a central subject disassembly diagram, but the overall form remains a complete Chinese infographic. All text must be in Simplified Chinese, clear, neat, and readable, without garbled characters, typos, English, or pinyin. The focus is on highlighting real structures, material differences, cultural explanations, and a catalog atmosphere.\n\nAvoid: poster feel, studio portrait feel, e-commerce feel, anime feel, cosplay feel, random annotations, incorrect structures, blurry text, fake materials, excessive decoration.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-4-5"
+      ],
+      "tags": [
+        "chinese",
+        "subject",
+        "color",
+        "feel",
+        "disassembly",
+        "main"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/museum-level-chinese-disassembly-infographic",
+      "imageSourceUrl": "assets/opennana/museum-level-chinese-disassembly-infographic.jpeg",
+      "images": {
+        "original": "/images-en/original/en-typography-museum-catalog-style-chinese-disassembly-infographic.webp",
+        "large": "/images-en/large/en-typography-museum-catalog-style-chinese-disassembly-infographic.webp",
+        "medium": "/images-en/medium/en-typography-museum-catalog-style-chinese-disassembly-infographic.webp",
+        "thumb": "/images-en/thumb/en-typography-museum-catalog-style-chinese-disassembly-infographic.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoNABAAA4BaJYwCdADb63ev0AAA/uFfmrHhvDSdM6Sv/gK2YcslG+HaMiPnqGY5NXGy9IdwKstoHrVfgoWkOxvAAAA=",
+        "width": 1007,
+        "height": 1200
+      },
+      "createdAt": "2026-04-22T06:59:03.006Z"
+    },
+    {
+      "id": "en-typography-high-end-skincare-product-poster",
+      "language": "en",
+      "title": "High-End Skincare Product Poster",
+      "prompt": "Create a high-end skincare e-commerce hero poster for \"澄光维稳精华\" (\"Clarifying Stabilizing Essence\"). The style should be clean, light-luxury, and strongly science-skincare oriented. In the center, place a semi-transparent frosted-glass essence bottle filled with golden liquid and subtle water-droplet reflections. Use an off-white to warm gray gradient background with liquid-flow elements and microscopic molecular-structure decoration.\n\nThe poster must include the following exact Chinese copy:\n\"澄光\"\n\"维稳精华\"\n\"修护屏障\"\n\"舒缓泛红\"\n\"细腻透亮\"\n\"第 2 代升级配方\"\n\"核心成分\"\n\"神经酰胺\"\n\"泛醇 B5\"\n\"积雪草提取物\"\n\"微囊脂质体\"\n\"适合人群\"\n\"敏感肌\"\n\"熬夜肌\"\n\"换季不稳定肌\"\n\"限时到手价 229 元\"\n\"买 1 送 3\"\n\"赠洁面 15ml\"\n\"赠精华 5ml\"\n\"赠面霜 10g\"\n\nFine print:\n\"实际效果因人而异，请坚持使用\"\n\nFocus on product selling points, pricing hierarchy, gift-list modules, product naming, and short functional phrases. The result should feel premium and not tacky or overly live-commerce styled.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "poster",
+        "essence",
+        "product",
+        "high-end",
+        "skincare",
+        "e-commerce"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/e1ddd78f-3b18-490f-bdd9-a4e5bbee147d",
+      "images": {
+        "original": "/images-en/original/en-typography-high-end-skincare-product-poster.webp",
+        "large": "/images-en/large/en-typography-high-end-skincare-product-poster.webp",
+        "medium": "/images-en/medium/en-typography-high-end-skincare-product-poster.webp",
+        "thumb": "/images-en/thumb/en-typography-high-end-skincare-product-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAgCdASoQAAoAA4BaJYwCdAD1cDTroWAAAP7waksdzvrdrr5piqQMM46Yj1JNJ86z713N4G0tFM+Q0pdgJjaAAAA=",
+        "width": 1080,
+        "height": 703
+      },
+      "createdAt": "2026-04-22T06:59:06.713Z"
+    },
+    {
+      "id": "en-typography-minimal-design-prompt-collection",
+      "language": "en",
+      "title": "Minimal Design Prompt Collection",
+      "prompt": "Generate a series of gongbi-style bookmark designs\nDesign a postcard collaboration between The Little Prince and SpaceX\nGenerate a single-day calendar for April 19, 2026 themed around The Garden of Words\nGenerate a series of Labor Day hand-held sign designs\nGenerate a poster for the 2026 Grain Rain solar term\nGenerate a set of icon fonts for a sports app\nDesign a film-photography-style poster with the theme \"Toward the mountains and sea\"\nDesign a Shanghai postcard in black line-art style\nDesign a set of seal carvings for \"Elon Musk\"\nDesign a set of co-branded promotional materials for Durex and Chayan Yuese",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "generate",
+        "set",
+        "series",
+        "designs",
+        "postcard",
+        "poster"
+      ],
+      "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGOtEbUbwAAnR5l?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-minimal-design-prompt-collection.webp",
+        "large": "/images-en/large/en-typography-minimal-design-prompt-collection.webp",
+        "medium": "/images-en/medium/en-typography-minimal-design-prompt-collection.webp",
+        "thumb": "/images-en/thumb/en-typography-minimal-design-prompt-collection.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAQCdASoQAAYAA4BaJYwC7AEUOCFuDAD+5iUB4s0xvrQHNz3hcQJWzPaa0Vj1sMzROwYOvtNI2Auo8iqykMAkFQwUXAAA",
+        "width": 1983,
+        "height": 793
+      },
+      "createdAt": "2026-04-22T06:59:07.511Z"
+    },
+    {
+      "id": "en-typography-chinese-calligraphy-manuscript-recreation",
+      "language": "en",
+      "title": "Chinese Calligraphy Manuscript Recreation",
+      "prompt": "Generate an image of the authentic manuscript of [classic text title]\n\nGenerate an image of the authentic manuscript of [classic text title], and incorporate the emotional core of the work into the calligraphy",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "generate",
+        "authentic",
+        "manuscript",
+        "classic",
+        "text",
+        "title"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGb2ERIbgAAW4R5?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-chinese-calligraphy-manuscript-recreation.webp",
+        "large": "/images-en/large/en-typography-chinese-calligraphy-manuscript-recreation.webp",
+        "medium": "/images-en/medium/en-typography-chinese-calligraphy-manuscript-recreation.webp",
+        "thumb": "/images-en/thumb/en-typography-chinese-calligraphy-manuscript-recreation.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoLABAAA4BaJaACdLoAAnUBUAAA4bbhOchYuwKOpGEYGdpdPzfY9ng4BWgsQAAA",
+        "width": 1024,
+        "height": 1536
+      },
+      "createdAt": "2026-04-22T06:59:08.457Z"
+    },
+    {
+      "id": "en-typography-chinese-calligraphy-copybook-sheet",
+      "language": "en",
+      "title": "Chinese Calligraphy Copybook Sheet",
+      "prompt": "Generate a calligraphy copybook practice sheet in [script style]",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-4"
+      ],
+      "tags": [
+        "generate",
+        "calligraphy",
+        "copybook",
+        "practice",
+        "sheet",
+        "script"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGb7IZWaoAA8DCz?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-chinese-calligraphy-copybook-sheet.webp",
+        "large": "/images-en/large/en-typography-chinese-calligraphy-copybook-sheet.webp",
+        "medium": "/images-en/medium/en-typography-chinese-calligraphy-copybook-sheet.webp",
+        "thumb": "/images-en/thumb/en-typography-chinese-calligraphy-copybook-sheet.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAQCdASoMABAAA4BaJQBOgCIj9HIgAP7yKrVTsZsRaCV2tLkNGn4BM+QAAA==",
+        "width": 1086,
+        "height": 1448
+      },
+      "createdAt": "2026-04-22T06:59:09.248Z"
+    },
+    {
+      "id": "en-typography-silhouette-universe-narrative-poster",
+      "language": "en",
+      "title": "Silhouette Universe Narrative Poster",
+      "prompt": "Automatically generate a high-aesthetic \"Silhouette Universe / Collector's Edition Narrative Poster\" based on [theme: xxx]. Do not default to common containers such as bottles, hourglasses, glass domes, or pocket watches. Instead, let the AI choose the most symbolic, visually strong, and narratively suitable outer silhouette for the theme. The silhouette can be an artifact, building, gate, tower, archway, dome, stairwell, corridor, statue, profile, eye, hand, skull, wing, mask, mirror, throne, ring, crack, light curtain, shadow, geometric form, spatial cross-section, stage frame, abstract symbol, or any more creative contour that best represents the theme.\n\nThe goal is not to simply place a world inside an object, but to make the entire themed universe grow naturally within, around, and through the silhouette itself. The silhouette should be elegant, recognizable, and compositionally dominant. Inside or along its boundary, generate a rich and layered narrative world strongly tied to the theme, including iconic scenes, key architecture or spaces, symbols and metaphors, traces of characters or civilizations, foreground-midground-background depth, and atmosphere with emotional tension. Elements such as doors, staircases, bridges, water, smoke, paths, light sources, ruins, mechanical structures, landscapes, abstract forms, creatures, or props should all feel unified and organically integrated rather than pasted together.\n\nThe final composition should feel like a premium collector's poster with strong design value. The large shapes should feel stable, the main silhouette should be unmistakable, and the inner world should have depth, structure, and breathing room. Details should be rich but not crowded. You may add small human silhouettes, distant buildings, beams of light, doorways, bridges, steps, corridors, reflections, skylight, or far-background structures to enhance scale, story, and epic atmosphere. The overall mood should be quiet, grand, refined, and lingering rather than noisy or overloaded.\n\nBlend the feeling of a collector's edition film poster, high-end narrative visual design, dreamy watercolor texture, and fine printed paper. Emphasize paper grain, feathered edges, watercolor brush marks, gentle diffusion, atmospheric perspective, soft haze, selective volumetric light, light passing through mist, generous negative space, and restrained layout. The image should feel premium, poetic, majestic, sacred, nostalgic, quiet, and mythic.\n\nLet the AI choose an elevated color palette based on the theme, but keep it unified, restrained, tasteful, low-saturation, and premium. Avoid chaotic high saturation, cheap neon effects, or plastic digital color. Suitable palette families may include black-gold-gray, cool blue-gray, mist white-gray, brown-red with off-white, dark copper, aged paper tones, deep sea blue, twilight purple, or silver-gray, as long as they serve the theme.\n\nFinal requirement: the first glance should give strong theme recognition and a memorable silhouette, the second glance should reveal a complete narrative world, and the third glance should still reward close inspection with depth and aftertaste. Avoid generic backgrounds, hard cut-and-paste compositions, templated fantasy assets, video-game promo art vibes, excessive cartooning, or realism that kills the artistic mood. If appropriate, subtle titles, numbering, signatures, or marks can be added as part of the poster design, but they must never overpower the image.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "silhouette",
+        "theme",
+        "light",
+        "narrative",
+        "poster",
+        "world"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGb-f9yboAAn3en?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-silhouette-universe-narrative-poster.webp",
+        "large": "/images-en/large/en-typography-silhouette-universe-narrative-poster.webp",
+        "medium": "/images-en/medium/en-typography-silhouette-universe-narrative-poster.webp",
+        "thumb": "/images-en/thumb/en-typography-silhouette-universe-narrative-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAgCdASoLABAAA4BaJYwCsAEWNVFutES0gAD8O7eFFJsQxoll9FC3IsHzOEnryxbDJ1IERW584POCxylW/D+zfk2g/OKU+0EAMF61+De6rS4/Vt7M5MsHroAAAA==",
+        "width": 1024,
+        "height": 1536
+      },
+      "createdAt": "2026-04-22T06:59:09.969Z"
+    },
+    {
+      "id": "en-typography-e-commerce-product-detail-page",
+      "language": "en",
+      "title": "E-commerce Product Detail Page",
+      "prompt": "Generate an e-commerce product detail page for [product name]",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "product",
+        "generate",
+        "e-commerce",
+        "detail",
+        "page",
+        "name"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGa6X8CW4AEonBd?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-e-commerce-product-detail-page.webp",
+        "large": "/images-en/large/en-typography-e-commerce-product-detail-page.webp",
+        "medium": "/images-en/medium/en-typography-e-commerce-product-detail-page.webp",
+        "thumb": "/images-en/thumb/en-typography-e-commerce-product-detail-page.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoJABAAA4BaJZQCdADdgxzSkAD+8zD9gtJZCsqPyycUo5wwTPvWUfSBYNsjK80ZdjWIaPR5cNS2jx9U9Q+tETrsU/r8FYcAAAA=",
+        "width": 941,
+        "height": 1672
+      },
+      "createdAt": "2026-04-22T06:59:10.558Z"
+    },
+    {
+      "id": "en-typography-dense-chinese-layout-stress-test",
+      "language": "en",
+      "title": "Dense Chinese Layout Stress Test",
+      "prompt": "Generate an image of [scene / content]",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "generate",
+        "content"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGCnWfOXwAAVCRn?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-dense-chinese-layout-stress-test.webp",
+        "large": "/images-en/large/en-typography-dense-chinese-layout-stress-test.webp",
+        "medium": "/images-en/medium/en-typography-dense-chinese-layout-stress-test.webp",
+        "thumb": "/images-en/thumb/en-typography-dense-chinese-layout-stress-test.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoLABAAA4BaJZQC7AELX/M2QAD+8DQmtoOH4UtJOV3xTHavrPuAfvA+vcafzYLWypMky3hvAxMExGaZEazNsbOUbDsHb6AA",
+        "width": 1024,
+        "height": 1536
+      },
+      "createdAt": "2026-04-22T06:59:11.153Z"
+    },
+    {
+      "id": "en-typography-handwritten-chinese-medical-prescription",
+      "language": "en",
+      "title": "Handwritten Chinese Medical Prescription",
+      "prompt": "Generate an image of a handwritten Chinese medicine or Western medicine prescription",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-4"
+      ],
+      "tags": [
+        "medicine",
+        "generate",
+        "handwritten",
+        "chinese",
+        "western",
+        "prescription"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGaqaO2W4AA2W-6?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-typography-handwritten-chinese-medical-prescription.webp",
+        "large": "/images-en/large/en-typography-handwritten-chinese-medical-prescription.webp",
+        "medium": "/images-en/medium/en-typography-handwritten-chinese-medical-prescription.webp",
+        "thumb": "/images-en/thumb/en-typography-handwritten-chinese-medical-prescription.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoMABAAA4BaJZQCdAELMprzxkAA/u0nSrOTcAbnSIzM0rqs0e4cU9FM/JQ+juh6TER7Ys/gC4cC+IATxKJW0rAwPaDzJ+Fch9uSLnjmpAAAAA==",
+        "width": 1086,
+        "height": 1449
+      },
+      "createdAt": "2026-04-22T06:59:11.692Z"
+    },
+    {
+      "id": "en-infographics-world-time-analog-clock-wall",
+      "language": "en",
+      "title": "World Time Analog Clock Wall",
+      "prompt": "It's 10 AM in Los Angeles, 11 AM in Denver, 12 PM in Chicago, 1 PM in New York, 6 PM in London, and 2 AM in Tokyo. Render a wall with different analog clocks, each showing the correct time for its city, with the city label below each clock.",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "each",
+        "city",
+        "los",
+        "angeles",
+        "denver",
+        "chicago"
+      ],
+      "sourceUrl": "https://x.com/Angaisb_/status/2046666389734179018",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGYD-Y4bMAA0KxJ?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-world-time-analog-clock-wall.webp",
+        "large": "/images-en/large/en-infographics-world-time-analog-clock-wall.webp",
+        "medium": "/images-en/medium/en-infographics-world-time-analog-clock-wall.webp",
+        "thumb": "/images-en/thumb/en-infographics-world-time-analog-clock-wall.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAYAA4BaJQBOiP/wPQ4/q/gA/uuQxo5B5hIV59mzfP6hG512XNEzN42Br2ydboe/Onb7Nlzs7T58AAA=",
+        "width": 2048,
+        "height": 819
+      },
+      "createdAt": "2026-04-22T06:59:12.021Z"
+    },
+    {
+      "id": "en-infographics-encyclopedia-style-knowledge-card",
+      "language": "en",
+      "title": "Encyclopedia-Style Knowledge Card",
+      "prompt": "Generate a high-quality vertical encyclopedia-style infographic for [topic].\n\nThis should not be a normal poster or a simple illustration. It should feel like a modular educational infographic that combines the clarity of a field guide, the structure of an encyclopedia page, the polish of a lifestyle knowledge card, and the shareability of a strong social-media explainer.\n\nThe image should include:\n- a clear and appealing main visual of the topic\n- several enlarged detail callouts\n- multiple rounded modular information sections\n- strong title hierarchy and highlighted key labels\n- concise but information-rich educational content\n- visual scoring, quick takeaways, or a Top 5 module\n\nAdapt the content sections automatically based on the topic. Useful categories include:\nbasic profile, classification, appearance, habits or ecology, formation mechanism or structure, growth or usage conditions, care or maintenance advice, risks and cautions, suitable users or use cases, pros and cons, and a quick scorecard.\n\nVisual requirements:\nuse a clean light background, soft colors, subtle shadows, refined small icons, rounded information cards, and neat layout. The information density should be high but not crowded, and the final image should feel publishable, collectible, and repeatable as a knowledge-card format rather than an advertisement.\n\nDo not make it look like a commercial promo poster. Emphasize knowledge organization, modular information, and a field-guide presentation.",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [
+        "ar-4-5"
+      ],
+      "tags": [
+        "information",
+        "topic",
+        "not",
+        "modular",
+        "visual",
+        "infographic"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGcAZlsa8AEpG1O?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-encyclopedia-style-knowledge-card.webp",
+        "large": "/images-en/large/en-infographics-encyclopedia-style-knowledge-card.webp",
+        "medium": "/images-en/medium/en-infographics-encyclopedia-style-knowledge-card.webp",
+        "thumb": "/images-en/thumb/en-infographics-encyclopedia-style-knowledge-card.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAQCdASoNABAAA4BaJQAATRkVkLgINAAA/vTnuko1236EnWjYs9e8eKw42TvI0Xl0vTvUArYpic+zeonyFgs+hFWnpgzA3fmsdMf8GKy982S5YAA=",
+        "width": 1122,
+        "height": 1402
+      },
+      "createdAt": "2026-04-22T06:59:12.603Z"
+    },
+    {
+      "id": "en-infographics-alphabet-object-grid",
+      "language": "en",
+      "title": "Alphabet Object Grid",
+      "prompt": "Create an image with a 10x10 grid of objects whose names all start with the letter A",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [
+        "ar-1-1"
+      ],
+      "tags": [
+        "grid",
+        "objects",
+        "whose",
+        "names",
+        "all",
+        "start"
+      ],
+      "sourceUrl": "https://x.com/umesh_ai/status/2046510988367945983",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGaqAFba0AES6z_?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-alphabet-object-grid.webp",
+        "large": "/images-en/large/en-infographics-alphabet-object-grid.webp",
+        "medium": "/images-en/medium/en-infographics-alphabet-object-grid.webp",
+        "thumb": "/images-en/thumb/en-infographics-alphabet-object-grid.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAQCdASoQABAAA4BaJZQAAsf+LeSdAAD+8fw9CSephhMZdI6uZTXdlhO+TNs4tkVUF0JivDNPJqBwqsf/dmDNYOEXS9MjUW136NFK1ov6CHhvlMtKEAAA",
+        "width": 1254,
+        "height": 1254
+      },
+      "createdAt": "2026-04-22T06:59:13.290Z"
+    },
+    {
+      "id": "en-infographics-100-technology-topics-grid",
+      "language": "en",
+      "title": "100 Technology Topics Grid",
+      "prompt": "Create a 10 × 10 grid of 100 different topics representing recent technological progress. Use a realistic, polished editorial illustration style. Each topic should appear in its own square with a short clear label underneath. Keep the grid neat on a white background. Make every topic visually different and every label correctly spelled. Use these row themes: Row 1: AI models and agents Row 2: robotics Row 3: semiconductors and compute Row 4: networks and smart devices Row 5: biotech and health technology Row 6: energy and power systems Row 7: transport and autonomy Row 8: space and aerospace Row 9: manufacturing and materials Row 10: climate and environmental technology. Show each tile as a realistic mini-scene, product-class object, lab instrument, robot, chip, vehicle, or device that clearly conveys the topic. Keep the overall style consistent, modern, realistic, and visually impressive.",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "row",
+        "realistic",
+        "topic",
+        "grid",
+        "different",
+        "use"
+      ],
+      "sourceUrl": "https://x.com/chetaslua/status/2046489044243403029",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGaW8ECaEAAq-LZ?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-100-technology-topics-grid.webp",
+        "large": "/images-en/large/en-infographics-100-technology-topics-grid.webp",
+        "medium": "/images-en/medium/en-infographics-100-technology-topics-grid.webp",
+        "thumb": "/images-en/thumb/en-infographics-100-technology-topics-grid.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQAgCdASoPABAAA4BaJZwAD5RQkHBJvLyeAP7rMKwiohxBzeF63m8MvdY0jIJBaK82dPMaFauz/8yfl4CCeI2RPLaf3ONobmAxw7+d0fcv+WcSXVjf9SlHxMg+gBHNe+aAAA==",
+        "width": 1254,
+        "height": 1354
+      },
+      "createdAt": "2026-04-22T06:59:13.896Z"
+    },
+    {
+      "id": "en-infographics-fitness-training-infographic",
+      "language": "en",
+      "title": "Fitness Training Infographic",
+      "prompt": "Generate a Chinese fitness infographic for [topic].\n\nThe graphic should be both professional and practical for a normal adult to use as a training reference. Unless otherwise specified, assume the audience is a healthy adult with no major injuries, the goal is muscle gain plus basic strength improvement, the level is beginner to intermediate, the setting is a normal gym, and the total session length should stay within 40 to 60 minutes.\n\nChoose the output format automatically based on the training topic:\n\n1. If the topic is a muscle group or body part, such as chest, lats, biceps, abs, shoulders, or legs, generate a training-plan infographic for that body part.\n2. If the topic is an exercise or skill goal, such as pull-up, push-up, dips, or squat, generate an exercise-unlock or progression-plan infographic.\n\nUse a clear, modern, professional, easy-to-read Chinese infographic style in vertical format. The visual design should be clean and suitable for social sharing or personal training reference. Do not write long paragraphs. Each module should use short concise phrases, and numerical information should be prominent.\n\nThe infographic must include:\nA. Title area with main title and subtitle\nB. Training goal area\nC. Warm-up area\nD. Main training area with 4 to 6 core exercises\nE. Progression or unlock logic area\nF. Alternative exercises area\nG. Execution reminders area\nH. Recovery suggestions area\nI. Visual design requirements: modern, clean, professional, modular card layout\n\nThe final result should be a complete infographic rather than plain text paragraphs.",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "area",
+        "infographic",
+        "training",
+        "topic",
+        "generate",
+        "professional"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGbRt9DW8AA5V1S?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-fitness-training-infographic.webp",
+        "large": "/images-en/large/en-infographics-fitness-training-infographic.webp",
+        "medium": "/images-en/medium/en-infographics-fitness-training-infographic.webp",
+        "thumb": "/images-en/thumb/en-infographics-fitness-training-infographic.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoLABAAA4BaJZwC7AEOux0JzwAA/uAKbXjaWWZzmRiDJ8i7a+csRKQ79Xh/3wXrS0NxONUTAwS7LKajaUgCjR9QQ9UtAAAA",
+        "width": 1055,
+        "height": 1491
+      },
+      "createdAt": "2026-04-22T06:59:14.697Z"
+    },
+    {
+      "id": "en-infographics-gaokao-exam-paper-replica",
+      "language": "en",
+      "title": "Gaokao Exam Paper Replica",
+      "prompt": "Generate an image of a 2026 Gaokao exam paper for [subject name]",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "generate",
+        "gaokao",
+        "exam",
+        "paper",
+        "subject",
+        "name"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGMr98EaYAA_DsG?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-gaokao-exam-paper-replica.webp",
+        "large": "/images-en/large/en-infographics-gaokao-exam-paper-replica.webp",
+        "medium": "/images-en/medium/en-infographics-gaokao-exam-paper-replica.webp",
+        "thumb": "/images-en/thumb/en-infographics-gaokao-exam-paper-replica.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoLABAAA4BaJaQAA3AA/vQPVMoRIAAA",
+        "width": 1450,
+        "height": 2048
+      },
+      "createdAt": "2026-04-22T06:59:15.466Z"
+    },
+    {
+      "id": "en-infographics-three-day-travel-guide-card",
+      "language": "en",
+      "title": "Three-Day Travel Guide Card",
+      "prompt": "Generate a three-day travel guide image for [city]",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [
+        "ar-9-16"
+      ],
+      "tags": [
+        "generate",
+        "three-day",
+        "travel",
+        "guide",
+        "city"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGa2KbFXMAAv9Wh?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-three-day-travel-guide-card.webp",
+        "large": "/images-en/large/en-infographics-three-day-travel-guide-card.webp",
+        "medium": "/images-en/medium/en-infographics-three-day-travel-guide-card.webp",
+        "thumb": "/images-en/thumb/en-infographics-three-day-travel-guide-card.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACwAQCdASoJABAAA4BaJQBOgCHfvuqAAP38Z7F19HIi6eqyJLjoYYwYw6/kAgSUVZHSwglGNobtqcocKxAHbtDOXfLLEzUHklSN4NwPf8NHifZH9r5CiAAA",
+        "width": 940,
+        "height": 1672
+      },
+      "createdAt": "2026-04-22T06:59:16.608Z"
+    },
+    {
+      "id": "en-infographics-character-relationship-diagram-poster",
+      "language": "en",
+      "title": "Character Relationship Diagram Poster",
+      "prompt": "Generate a high-design character relationship poster for [theme]. This should not be a normal illustration, but a relationship map that combines information visualization, narrative structure, poster-level design, and strong fidelity to the style of the original work.\n\nAutomatically do the following:\n- identify the source work and its core setting\n- select the 6 to 12 most representative key characters, with an upper limit of 15 if needed\n- identify and show the most important relationships, such as family ties, romance, friendship, alliances, hostility, mentor-student links, master-servant links, manipulation, betrayal, and hidden relationships\n- choose the most suitable composition automatically, such as protagonist-centered, dual-core confrontation, faction layout, family tree, or time-evolution structure\n- extract the work's style DNA, including color palette, worldbuilding symbols, texture language, emotional tone, layout rhythm, and iconic motifs\n- convert those style elements into the overall visual design of the relationship map rather than simply copying an official poster\n- use different colors, line styles, and arrows to distinguish relationship types while keeping the layout clear and readable\n- emphasize the core characters most strongly, secondary characters next, and minor characters less prominently to create a clear visual hierarchy\n- keep every character name easy to read, optionally with role or faction tags if useful\n\nThe final piece should:\n- make the main relationships understandable at a glance\n- strongly evoke the original work's identity and setting\n- combine infographic clarity with premium poster design\n- feel unified, polished, complete, and suitable for social sharing or poster display\n- avoid cheap flowchart vibes, clutter, or information overload",
+      "category": "infographics",
+      "categoryLabel": "Infographics & Education",
+      "domains": [],
+      "formats": [
+        "ar-4-5"
+      ],
+      "tags": [
+        "relationship",
+        "poster",
+        "work",
+        "most",
+        "characters",
+        "relationships"
+      ],
+      "sourceUrl": "https://x.com/MrLarus/status/2046627021674168640",
+      "imageSourceUrl": "https://pbs.twimg.com/media/HGXHhQcbAAAFcYA?format=jpg&name=large",
+      "images": {
+        "original": "/images-en/original/en-infographics-character-relationship-diagram-poster.webp",
+        "large": "/images-en/large/en-infographics-character-relationship-diagram-poster.webp",
+        "medium": "/images-en/medium/en-infographics-character-relationship-diagram-poster.webp",
+        "thumb": "/images-en/thumb/en-infographics-character-relationship-diagram-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAACwAQCdASoNABAAA4BaJZQAAxeQs1jAAP7xBTVAnyTW+jLBq2ULhbqpQ6k/Xy0VhUrNY9iDoJoSzgJZMl2GPC8rSuwKAZW9Rm1bNmbEIJJoRYYFx27gAA==",
+        "width": 1122,
+        "height": 1402
+      },
+      "createdAt": "2026-04-22T06:59:17.428Z"
+    },
+    {
+      "id": "en-character-16-panel-anime-expression-grid",
+      "language": "en",
+      "title": "16-Panel Anime Expression Grid",
+      "prompt": "Create a 16-panel expression grid of a silver-haired, blue-eyed anime girl. Her face shape, hairstyle, and clothing must remain highly consistent across all panels. The 16 expressions should include: happy, sad, angry, surprised, shy, speechless, evil grin, contemplative, curious, proud, wronged, disdainful, confused, scared, crying, and a heart expression.",
+      "category": "character",
+      "categoryLabel": "Character & Consistency",
+      "domains": [],
+      "formats": [
+        "ar-1-1"
+      ],
+      "tags": [
+        "expression",
+        "panel",
+        "grid",
+        "silver-haired",
+        "blue-eyed",
+        "anime"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/27258fa9-086e-4dfa-b61e-d9ada90425b2",
+      "images": {
+        "original": "/images-en/original/en-character-16-panel-anime-expression-grid.webp",
+        "large": "/images-en/large/en-character-16-panel-anime-expression-grid.webp",
+        "medium": "/images-en/medium/en-character-16-panel-anime-expression-grid.webp",
+        "thumb": "/images-en/thumb/en-character-16-panel-anime-expression-grid.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAwAwCdASoQABAAA4BaJZwANT/Tg+gT7Cd//T/LstEDx7hAAP7Hns6Icf9LwJpGeeu13irNiCX9cb0ZsKWO011kJGpGjoSpVpCOyKHC4dFTiZJcL5ENk46w8gAAAA==",
+        "width": 1080,
+        "height": 1080
+      },
+      "createdAt": "2026-04-22T06:59:24.670Z"
+    },
+    {
+      "id": "en-character-official-character-reference-sheet",
+      "language": "en",
+      "title": "Official Character Reference Sheet",
+      "prompt": "Based on this character and background, please create a character reference sheet similar to official setting materials.\n- Includes three-view drawings: front view, side view, and back view\n- Add variations of the character's facial expressions\n- Break down and display detailed parts of the clothing and equipment\n- Add a color palette\n- Include a brief explanation of the worldview setting\n- Overall, use an organized layout (white background, illustration style)",
+      "category": "character",
+      "categoryLabel": "Character & Consistency",
+      "domains": [],
+      "formats": [
+        "ar-4-5"
+      ],
+      "tags": [
+        "character",
+        "view",
+        "setting",
+        "add",
+        "based",
+        "please"
+      ],
+      "sourceUrl": "https://opennana.com/awesome-prompt-gallery/official-character-reference-sheet",
+      "imageSourceUrl": "assets/opennana/official-character-reference-sheet.jpeg",
+      "images": {
+        "original": "/images-en/original/en-character-official-character-reference-sheet.webp",
+        "large": "/images-en/large/en-character-official-character-reference-sheet.webp",
+        "medium": "/images-en/medium/en-character-official-character-reference-sheet.webp",
+        "thumb": "/images-en/thumb/en-character-official-character-reference-sheet.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAwAgCdASoNABAAA4BaJZwAD5AvPXXoun+NgAD+9P6xh/3rP+aoLu3j0uJhL0FOwRfXF7c7HeJEO1tSt6mTKGZT9XY8oBDtjTVMxVT1B4EFUJmRP/sfaL+RXDSRMEAA",
+        "width": 720,
+        "height": 900
+      },
+      "createdAt": "2026-04-22T06:59:24.790Z"
+    },
+    {
+      "id": "en-editing-pet-brand-collaboration-poster",
+      "language": "en",
+      "title": "Pet Brand Collaboration Poster",
+      "prompt": "Theme: \\\"77 (cat's name) X KFC\\\" collaboration poster. Generate a collaboration poster featuring the same pet (absolutely consistent in appearance and coloring) with KFC brand identity (red-and-white color scheme, classic logo, restaurant scenes, etc.). Have the cat wear a KFC employee uniform, KFC employee hat, and name badge while standing at the counter, selling fried chicken, burgers, and combo meals, and interacting with chicken buckets, fries, soda, and other brand elements. The style should be lively and fun with a commercial co-branding feel, suitable for online promotion and event posters. Add appropriate Chinese copy freely for the poster.",
+      "category": "editing",
+      "categoryLabel": "Image Editing",
+      "domains": [],
+      "formats": [
+        "ar-3-4"
+      ],
+      "tags": [
+        "kfc",
+        "poster",
+        "cat",
+        "name",
+        "collaboration",
+        "brand"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/7efff353-b76b-4986-9894-24823e630dd7",
+      "images": {
+        "original": "/images-en/original/en-editing-pet-brand-collaboration-poster.webp",
+        "large": "/images-en/large/en-editing-pet-brand-collaboration-poster.webp",
+        "medium": "/images-en/medium/en-editing-pet-brand-collaboration-poster.webp",
+        "thumb": "/images-en/thumb/en-editing-pet-brand-collaboration-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAgCdASoMABAAA4BaJYgCdAD0ScmF7SkAAP1lumBnq2qSviIBlLJwiYnlDTnv40Q6gmYG2GQ9hWWkGGnKgQ0XoD4P9ywA",
+        "width": 1080,
+        "height": 1441
+      },
+      "createdAt": "2026-04-22T06:59:29.447Z"
+    },
+    {
+      "id": "en-editing-comic-page-coloring-translation",
+      "language": "en",
+      "title": "Comic Page Coloring & Translation",
+      "prompt": "Colorize this comic page and translate it into Chinese, placing the text in the original positions while maintaining composition and image details consistently",
+      "category": "editing",
+      "categoryLabel": "Image Editing",
+      "domains": [],
+      "formats": [],
+      "tags": [
+        "colorize",
+        "comic",
+        "page",
+        "translate",
+        "chinese",
+        "placing"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/d67a101c-2874-4e58-9855-05e8a86d891b",
+      "images": {
+        "original": "/images-en/original/en-editing-comic-page-coloring-translation.webp",
+        "large": "/images-en/large/en-editing-comic-page-coloring-translation.webp",
+        "medium": "/images-en/medium/en-editing-comic-page-coloring-translation.webp",
+        "thumb": "/images-en/thumb/en-editing-comic-page-coloring-translation.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAQCdASoKABAAA4BaJaQAD46tWA/XQGgA/rarp46pTSvnCDqELUnZjuc5TsiDkcmscwN4eIWrPSUPYJiDewU0YMkZxuhDqr2+kZBjUI+8icytwOnepIAA",
+        "width": 876,
+        "height": 1372
+      },
+      "createdAt": "2026-04-22T06:59:34.278Z"
+    }
+  ]
+}

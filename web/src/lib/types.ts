@@ -1,14 +1,18 @@
 export type PromptEntry = {
   id: string;
+  language?: "ko" | "en";
+  title?: string;
   prompt: string;
   negativePrompt?: string;
-  category: string;          // primary — Purpose slug
+  category: string;
   categoryLabel: string;
-  domains: string[];         // Domain slugs (Beauty, Hospitality, …)
-  formats: string[];         // Format slugs (ar-4-5, ar-9-16, …)
-  tags: string[];            // extracted keyword tags
+  domains: string[];
+  formats: string[];
+  tags: string[];
   model?: string;
   sourceFolder?: string;
+  sourceUrl?: string;       // EN entries: 원본 X/Twitter·블로그 링크
+  imageSourceUrl?: string;  // EN entries: 원격 이미지 원본 URL
   images: {
     original: string;
     large: string;

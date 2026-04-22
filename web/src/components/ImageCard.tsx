@@ -2,11 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import type { PromptEntry } from "@/lib/types";
 
-export function ImageCard({ entry }: { entry: PromptEntry }) {
+export function ImageCard({
+  entry,
+  lang = "ko",
+}: {
+  entry: PromptEntry;
+  lang?: "ko" | "en";
+}) {
   const aspect = entry.images.width / entry.images.height;
+  const title = entry.title ?? entry.prompt.slice(0, 100);
   return (
     <Link
-      href={`/p/${entry.id}`}
+      href={`/${lang}/p/${entry.id}`}
       className="group block relative border border-border-subtle hover:border-border-strong overflow-hidden"
     >
       <div
@@ -15,7 +22,7 @@ export function ImageCard({ entry }: { entry: PromptEntry }) {
       >
         <Image
           src={entry.images.medium}
-          alt={entry.prompt.slice(0, 100)}
+          alt={title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           placeholder="blur"
@@ -28,10 +35,9 @@ export function ImageCard({ entry }: { entry: PromptEntry }) {
           {entry.categoryLabel} · {entry.id}
         </div>
         <div className="font-mono text-[12px] text-fg line-clamp-2 leading-[1.5]">
-          {entry.prompt}
+          {entry.title ?? entry.prompt}
         </div>
       </div>
-      {/* 상단 우측: 도메인 뱃지 */}
       {entry.domains && entry.domains.length > 0 && (
         <div className="absolute top-2 right-2 flex flex-wrap gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
           {entry.domains.slice(0, 2).map((d) => (
