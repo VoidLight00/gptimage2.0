@@ -27,7 +27,7 @@ export default function GateForm({
       <input type="hidden" name="next" value={next} />
       <label className="block">
         <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-fg-50 block mb-3">
-          ▸ CMD
+          ▸ PASSWORD
         </span>
         <div
           className={`flex items-center border ${
@@ -40,12 +40,13 @@ export default function GateForm({
             name="cmd"
             type="password"
             autoFocus
-            autoComplete="off"
+            autoComplete="current-password"
             autoCapitalize="off"
             autoCorrect="off"
             spellCheck={false}
             inputMode="text"
-            placeholder="enter passphrase"
+            placeholder="enter password"
+            aria-label="Password"
             className="flex-1 bg-transparent py-3.5 pr-4 font-mono text-[15px] md:text-[16px] text-fg placeholder:text-fg-30 focus:outline-none min-h-[48px] tracking-wider"
           />
         </div>
@@ -53,7 +54,7 @@ export default function GateForm({
 
       {err && (
         <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg">
-          × access denied — invalid cmd
+          × access denied — invalid password
         </div>
       )}
 

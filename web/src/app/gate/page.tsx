@@ -46,14 +46,14 @@ export default async function GatePage(props: {
         >
           ENTER
           <br />
-          <span className="text-fg-50">CMD</span>
+          <span className="text-fg-50">PASSWORD</span>
         </h1>
 
         <GateForm action={attempt} next={next} err={err} />
 
         <div className="mt-10 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-fg-50 space-y-2">
           <div>// private archive by VOIDLIGHT</div>
-          <div>// cmd is granted to authorized users</div>
+          <div>// password is granted to authorized users</div>
         </div>
       </div>
     </div>
