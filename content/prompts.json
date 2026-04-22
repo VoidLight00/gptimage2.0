@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-22T03:54:55.437Z",
+  "generatedAt": "2026-04-22T03:58:21.140Z",
   "totalEntries": 3,
-  "skippedCount": 34,
+  "skippedCount": 40,
   "categories": [
     {
       "slug": "portrait",
@@ -10,8 +10,8 @@
       "cover": "/images/thumb/C-001.webp"
     },
     {
-      "slug": "cyberpunk",
-      "label": "Cyberpunk",
+      "slug": "etc",
+      "label": "Etc",
       "count": 1,
       "cover": "/images/thumb/C-002.webp"
     },
@@ -32,8 +32,7 @@
         "cinematic",
         "portrait",
         "young",
-        "korean",
-        "woman"
+        "korean"
       ],
       "sourceFolder": "덕테이프 이미지 생성 및 시트/CODEX제작",
       "images": {
@@ -45,19 +44,18 @@
         "width": 1024,
         "height": 1536
       },
-      "createdAt": "2026-04-22T03:54:54.878Z"
+      "createdAt": "2026-04-22T03:58:20.556Z"
     },
     {
       "id": "C-002",
       "prompt": "Neon-drenched cyberpunk alley in Seoul Hongdae, rain-soaked pavement reflecting holographic signs, a lone figure in a translucent raincoat walking away, 3am atmosphere, blade runner aesthetic.",
-      "category": "cyberpunk",
-      "categoryLabel": "Cyberpunk",
+      "category": "etc",
+      "categoryLabel": "Etc",
       "tags": [
         "neon-drenched",
         "cyberpunk",
         "alley",
-        "seoul",
-        "hongdae"
+        "seoul"
       ],
       "sourceFolder": "덕테이프 이미지 생성 및 시트/CODEX제작",
       "images": {
@@ -69,7 +67,7 @@
         "width": 1024,
         "height": 1536
       },
-      "createdAt": "2026-04-22T03:54:55.179Z"
+      "createdAt": "2026-04-22T03:58:20.867Z"
     },
     {
       "id": "C-003",
@@ -79,7 +77,6 @@
       "tags": [
         "minimalist",
         "product",
-        "shot",
         "skincare",
         "serum"
       ],
@@ -93,7 +90,7 @@
         "width": 1536,
         "height": 1024
       },
-      "createdAt": "2026-04-22T03:54:55.437Z"
+      "createdAt": "2026-04-22T03:58:21.140Z"
     }
   ]
 }
