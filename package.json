@@ -1,0 +1,11 @@
+{
+  "name": "gptimage2.0-batch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "batch": "bun run batch/runner.ts"
+  },
+  "dependencies": {
+    "yaml": "^2.5.0"
+  }
+}

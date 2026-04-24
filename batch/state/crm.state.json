@@ -1,0 +1,153 @@
+{
+  "plan": "crm",
+  "started_at": "2026-04-24T09:27:46.061Z",
+  "completed": {
+    "B-CRM-0001": {
+      "path": "raw/batch/crm/B-CRM-0001.png",
+      "bytes": 1041915,
+      "revised": "2:1 aspect ratio CRM email/push header image for an F&B delivery app, designed at 1600x800. Photorealistic, high-end lifestyle look. Scene: warm-lit hotel room corner at blue hour (cool, calm ambient tones outside window, with warm lamp glow inside). Core objects: a welcome tea set (steaming cup, teapot, saucer) and elegant chocolates on a small tray, placed on a bedside table or small round table. Composition: keep the top 1/3 of the image empty/clean for text overlay (minimal detail, soft gradient, negative space). Place main subjects in lower third or along left/right side, leaving a large open area. Subtle, sophisticated color grading, muted and refined; no brand logos, no text. Shallow depth of field, soft bokeh, cinematic lighting, premium hospitality vibe. Clean background, uncluttered, consistent with modern hotel interior (linen, wood, soft fabrics)."
+    },
+    "B-CRM-0002": {
+      "path": "raw/batch/crm/B-CRM-0002.png",
+      "bytes": 1301636,
+      "revised": "1:1 정사각형 인앱 모달/CRM 헤더용 F&B 배달 앱 비주얼. 창밖으로 비가 내리는 장면이 보이는 카페 실내, 창가 자연광 역광(soft backlight), 은은한 하이라이트와 부드러운 그림자. 톤&무드: 미니멀하고 세련된, 따뜻한 베이지/크림 + 차분한 그레이, 과하지 않은 고급스러움. 핵심 오브제: 리넨 소재 패키징(리넨 파우치/포장지)과 웰컴 카드(생일 축하 느낌의 카드, 텍스트는 비워둠/무문자). 구도: 화면 좌측 2/3에 카페 테이블과 오브제 배치, 오브제는 화면 하단 또는 좌측/우측 측면에 놓고, 상단 1/3은 텍스트를 위한 여백으로 깨끗하게 비워둠. 우측은 넉넉한 네거티브 스페이스. 얕은 심도, 살짝 보케로 빗방울과 도시/가로등 흐림. 고해상도, 포토리얼, 노이즈 적게, 로고/문자/워터마크 없음."
+    },
+    "B-CRM-0003": {
+      "path": "raw/batch/crm/B-CRM-0003.png",
+      "bytes": 1039010,
+      "revised": "4:5 세로형 패션 이커머스 CRM 헤더/카드뉴스용 이미지. VIP 전용 프리세일 분위기. 깨끗한 미니멀 책상 위, 아침 햇살이 창으로 들어와 부드럽게 퍼지는 장면. 소프트박스 같은 균일한 확산광, 하이키이지만 과하지 않게. 핵심 오브제: 반짝이는 메탈릭(실버/펄) 회원 카드 1장과 그 카드를 살짝 집는 손가락 끝(손은 프레임 하단에서 올라오며 손가락 끝만 보이게, 피부톤 자연스러운 라이트 베이지). 카드에는 읽을 수 있는 문구 없이 추상적 홀로그램 패턴과 미세한 반짝임만. 구도: 화면 좌측 2/3에 책상, 카드와 손가락을 화면 하단 또는 좌측 하단에 배치. 우측 1/3은 깔끔한 여백(텍스트용). 상단 1/3은 완전히 비워둔 네거티브 스페이스. 배경 소품은 최소: 흐릿한 커피잔 실루엣이나 얇은 잡지 모서리 정도를 아주 은은하게(주의 분산 금지). 컬러 톤은 은은하고 세련된 뉴트럴(오프화이트, 웜그레이, 라이트 베이지), 브랜드 감성 해치지 않게. 사진처럼 리얼한 스타일, 고급 패션 이커머스 느낌, 선명한 디테일, 얕은 심도, 노이즈 없음."
+    },
+    "B-CRM-0004": {
+      "path": "raw/batch/crm/B-CRM-0004.png",
+      "bytes": 1182791,
+      "revised": "4:5 세로형 멤버십 카드뉴스 포맷의 호텔 멤버십 CRM 이메일/푸시 헤더 이미지. 캠페인 목적: 구독 갱신 유도. 핵심 오브제: 고급스러운 웰컴 카드(무지 또는 미니멀한 로고 느낌, 텍스트 없음)와 리넨 패키징(리넨 파우치/포장, 끈 또는 리본). 배경/분위기: 아침 햇살이 들어오는 깔끔한 책상(밝은 우드 또는 아이보리 톤). 라이팅: 창가 자연광 역광, 은은한 렌즈 플레어/글로우, 부드러운 그림자. 구도: 상단 1/3은 완전히 비워 텍스트 오버레이 가능, 주요 오브제는 화면 하단 또는 좌/우 측면에 배치, 아래 큰 여백, 미니멀한 네거티브 스페이스. 브랜드 감성을 해치지 않는 은은하고 세련된 톤(뉴트럴 베이지/오프화이트/웜 그레이), 깨끗한 하이엔드 호텔 감성. 사진처럼 사실적인 스타일, 고해상도, 노이즈 최소화, 인물/손 없음, 문구/워터마크 없음."
+    },
+    "B-CRM-0005": {
+      "path": "raw/batch/crm/B-CRM-0005.png",
+      "bytes": 1310786,
+      "revised": "16:9 wide header image for fashion ecommerce CRM email/push display banner. Minimal ivory background flat lay on smooth matte surface, softbox even lighting, subtle shadows. Key objects: stylish ceramic cafe cup (latte) and a small loyalty stamp card with several reward stamps visible (ink stamp marks), placed in the lower center area slightly toward bottom with elegant spacing; optionally a few minimal fashion-related accents (neutral-toned fabric swatch or thin gold paperclip) kept very subtle. Composition leaves the top 1/3 empty as clean negative space for overlay text; keep main subjects in lower third and slightly to left/right to avoid center text overlap. Refined, modern, understated tone, premium brand feel, warm neutral color grading, high resolution, photorealistic."
+    },
+    "B-CRM-0006": {
+      "path": "raw/batch/crm/B-CRM-0006.png",
+      "bytes": 1331111,
+      "revised": "1:1 정사각 인앱 모달/CRM 푸시 헤더용 비주얼. 배경: 창밖에 비가 내리는 카페 내부, 창문에 빗방울과 흐린 도시 불빛 보케. 라이팅: 블루 아워의 차분한 청록/블루 톤, 은은하고 세련된 고급스러운 무드, 소프트 디퓨즈드 라이트. 핵심 오브제: 테이블 위 카페 테이크아웃 컵 1개(심플한 무지 컵, 로고 없음)와 적립 도장이 여러 개 찍힌 적립 카드(스탬프가 선명하지만 과장되지 않게), 카드 옆에 작은 스탬프 도장(옵션). 구도: 화면 좌측 2/3에 컵과 카드가 자연스럽게 놓여 있고, 우측 1/3은 여백(블러 처리된 배경)으로 남겨 텍스트 배치 가능. 상단 1/3은 깨끗하게 비워 두기(주요 피사체는 하단 또는 좌/우 측면 배치). 얕은 심도, 제품광고 스타일, 노이즈 적고 깔끔한 디테일. 컬러 팔레트: 딥 네이비, 스틸 블루, 웜 베이지 하이라이트. 사람/손/얼굴 없음. 텍스트/로고/워터마크 없음. 고해상도."
+    },
+    "B-CRM-0007": {
+      "path": "raw/batch/crm/B-CRM-0007.png",
+      "bytes": 1184542,
+      "revised": "4:5 vertical membership-card-news style header image for a beauty brand CRM email/push. Purpose: repurchase reminder. Scene: warm-lit hotel room corner (nightstand, soft curtains, subtle decor), but overall blue-hour calm tone; sophisticated, minimal, premium. Main objects: a sparkling membership card held delicately by fingertips (only finger tips visible, elegant manicure), subtle glints on the card edges/foil. Composition: subject placed bottom-center slightly toward lower third, leaving top 1/3 empty clean negative space for text; also keep ample breathing room. Lighting: soft warm practical lamp + cool ambient blue-hour fill, cinematic, gentle shadows. Color palette: muted beige/cream, warm gold accents, cool blue-gray. Style: photorealistic, high-end beauty advertising, no text, no logos, no watermarks, shallow depth of field, bokeh highlights."
+    },
+    "B-CRM-0008": {
+      "path": "raw/batch/crm/B-CRM-0008.png",
+      "bytes": 1259091,
+      "revised": "2:1 ratio (1600x800) email header image for a beauty brand CRM welcome series. Minimal ivory background flat lay. Key objects: an elegant welcome card and linen packaging (linen pouch/box with subtle texture), premium unbranded, no logos, no readable text on card (blank or abstract). Lighting: soft natural window light with gentle backlight, delicate shadows. Composition: main scene occupies left two-thirds; right side has clean negative space for copy. Keep top one-third mostly empty for text overlay. Place key subjects along the lower area and/or left edge, leaving upper area uncluttered. Tone: muted, refined, warm-neutral, sophisticated, subtle highlights, clean styling. High-end product photography look, shallow depth of field but mostly crisp flatlay, no people, no clutter."
+    },
+    "B-CRM-0009": {
+      "path": "raw/batch/crm/B-CRM-0009.png",
+      "bytes": 1256242,
+      "revised": "2:1 email header image (1600x800). Travel OTA CRM campaign header for subscription renewal. Scene: clean minimalist desk with morning sunlight, but warm tungsten sunset-like tone lighting. Key objects: a stylish cafe cup (ceramic) with subtle steam and a loyalty stamp card with visible stamped marks (travel-themed stamp icons), placed in the center-bottom area slightly offset, with a pen and passport-like corner subtly in frame but not dominant. Composition: keep top 1/3 empty negative space for text overlay; main subjects in lower third and slightly to left/right sides; shallow depth of field, premium modern aesthetic, muted elegant colors (warm beige, soft gray, light wood). No text, no logos, no watermarks. Photorealistic, high-end editorial style."
+    },
+    "B-CRM-0010": {
+      "path": "raw/batch/crm/B-CRM-0010.png",
+      "bytes": 1453968,
+      "revised": "1:1 정사각형 인앱 모달/CRM 푸시 헤더용 이미지. 미니멀한 아이보리 배경의 탑뷰 플랫레이. 호텔 객실의 웰컴티 세트와 초콜릿을 핵심 오브제로: 하단 또는 좌/우 측면에 배치된 도자기 티컵(연한 크림/오프화이트), 작은 티포트 또는 티백, 접시에 올린 초콜릿 2~3개(다크 브라운), 작은 웰컴 카드(무지, 텍스트 없음), 린넨 냅킨. 상단 1/3은 완전히 비워두고 가운데도 텍스트 얹기 위해 넓게 비움(네거티브 스페이스). 소프트박스 균일광, 부드러운 그림자, 고급스럽고 은은한 톤, 브랜드 감성을 해치지 않는 세련된 무드. 사진처럼 리얼한 제품 촬영 스타일, 과한 소품/패턴/로고 없음, 글자/워터마크 없음."
+    },
+    "B-CRM-0011": {
+      "path": "raw/batch/crm/B-CRM-0011.png",
+      "bytes": 1261004,
+      "revised": "16:9 앱 푸시/디스플레이 배너용 뷰티 브랜드 CRM 헤더 이미지, 고급스럽고 은은한 톤. 따뜻한 조명의 호텔 객실 코너 배경(노을빛 텅스텐 웜 톤), 탑뷰 플랫레이 구도. 핵심 오브제: 비행기 창 밖의 부드러운 구름이 보이는 장면(창문 프레임 일부만 보이게, 현실적인 사진 스타일) + 세련된 탑승권(미니멀 타이포, 브랜드/개인정보는 가상의 텍스트, 금박 느낌 디테일). 텍스트 오버레이를 고려해 상단 1/3은 깨끗하게 비워두고(단색에 가까운 따뜻한 그라데이션 여백), 주요 피사체는 화면 하단과 좌우 측면에 배치. 가운데는 비워둔 네거티브 스페이스. 호텔 침구의 질감, 가죽 트레이, 은은한 메탈 소품 등으로 럭셔리한 분위기. 과하지 않은 색감, 부드러운 그림자, 하이엔드 라이프스타일 광고 사진 느낌, 초고해상도."
+    },
+    "B-CRM-0012": {
+      "path": "raw/batch/crm/B-CRM-0012.png",
+      "bytes": 1038990,
+      "revised": "1:1 인앱 모달 비주얼 포맷의 패션 이커머스 CRM 웰컴 시리즈용 헤더 이미지. 아침 햇살이 들어오는 깔끔한 책상 배경, 전체 톤은 블루 아워의 차분한 쿨톤 + 은은한 따뜻한 햇살 하이라이트. 핵심 오브제: 세련된 카페 테이크아웃 컵(무지, 로고 없음)과 적립 도장이 찍힌 멤버십 카드(심플한 그래픽, 텍스트 없음). 구도: 좌측 2/3에 장면 구성, 우측 1/3은 여백(부드러운 그라데이션)으로 텍스트 공간 확보. 주요 피사체는 화면 하단과 좌측에 배치, 상단 1/3은 비워두기(깨끗한 네거티브 스페이스). 미니멀, 고급, 브랜드 감성을 해치지 않는 은은하고 세련된 톤. 얕은 심도, 자연스러운 소프트 섀도, 하이엔드 제품 사진 느낌, 노이즈 최소화. 1:1, 고해상도."
+    },
+    "B-CRM-0013": {
+      "path": "raw/batch/crm/B-CRM-0013.png",
+      "bytes": 1477652,
+      "revised": "4:5 vertical membership card-news style header image for a luxury hotel membership CRM email/push welcome series. Scene: inside a cozy cafe, window in background with raindrops and rainy city blur outside. Blue hour calm lighting, cool desaturated tones with subtle warm accents. Top-view flat lay composition on a wooden cafe table; include a neatly wrapped gift box with elegant ribbon as key object. Leave center empty (negative space) and keep the top 1/3 of the frame clean for text overlay. Place main subjects in lower area and/or left/right sides (e.g., gift box bottom-right, coffee cup bottom-left, small notebook, membership card mockup partially visible). Refined, minimal, premium, modern aesthetic; soft shadows, gentle reflections, no visible logos or text. High-resolution, photorealistic, clean styling."
+    },
+    "B-CRM-0014": {
+      "path": "raw/batch/crm/B-CRM-0014.png",
+      "bytes": 1453842,
+      "revised": "16:9 wide banner header image for a beauty brand CRM email/push. Top-view flat lay composition with negative space: keep the top one-third clean and empty for text. Scene: cozy hotel room corner with warm ambient lamp light, but overall blue-hour calm tone (cool shadows, soft warm highlights). Key objects: a ceramic cafe cup with latte/coffee, and a loyalty stamp card with several stamped marks; include a small stamp or ink pad subtly. Place main subjects along the bottom area and slightly to left/right edges, leaving the center mostly empty. Elegant, subtle, refined, premium beauty brand aesthetic; muted colors (cream, taupe, dusty rose, soft navy). Soft depth and gentle shadows, high-end editorial photography style, no people, no readable text/logos, no clutter."
+    },
+    "B-CRM-0015": {
+      "path": "raw/batch/crm/B-CRM-0015.png",
+      "bytes": 1128638,
+      "revised": "2:1 이메일 헤더(1600x800)용 여행 OTA CRM 캠페인 이미지. 목적: 생일 축하 리워드. 사진처럼 사실적이면서도 은은하고 세련된 톤. 장면: 아침 햇살이 들어오는 깔끔한 책상 위, 소프트박스 균일광 느낌의 부드러운 라이팅. 핵심 오브제: (1) 비행기 창문 프레임과 창밖의 부드러운 구름(하늘의 연한 블루 그라데이션) (2) 책상 위에 놓인 탑승권(깔끔한 디자인, 텍스트는 읽히지 않게 추상화/더미). 구도: 화면 좌측 2/3에 책상과 오브제 배치, 우측 1/3은 넓은 여백(텍스트 공간). 또한 상단 1/3은 비워두어 헤드라인을 얹을 수 있게 하늘/밝은 여백 중심으로 구성. 주요 피사체는 화면 하단과 좌측/우측 가장자리 쪽에 배치하여 중앙 상단은 비움. 컬러: 아이보리/라이트 베이지 책상, 라이트 블루 하늘, 따뜻한 아침 햇살 하이라이트. 미니멀, 고급스러운 브랜드 감성. 고해상도, 노이즈 적고 깨끗한 마감, 얕은 심도, 자연스러운 그림자."
+    },
+    "B-CRM-0016": {
+      "path": "raw/batch/crm/B-CRM-0016.png",
+      "bytes": 1186732,
+      "revised": "2:1 ratio CRM email/push header image for a beauty brand, designed at 1600x800. Minimal ivory background flat lay. Key objects: an elegant welcome card (cream cardstock, subtle emboss, no readable brand text) and linen packaging (beige linen pouch/box wrap with natural ribbon). Composition: main subjects placed in the lower center with slight spread to left/right, leaving the top one-third clean empty negative space for text overlay. Blue hour calm lighting with soft cool shadows, refined muted tones, sophisticated and understated. High-end editorial product photography, clean, modern, no people, no clutter, no visible logos, no readable text. Crisp details, gentle vignette, premium aesthetic."
+    },
+    "B-CRM-0017": {
+      "path": "raw/batch/crm/B-CRM-0017.png",
+      "bytes": 1323764,
+      "revised": "16:9 호텔 멤버십 CRM 앱 푸시/디스플레이 배너 헤더 이미지, 고급스럽고 은은한 톤. 아침 햇살이 들어오는 깔끔한 책상 위 탑뷰 플랫레이 구성, 소프트박스 균일광, 부드러운 그림자. 중앙은 비워두고 상단 1/3은 넓게 네거티브 스페이스(텍스트 영역)로 깔끔한 배경만 보이게. 화면 하단 또는 좌/우 측면에 주요 오브제 배치: 반짝이는 프리미엄 멤버십 카드(메탈릭 실버/샴페인 골드 포인트, 미세한 홀로그램/글리터 하이라이트, 로고는 비식별 추상 심볼), 손가락 끝이 카드를 살짝 잡거나 터치하는 순간(자연스러운 피부톤, 젠틀한 포즈). 주변 소품 최소화: 얇은 노트, 심플한 펜 정도를 흐릿하게. 전체는 모던, 미니멀, 세련된 호텔 브랜드 감성. 초고해상도, 사진 현실감, 텍스트/워터마크 없음."
+    },
+    "B-CRM-0018": {
+      "path": "raw/batch/crm/B-CRM-0018.png",
+      "bytes": 1084686,
+      "revised": "4:5 vertical membership card-news header image for an F&B delivery app CRM email/push, welcome series. Scene: cozy hotel room corner with warm ambient lamp light, near a window with soft natural backlight (rim light), modern upscale interior, subtle textures (linen, wood, muted decor). Key object: wrapped gift box with elegant ribbon (premium, minimal), placed in lower portion and slightly to left or right side, not centered; keep top 1/3 empty for text. Composition: left 2/3 contains the scene and subject; right side has clean negative space gradient for copy. Tone: refined, understated, sophisticated, brand-safe; muted warm neutrals, soft shadows, gentle highlights. No text, no logos, no people, no clutter. High-resolution, photorealistic, shallow depth of field, cinematic yet minimal."
+    },
+    "B-CRM-0019": {
+      "path": "raw/batch/crm/B-CRM-0019.png",
+      "bytes": 1240350,
+      "revised": "1:1 square in-app modal header image for a fashion ecommerce CRM (email/push). Scene: warm, sophisticated hotel room corner under sunset tungsten lighting. Key objects: a small welcome tea set and chocolates on a tray. Composition: left 2/3 contains the scene with the tray placed low in the frame near the bottom-left/side; right side has clean negative space; top 1/3 left mostly empty for overlay text. Background: subtle hotel textures (bed edge, nightstand, curtain hint) softly blurred, premium and minimalist. Color grading: warm golden amber, soft shadows, refined and understated, no harsh contrast. No text, no logos, no people. Photorealistic, high-end editorial product shot, gentle bokeh, clean modern aesthetic."
+    },
+    "B-CRM-0020": {
+      "path": "raw/batch/crm/B-CRM-0020.png",
+      "bytes": 1644221,
+      "revised": "1:1 square in-app modal header image for a cafe app reward CRM (email/push). Top-view flat lay on a cafe table near a window with raindrops visible outside; interior cozy but modern. Blue-hour calm lighting, cool desaturated tones with subtle warm accents. Main object: a neatly wrapped gift box with an elegant ribbon (premium paper, minimal pattern). Composition: center negative space intentionally left empty for overlay text; keep upper third clear/empty; place the gift box and small cafe elements (coffee cup saucer, receipt, loyalty card, subtle pastry plate) along the bottom edge and/or left/right sides, avoiding clutter. Reflections and soft shadows, high-end understated aesthetic, no readable text, no logos, no people. Photorealistic, crisp, editorial styling, clean background, brand-safe."
+    },
+    "B-CRM-0021": {
+      "path": "raw/batch/crm/B-CRM-0021.png",
+      "bytes": 1246546,
+      "revised": "16:9 여행 OTA CRM 이메일/앱 푸시 헤더 배너 이미지, 포토리얼 고급 플랫레이 탑뷰. 배경: 따뜻한 조명의 호텔 객실 코너(우드 톤 테이블/침대 가장자리 일부, 은은한 램프 빛), 전체 분위기: 블루 아워의 차분한 쿨톤과 따뜻한 조명 대비. 핵심 오브제: 비행기 창문 프레임(좌측 하단 또는 하단 중앙에 부분적으로 보이게) 밖으로 부드러운 구름층과 푸른 하늘, 옆에 탑승권 1장(미니멀 디자인, 개인 정보 없는 더미 텍스트). 구도: 중앙은 비워 둔 네거티브 스페이스, 상단 1/3 완전히 비움(텍스트 오버레이 영역), 주요 피사체는 하단과 좌/우 측면으로 배치. 세련되고 은은한 브랜드 무드, 과장된 채도 없이 소프트 섀도우, 깨끗한 질감, 고급 라이프스타일 사진 스타일. 추가 요소는 최소화(여권/소품 과다 금지). 4K 수준 디테일, 노이즈 적고 선명, 광고 배너용."
+    },
+    "B-CRM-0022": {
+      "path": "raw/batch/crm/B-CRM-0022.png",
+      "bytes": 1313721,
+      "revised": "2:1 aspect ratio email header image (1600x800). F&B delivery app CRM email/push header for reactivating dormant customers. Scene: a warm-lit hotel room corner (tasteful modern interior), softbox even lighting, cozy but premium. Key objects: a stylish cafe cup (paper or ceramic with sleeve) and a loyalty stamp card with several stamped marks and one fresh stamp impression; maybe a subtle stamp tool nearby. Composition: main subjects placed in the lower center area and slightly to one side, leaving the top one-third clean empty negative space for text overlay. Background softly blurred with warm ambient light, elegant neutral color palette (beige, warm gray, soft wood), refined minimal props. Avoid any readable text/logos. High-end, subtle, sophisticated tone. Photorealistic, shallow depth of field, clean layout, no people."
+    },
+    "B-CRM-0023": {
+      "path": "raw/batch/crm/B-CRM-0023.png",
+      "bytes": 1153985,
+      "revised": "2:1 ratio email header image for fashion ecommerce CRM/push (1600x800). Scene: warm-lit hotel room corner with refined, subtle, sophisticated tone; softbox even lighting. Core objects: a sparkling premium membership card held delicately at the tip of a finger (only fingertip visible), with gentle glitter highlights on the card edges. Composition: main subject placed in the lower center area, slightly toward bottom, leaving the top 1/3 clean empty negative space for headline text; also keep background uncluttered. Shallow depth of field, luxe neutral palette (warm beige, cream, soft brown), minimal modern decor hints (bedside table edge, curtain, lamp glow bokeh). No text, no logos, no watermarks. High-end product photography style, crisp, elegant, brand-safe."
+    },
+    "B-CRM-0024": {
+      "path": "raw/batch/crm/B-CRM-0024.png",
+      "bytes": 1075437,
+      "revised": "1:1 인앱 모달/CRM 헤더용 이미지. 여행 OTA 웰컴 시리즈 비주얼. 아침 햇살이 들어오는 깔끔한 미니멀 책상 위, 블루 아워의 차분한 톤과 은은한 고급스러운 컬러 그레이딩. 화면 하단 중앙에 탑승권(브랜드/개인정보 없는 중립 디자인, 흰색 바탕에 연한 회색 텍스트, QR/바코드는 단순화)과 그 옆에 비행기 창문 프레임이 놓여 있고 창 밖으로 부드러운 구름이 보이는 오브제(사진처럼 리얼하지만 과도한 디테일 없음). 상단 1/3은 텍스트를 위한 넓은 네거티브 스페이스로 비워두기(깨끗한 그라데이션 배경, 하늘빛). 주요 피사체는 하단에 배치, 좌우 균형. 깨끗한 데스크 소품(연한 베이지 노트, 펜) 은은하게 흐림 처리, 브랜드 감성을 해치지 않는 세련된 미니멀 스타일. 고해상도, 자연광, 소프트 섀도우, 노이즈 최소화, 텍스트/로고 없음."
+    },
+    "B-CRM-0025": {
+      "path": "raw/batch/crm/B-CRM-0025.png",
+      "bytes": 1118526,
+      "revised": "16:9 wide header image for fashion ecommerce CRM email/push banner. Scene: inside a cozy modern cafe on a rainy day, raindrops and blurred city lights visible through a window in the background. Softbox-like even diffused lighting, elegant muted tones (warm beige, soft gray, subtle taupe) with a premium minimalist fashion brand feel. Composition: leave the top 1/3 empty as clean negative space for overlay text; main subjects placed in the lower center area with slight offset to create balance. Key objects: a stylish ceramic cafe cup with latte, light steam, and next to it a small loyalty stamp card showing several stamped marks (ink stamps), tasteful design. On the table: subtle fashion-related elements (neutral fabric swatch or minimal accessory) but keep focus on cup and stamp card. Shallow depth of field, crisp subjects, blurred background, no readable text, no logos, no people. High-resolution, clean, modern, sophisticated, suitable for app push/display banner header."
+    }
+  },
+  "failed": {
+    "B-CRM-0026": {
+      "tries": 1,
+      "last_error": "HTTP 429: {\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"plus\",\"resets_at\":1777028349,\"eligible_promo\":null,\"resets_in_seconds\":3419}}"
+    },
+    "B-CRM-0027": {
+      "tries": 1,
+      "last_error": "HTTP 429: {\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"plus\",\"resets_at\":1777028349,\"eligible_promo\":null,\"resets_in_seconds\":3418}}"
+    },
+    "B-CRM-0028": {
+      "tries": 1,
+      "last_error": "HTTP 429: {\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"plus\",\"resets_at\":1777028349,\"eligible_promo\":null,\"resets_in_seconds\":3417}}"
+    },
+    "B-CRM-0029": {
+      "tries": 1,
+      "last_error": "HTTP 429: {\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"plus\",\"resets_at\":1777028349,\"eligible_promo\":null,\"resets_in_seconds\":3416}}"
+    },
+    "B-CRM-0030": {
+      "tries": 1,
+      "last_error": "HTTP 429: {\"error\":{\"type\":\"usage_limit_reached\",\"message\":\"The usage limit has been reached\",\"plan_type\":\"plus\",\"resets_at\":1777028349,\"eligible_promo\":null,\"resets_in_seconds\":3415}}"
+    }
+  }
+}

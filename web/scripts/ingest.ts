@@ -24,6 +24,7 @@ const RAW_DIR = path.join(ROOT, "raw");
 const CONTENT_DIR = path.join(WEB_ROOT, "content");
 const PUBLIC_IMAGES = path.join(WEB_ROOT, "public", "images");
 const OVERRIDES_PATH = path.join(CONTENT_DIR, "overrides.json");
+const BATCH_MANIFEST = path.join(ROOT, "batch", "manifest.jsonl");
 
 type OverrideMap = Record<string, { category?: string; prompt?: string; tags?: string[] }>;
 
@@ -39,6 +40,8 @@ type ExtractedRow = {
   model?: string;
   negativePrompt?: string;
   source: { file: string; sheet?: string; row?: number };
+  /** batch manifest 에서 강제 지정된 카테고리 (존재 시 classify 우회) */
+  forcedCategory?: { slug: string; label: string };
 };
 
 function ensureDir(p: string) {
@@ -290,6 +293,39 @@ async function main() {
     rows.push(...parseWorkbook(ss));
   }
 
+  // batch manifest (JSONL) — runner.ts 가 생성한 프롬프트·카테고리 소스
+  if (fs.existsSync(BATCH_MANIFEST)) {
+    log(`▸ Reading batch manifest: ${path.relative(ROOT, BATCH_MANIFEST)}`);
+    const lines = fs
+      .readFileSync(BATCH_MANIFEST, "utf8")
+      .split("\n")
+      .filter((l) => l.trim().length > 0);
+    const seen = new Set<string>();
+    let added = 0;
+    for (const line of lines) {
+      try {
+        const rec = JSON.parse(line);
+        const id = String(rec.id || "").trim();
+        const prompt = String(rec.prompt || "").trim();
+        if (!id || !prompt || seen.has(id)) continue;
+        seen.add(id);
+        rows.push({
+          id,
+          prompt,
+          source: { file: "batch/manifest.jsonl" },
+          forcedCategory:
+            rec.category && rec.categoryLabel
+              ? { slug: String(rec.category), label: String(rec.categoryLabel) }
+              : undefined,
+        });
+        added++;
+      } catch {
+        // skip malformed line
+      }
+    }
+    log(`  ✓ batch manifest: ${added}행`);
+  }
+
   // 사이드카 .txt / .md
   log("▸ Scanning sidecar text files");
   const textFiles = walkXlsx.call(null as never, RAW_DIR) as string[]; // noop — just for typing
@@ -378,7 +414,9 @@ async function main() {
         const classified = classify(prompt);
         const cat = override?.category
           ? { slug: override.category, label: override.category }
-          : classified.category;
+          : e.forcedCategory
+            ? e.forcedCategory
+            : classified.category;
 
         outEntries.push({
           id: safeId,

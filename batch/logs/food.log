@@ -1,0 +1,37 @@
+[2m[18시 30분 34초][0m [1mplan[0m food / F&B·외식 / count=30 / prefix=B-FOOD
+[2m[18시 30분 34초][0m   변수 6개 × 값 [4,8,4,4,4,4] = 총 조합 8192개
+[2m[18시 30분 34초][0m   대상 30개 / 전체 30개
+[2m[18시 30분 34초][0m   resume: 완료 1 / 실패 0
+[2m[18시 32분 3초][0m   [32m✓[0m B-FOOD-0002 (1477KB) — 2/30 · 0.01/s · ETA 2473s
+[2m[18시 33분 24초][0m   [32m✓[0m B-FOOD-0003 (1553KB) — 3/30 · 0.01/s · ETA 2287s
+[2m[18시 34분 12초][0m   [32m✓[0m B-FOOD-0004 (1383KB) — 4/30 · 0.01/s · ETA 1889s
+[2m[18시 35분 27초][0m   [32m✓[0m B-FOOD-0005 (1568KB) — 5/30 · 0.01/s · ETA 1829s
+[2m[18시 36분 42초][0m   [32m✓[0m B-FOOD-0006 (1231KB) — 6/30 · 0.01/s · ETA 1766s
+[2m[18시 37분 59초][0m   [32m✓[0m B-FOOD-0007 (1302KB) — 7/30 · 0.01/s · ETA 1703s
+[2m[18시 38분 30초][0m   [32m✓[0m B-FOOD-0008 (1692KB) — 8/30 · 0.01/s · ETA 1493s
+[2m[18시 39분 37초][0m   [32m✓[0m B-FOOD-0009 (1247KB) — 9/30 · 0.01/s · ETA 1424s
+[2m[18시 40분 57초][0m   [32m✓[0m B-FOOD-0010 (1534KB) — 10/30 · 0.01/s · ETA 1383s
+[2m[18시 42분 10초][0m   [32m✓[0m B-FOOD-0011 (1378KB) — 11/30 · 0.01/s · ETA 1321s
+[2m[18시 43분 26초][0m   [32m✓[0m B-FOOD-0012 (1518KB) — 12/30 · 0.01/s · ETA 1263s
+[2m[18시 44분 33초][0m   [32m✓[0m B-FOOD-0013 (2131KB) — 13/30 · 0.01/s · ETA 1187s
+[2m[18시 46분 2초][0m   [32m✓[0m B-FOOD-0014 (1428KB) — 14/30 · 0.01/s · ETA 1141s
+[2m[18시 47분 9초][0m   [32m✓[0m B-FOOD-0015 (1227KB) — 15/30 · 0.01/s · ETA 1066s
+[2m[18시 48분 11초][0m   [32m✓[0m B-FOOD-0016 (1362KB) — 16/30 · 0.01/s · ETA 986s
+[2m[18시 49분 25초][0m   [32m✓[0m B-FOOD-0017 (1238KB) — 17/30 · 0.01/s · ETA 918s
+[2m[18시 50분 49초][0m   [32m✓[0m B-FOOD-0018 (1354KB) — 18/30 · 0.01/s · ETA 857s
+[2m[18시 52분 8초][0m   [32m✓[0m B-FOOD-0019 (1379KB) — 19/30 · 0.01/s · ETA 790s
+[2m[18시 53분 3초][0m   [32m✓[0m B-FOOD-0020 (1605KB) — 20/30 · 0.01/s · ETA 710s
+[2m[18시 54분 22초][0m   [32m✓[0m B-FOOD-0021 (1203KB) — 21/30 · 0.01/s · ETA 642s
+[2m[18시 55분 27초][0m   [32m✓[0m B-FOOD-0022 (1523KB) — 22/30 · 0.01/s · ETA 569s
+[2m[18시 56분 25초][0m   [32m✓[0m B-FOOD-0023 (1380KB) — 23/30 · 0.01/s · ETA 493s
+[2m[18시 57분 36초][0m   [32m✓[0m B-FOOD-0024 (2033KB) — 24/30 · 0.01/s · ETA 423s
+[2m[18시 58분 53초][0m   [32m✓[0m B-FOOD-0025 (1399KB) — 25/30 · 0.01/s · ETA 354s
+[2m[19시 0분 12초][0m   [32m✓[0m B-FOOD-0026 (1420KB) — 26/30 · 0.01/s · ETA 284s
+[2m[19시 1분 27초][0m   [32m✓[0m B-FOOD-0027 (1376KB) — 27/30 · 0.01/s · ETA 214s
+[2m[19시 1분 28초][0m   [31m✗[0m B-FOOD-0028 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 29초][0m   [31m✗[0m B-FOOD-0029 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 31초][0m   [31m✗[0m B-FOOD-0030 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 31초][0m [1mdone[0m food: 신규 26 · 누적 27/30 · 에러 3
+[2m[19시 1분 31초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/food.state.json
+[2m[19시 1분 31초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[19시 1분 31초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/food

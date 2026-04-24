@@ -1,0 +1,57 @@
+[2m[18시 30분 34초][0m [1mplan[0m beauty / 뷰티·스킨케어 / count=50 / prefix=B-BEAUTY
+[2m[18시 30분 34초][0m   변수 7개 × 값 [4,5,5,4,5,4,4] = 총 조합 32000개
+[2m[18시 30분 34초][0m   대상 50개 / 전체 50개
+[2m[18시 30분 34초][0m   resume: 완료 1 / 실패 0
+[2m[18시 31분 56초][0m   [32m✓[0m B-BEAUTY-0002 (1209KB) — 2/50 · 0.01/s · ETA 3908s
+[2m[18시 35분 31초][0m   [32m✓[0m B-BEAUTY-0003 (828KB) — 3/50 · 0.01/s · ETA 6962s
+[2m[18시 36분 48초][0m   [32m✓[0m B-BEAUTY-0004 (1504KB) — 4/50 · 0.01/s · ETA 5730s
+[2m[18시 37분 12초][0m   [32m✓[0m B-BEAUTY-0005 (1102KB) — 5/50 · 0.01/s · ETA 4470s
+[2m[18시 40분 35초][0m   [32m✓[0m B-BEAUTY-0006 (1266KB) — 6/50 · 0.01/s · ETA 5281s
+[2m[18시 41분 48초][0m   [32m✓[0m B-BEAUTY-0007 (1398KB) — 7/50 · 0.01/s · ETA 4824s
+[2m[18시 43분 53초][0m   [32m✓[0m B-BEAUTY-0008 (1161KB) — 8/50 · 0.01/s · ETA 4793s
+[2m[18시 45분 10초][0m   [32m✓[0m B-BEAUTY-0009 (1364KB) — 9/50 · 0.01/s · ETA 4489s
+[2m[18시 46분 27초][0m   [32m✓[0m B-BEAUTY-0010 (1224KB) — 10/50 · 0.01/s · ETA 4235s
+[2m[18시 48분 0초][0m   [32m✓[0m B-BEAUTY-0011 (1222KB) — 11/50 · 0.01/s · ETA 4077s
+[2m[18시 49분 23초][0m   [32m✓[0m B-BEAUTY-0012 (1177KB) — 12/50 · 0.01/s · ETA 3898s
+[2m[18시 51분 3초][0m   [32m✓[0m B-BEAUTY-0013 (1343KB) — 13/50 · 0.01/s · ETA 3789s
+[2m[18시 52분 30초][0m   [32m✓[0m B-BEAUTY-0014 (1208KB) — 14/50 · 0.01/s · ETA 3642s
+[2m[18시 53분 52초][0m   [32m✓[0m B-BEAUTY-0015 (1226KB) — 15/50 · 0.01/s · ETA 3493s
+[2m[18시 54분 36초][0m   [32m✓[0m B-BEAUTY-0016 (1378KB) — 16/50 · 0.01/s · ETA 3268s
+[2m[18시 55분 52초][0m   [32m✓[0m B-BEAUTY-0017 (1602KB) — 17/50 · 0.01/s · ETA 3131s
+[2m[18시 57분 8초][0m   [32m✓[0m B-BEAUTY-0018 (1439KB) — 18/50 · 0.01/s · ETA 3000s
+[2m[18시 58분 42초][0m   [32m✓[0m B-BEAUTY-0019 (1284KB) — 19/50 · 0.01/s · ETA 2907s
+[2m[19시 0분 38초][0m   [32m✓[0m B-BEAUTY-0020 (1375KB) — 20/50 · 0.01/s · ETA 2848s
+[2m[19시 1분 49초][0m   [32m✓[0m B-BEAUTY-0021 (845KB) — 21/50 · 0.01/s · ETA 2718s
+[2m[19시 1분 50초][0m   [31m✗[0m B-BEAUTY-0022 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 51초][0m   [31m✗[0m B-BEAUTY-0023 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 52초][0m   [31m✗[0m B-BEAUTY-0024 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 53초][0m   [31m✗[0m B-BEAUTY-0025 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 55초][0m   [31m✗[0m B-BEAUTY-0026 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 56초][0m   [31m✗[0m B-BEAUTY-0027 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 57초][0m   [31m✗[0m B-BEAUTY-0028 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 58초][0m   [31m✗[0m B-BEAUTY-0029 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 1분 59초][0m   [31m✗[0m B-BEAUTY-0030 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 0초][0m   [31m✗[0m B-BEAUTY-0031 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 1초][0m   [31m✗[0m B-BEAUTY-0032 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 2초][0m   [31m✗[0m B-BEAUTY-0033 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 3초][0m   [31m✗[0m B-BEAUTY-0034 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 4초][0m   [31m✗[0m B-BEAUTY-0035 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 5초][0m   [31m✗[0m B-BEAUTY-0036 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 7초][0m   [31m✗[0m B-BEAUTY-0037 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 8초][0m   [31m✗[0m B-BEAUTY-0038 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 9초][0m   [31m✗[0m B-BEAUTY-0039 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 10초][0m   [31m✗[0m B-BEAUTY-0040 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 11초][0m   [31m✗[0m B-BEAUTY-0041 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 12초][0m   [31m✗[0m B-BEAUTY-0042 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 13초][0m   [31m✗[0m B-BEAUTY-0043 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 14초][0m   [31m✗[0m B-BEAUTY-0044 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 15초][0m   [31m✗[0m B-BEAUTY-0045 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 16초][0m   [31m✗[0m B-BEAUTY-0046 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 17초][0m   [31m✗[0m B-BEAUTY-0047 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 18초][0m   [31m✗[0m B-BEAUTY-0048 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 19초][0m   [31m✗[0m B-BEAUTY-0049 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 20초][0m   [31m✗[0m B-BEAUTY-0050 — HTTP 429: {"error":{"type":"usage_limit_reached","message":"The usage limit has been reached","plan_type":"plus","resets
+[2m[19시 2분 20초][0m [1mdone[0m beauty: 신규 20 · 누적 21/50 · 에러 29
+[2m[19시 2분 20초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/beauty.state.json
+[2m[19시 2분 20초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[19시 2분 20초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/beauty
