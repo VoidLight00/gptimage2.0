@@ -1,13 +1,13 @@
 {
   "language": "en",
-  "generatedAt": "2026-04-22T07:26:27.727Z",
-  "totalEntries": 52,
-  "skippedCount": 1,
+  "generatedAt": "2026-04-24T06:27:47.024Z",
+  "totalEntries": 53,
+  "skippedCount": 0,
   "categories": [
     {
       "slug": "typography",
       "label": "Typography & Poster",
-      "count": 13,
+      "count": 14,
       "cover": "/images-en/thumb/en-typography-1980s-propaganda-poster.webp"
     },
     {
@@ -58,7 +58,7 @@
     {
       "slug": "ar-3-2",
       "label": "3:2",
-      "count": 7
+      "count": 8
     },
     {
       "slug": "ar-9-16",
@@ -117,7 +117,7 @@
         "width": 1200,
         "height": 799
       },
-      "createdAt": "2026-04-22T07:25:19.248Z"
+      "createdAt": "2026-04-24T06:26:51.903Z"
     },
     {
       "id": "en-photography-convenience-store-night-scene",
@@ -148,7 +148,7 @@
         "width": 1080,
         "height": 1446
       },
-      "createdAt": "2026-04-22T07:25:20.608Z"
+      "createdAt": "2026-04-24T06:26:53.917Z"
     },
     {
       "id": "en-photography-raw-iphone-quality-subway-station",
@@ -180,7 +180,7 @@
         "width": 2048,
         "height": 1143
       },
-      "createdAt": "2026-04-22T07:25:21.582Z"
+      "createdAt": "2026-04-24T06:26:57.779Z"
     },
     {
       "id": "en-photography-apple-park-keynote-crowd-shot",
@@ -210,7 +210,7 @@
         "width": 1200,
         "height": 900
       },
-      "createdAt": "2026-04-22T07:25:21.757Z"
+      "createdAt": "2026-04-24T06:26:57.961Z"
     },
     {
       "id": "en-photography-handwritten-notebook-photo",
@@ -240,7 +240,7 @@
         "width": 1200,
         "height": 900
       },
-      "createdAt": "2026-04-22T07:25:21.920Z"
+      "createdAt": "2026-04-24T06:26:58.131Z"
     },
     {
       "id": "en-photography-rice-grain-micro-typography",
@@ -272,7 +272,7 @@
         "width": 2048,
         "height": 1152
       },
-      "createdAt": "2026-04-22T07:25:22.562Z"
+      "createdAt": "2026-04-24T06:26:58.802Z"
     },
     {
       "id": "en-photography-360-equirectangular-panorama",
@@ -298,7 +298,7 @@
         "width": 1199,
         "height": 611
       },
-      "createdAt": "2026-04-22T07:25:22.950Z"
+      "createdAt": "2026-04-24T06:26:59.325Z"
     },
     {
       "id": "en-game-hitman-style-in-game-footage",
@@ -328,7 +328,7 @@
         "width": 1200,
         "height": 751
       },
-      "createdAt": "2026-04-22T07:25:24.001Z"
+      "createdAt": "2026-04-24T06:27:02.645Z"
     },
     {
       "id": "en-game-black-myth-wukong-game-scene",
@@ -359,7 +359,7 @@
         "width": 1080,
         "height": 603
       },
-      "createdAt": "2026-04-22T07:25:25.016Z"
+      "createdAt": "2026-04-24T06:27:03.969Z"
     },
     {
       "id": "en-game-gta-6-style-in-game-footage",
@@ -391,7 +391,7 @@
         "width": 2048,
         "height": 1143
       },
-      "createdAt": "2026-04-22T07:25:25.586Z"
+      "createdAt": "2026-04-24T06:27:04.794Z"
     },
     {
       "id": "en-game-gta-6-wedding-mission-screenshot",
@@ -422,7 +422,7 @@
         "width": 1672,
         "height": 941
       },
-      "createdAt": "2026-04-22T07:25:25.973Z"
+      "createdAt": "2026-04-24T06:27:05.237Z"
     },
     {
       "id": "en-game-league-of-legends-mid-lane-screenshot",
@@ -452,7 +452,7 @@
         "width": 1448,
         "height": 1086
       },
-      "createdAt": "2026-04-22T07:25:26.617Z"
+      "createdAt": "2026-04-24T06:27:05.614Z"
     },
     {
       "id": "en-game-100-pixel-art-items-grid",
@@ -484,7 +484,7 @@
         "width": 1200,
         "height": 689
       },
-      "createdAt": "2026-04-22T07:25:27.118Z"
+      "createdAt": "2026-04-24T06:27:05.844Z"
     },
     {
       "id": "en-game-zelda-tears-of-the-kingdom-style",
@@ -514,7 +514,7 @@
         "width": 2048,
         "height": 796
       },
-      "createdAt": "2026-04-22T07:25:27.558Z"
+      "createdAt": "2026-04-24T06:27:06.272Z"
     },
     {
       "id": "en-game-gta-san-andreas-gameplay-screenshot",
@@ -546,7 +546,7 @@
         "width": 1536,
         "height": 1024
       },
-      "createdAt": "2026-04-22T07:25:28.284Z"
+      "createdAt": "2026-04-24T06:27:06.990Z"
     },
     {
       "id": "en-uiux-live-streaming-screenshot",
@@ -577,7 +577,7 @@
         "width": 675,
         "height": 1199
       },
-      "createdAt": "2026-04-22T07:25:32.273Z"
+      "createdAt": "2026-04-24T06:27:09.100Z"
     },
     {
       "id": "en-uiux-douyin-livestream-screenshot",
@@ -609,7 +609,7 @@
         "width": 675,
         "height": 1199
       },
-      "createdAt": "2026-04-22T07:25:32.431Z"
+      "createdAt": "2026-04-24T06:27:09.292Z"
     },
     {
       "id": "en-uiux-youtube-time-travel-screenshot",
@@ -641,7 +641,7 @@
         "width": 2048,
         "height": 2048
       },
-      "createdAt": "2026-04-22T07:25:33.795Z"
+      "createdAt": "2026-04-24T06:27:10.164Z"
     },
     {
       "id": "en-uiux-song-dynasty-social-media-feed",
@@ -671,7 +671,7 @@
         "width": 400,
         "height": 1200
       },
-      "createdAt": "2026-04-22T07:25:33.876Z"
+      "createdAt": "2026-04-24T06:27:10.250Z"
     },
     {
       "id": "en-uiux-ancient-figures-on-modern-social-platforms",
@@ -703,7 +703,7 @@
         "width": 941,
         "height": 1672
       },
-      "createdAt": "2026-04-22T07:25:34.434Z"
+      "createdAt": "2026-04-24T06:27:10.627Z"
     },
     {
       "id": "en-uiux-e-commerce-app-homepage",
@@ -734,7 +734,7 @@
         "width": 1080,
         "height": 1935
       },
-      "createdAt": "2026-04-22T07:25:41.919Z"
+      "createdAt": "2026-04-24T06:27:13.332Z"
     },
     {
       "id": "en-uiux-music-player-interface",
@@ -765,7 +765,7 @@
         "width": 1080,
         "height": 1935
       },
-      "createdAt": "2026-04-22T07:25:44.474Z"
+      "createdAt": "2026-04-24T06:27:14.568Z"
     },
     {
       "id": "en-uiux-custom-style-ui-design-system",
@@ -795,7 +795,7 @@
         "width": 621,
         "height": 680
       },
-      "createdAt": "2026-04-22T07:25:44.545Z"
+      "createdAt": "2026-04-24T06:27:14.642Z"
     },
     {
       "id": "en-uiux-t-800-taobao-product-detail-page",
@@ -825,7 +825,7 @@
         "width": 632,
         "height": 900
       },
-      "createdAt": "2026-04-22T07:25:44.676Z"
+      "createdAt": "2026-04-24T06:27:14.775Z"
     },
     {
       "id": "en-video-movie-collage",
@@ -857,7 +857,7 @@
         "width": 1200,
         "height": 800
       },
-      "createdAt": "2026-04-22T07:25:49.766Z"
+      "createdAt": "2026-04-24T06:27:16.906Z"
     },
     {
       "id": "en-video-where-is-your-name-crowd-search-poster",
@@ -889,7 +889,7 @@
         "width": 1536,
         "height": 1024
       },
-      "createdAt": "2026-04-22T07:25:51.028Z"
+      "createdAt": "2026-04-24T06:27:18.348Z"
     },
     {
       "id": "en-video-eight-panel-gpt-image-2-launch-manga",
@@ -918,7 +918,7 @@
         "width": 1672,
         "height": 867
       },
-      "createdAt": "2026-04-22T07:25:51.989Z"
+      "createdAt": "2026-04-24T06:27:18.917Z"
     },
     {
       "id": "en-typography-1980s-propaganda-poster",
@@ -948,7 +948,38 @@
         "width": 1402,
         "height": 1122
       },
-      "createdAt": "2026-04-22T07:25:52.663Z"
+      "createdAt": "2026-04-24T06:27:19.508Z"
+    },
+    {
+      "id": "en-typography-chinese-tea-drink-product-launch-poster",
+      "language": "en",
+      "title": "Chinese Tea Drink Product Launch Poster",
+      "prompt": "Design a 3:4 vertical poster for a new Chinese trendy tea launch. Use a New Chinese visual style that feels light-luxury and restrained. The palette should be dark green, off-white, and gold, with rice-paper texture, elegant negative space, landscape accents, and modern layout design.\n\nMain subject:\na visually appealing cold-brew tea with tea leaves, citrus, ice cubes, and touches of gold foil.\n\nThe poster must accurately display the following exact Chinese copy:\n\"山川茶事\"\n\"山柚观音\"\n\"冷泡系列\"\n\"新品上市\"\n\"一口清醒，半城入夏\"\n\"限定尝鲜价\"\n\"中杯 16 元\"\n\"大杯 19 元\"\n\"门店活动\"\n\"第二杯半价\"\n\"加 3 元升级轻乳版\"\n\"每日前 100 名赠限定杯套\"\n\"推荐风味\"\n\"观音茶底 / 西柚果香 / 轻乳云顶 / 冰感回甘\"\n\"活动时间 4月20日 至 5月10日\"\n\"扫码点单\"\n\"SHANCHUAN TEA\"\n\nFine print:\n\"图片仅供参考，请以门店实际售卖为准\"\n\nMaintain a clear promotional hierarchy while keeping the overall feeling sophisticated rather than cheap or overly e-commerce-like. Pay special attention to small text, numbers, prices, info modules, and Chinese typography aesthetics.",
+      "category": "typography",
+      "categoryLabel": "Typography & Poster",
+      "domains": [],
+      "formats": [
+        "ar-3-2"
+      ],
+      "tags": [
+        "chinese",
+        "tea",
+        "poster",
+        "new",
+        "gold",
+        "vertical"
+      ],
+      "imageSourceUrl": "https://github.com/user-attachments/assets/552ba84c-41cb-401d-a1b0-ee13a6f7aa41",
+      "images": {
+        "original": "/images-en/original/en-typography-chinese-tea-drink-product-launch-poster.webp",
+        "large": "/images-en/large/en-typography-chinese-tea-drink-product-launch-poster.webp",
+        "medium": "/images-en/medium/en-typography-chinese-tea-drink-product-launch-poster.webp",
+        "thumb": "/images-en/thumb/en-typography-chinese-tea-drink-product-launch-poster.webp",
+        "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAQAgCdASoQAAsAA4BaJYgCdAEYEmRgq9vgAP7wcs88AAJM9UBeLk94iENTULnRulRppQWfURzwzPLMdclME6MVir3YjCXfgsJdrQ7BNT4ptJB1xkB/juYcZWHr+TMvGtEJASZHQ+j8MqwAAAA=",
+        "width": 1080,
+        "height": 744
+      },
+      "createdAt": "2026-04-24T06:27:21.321Z"
     },
     {
       "id": "en-typography-coffee-journey-infographic",
@@ -977,7 +1008,7 @@
         "width": 1080,
         "height": 748
       },
-      "createdAt": "2026-04-22T07:25:58.555Z"
+      "createdAt": "2026-04-24T06:27:22.973Z"
     },
     {
       "id": "en-typography-key-character-relationship-map",
@@ -1009,7 +1040,7 @@
         "width": 680,
         "height": 453
       },
-      "createdAt": "2026-04-22T07:25:58.646Z"
+      "createdAt": "2026-04-24T06:27:23.070Z"
     },
     {
       "id": "en-typography-jingdezhen-blue-and-white-porcelain-diagram",
@@ -1041,7 +1072,7 @@
         "width": 1200,
         "height": 800
       },
-      "createdAt": "2026-04-22T07:25:58.880Z"
+      "createdAt": "2026-04-24T06:27:23.316Z"
     },
     {
       "id": "en-typography-museum-catalog-style-chinese-disassembly-infographic",
@@ -1073,7 +1104,7 @@
         "width": 1007,
         "height": 1200
       },
-      "createdAt": "2026-04-22T07:25:59.129Z"
+      "createdAt": "2026-04-24T06:27:23.574Z"
     },
     {
       "id": "en-typography-high-end-skincare-product-poster",
@@ -1104,7 +1135,7 @@
         "width": 1080,
         "height": 703
       },
-      "createdAt": "2026-04-22T07:26:02.379Z"
+      "createdAt": "2026-04-24T06:27:25.023Z"
     },
     {
       "id": "en-typography-minimal-design-prompt-collection",
@@ -1134,7 +1165,7 @@
         "width": 1983,
         "height": 793
       },
-      "createdAt": "2026-04-22T07:26:03.203Z"
+      "createdAt": "2026-04-24T06:27:25.965Z"
     },
     {
       "id": "en-typography-chinese-calligraphy-manuscript-recreation",
@@ -1164,7 +1195,7 @@
         "width": 1024,
         "height": 1536
       },
-      "createdAt": "2026-04-22T07:26:04.371Z"
+      "createdAt": "2026-04-24T06:27:26.678Z"
     },
     {
       "id": "en-typography-chinese-calligraphy-copybook-sheet",
@@ -1196,7 +1227,7 @@
         "width": 1086,
         "height": 1448
       },
-      "createdAt": "2026-04-22T07:26:04.897Z"
+      "createdAt": "2026-04-24T06:27:27.065Z"
     },
     {
       "id": "en-typography-silhouette-universe-narrative-poster",
@@ -1226,7 +1257,7 @@
         "width": 1024,
         "height": 1536
       },
-      "createdAt": "2026-04-22T07:26:05.598Z"
+      "createdAt": "2026-04-24T06:27:27.599Z"
     },
     {
       "id": "en-typography-e-commerce-product-detail-page",
@@ -1258,7 +1289,7 @@
         "width": 941,
         "height": 1672
       },
-      "createdAt": "2026-04-22T07:26:06.100Z"
+      "createdAt": "2026-04-24T06:27:28.011Z"
     },
     {
       "id": "en-typography-dense-chinese-layout-stress-test",
@@ -1284,7 +1315,7 @@
         "width": 1024,
         "height": 1536
       },
-      "createdAt": "2026-04-22T07:26:06.623Z"
+      "createdAt": "2026-04-24T06:27:28.403Z"
     },
     {
       "id": "en-typography-handwritten-chinese-medical-prescription",
@@ -1316,7 +1347,7 @@
         "width": 1086,
         "height": 1449
       },
-      "createdAt": "2026-04-22T07:26:07.111Z"
+      "createdAt": "2026-04-24T06:27:28.833Z"
     },
     {
       "id": "en-infographics-world-time-analog-clock-wall",
@@ -1346,7 +1377,7 @@
         "width": 2048,
         "height": 819
       },
-      "createdAt": "2026-04-22T07:26:07.456Z"
+      "createdAt": "2026-04-24T06:27:29.090Z"
     },
     {
       "id": "en-infographics-encyclopedia-style-knowledge-card",
@@ -1378,7 +1409,7 @@
         "width": 1122,
         "height": 1402
       },
-      "createdAt": "2026-04-22T07:26:08.020Z"
+      "createdAt": "2026-04-24T06:27:29.629Z"
     },
     {
       "id": "en-infographics-alphabet-object-grid",
@@ -1410,7 +1441,7 @@
         "width": 1254,
         "height": 1254
       },
-      "createdAt": "2026-04-22T07:26:08.500Z"
+      "createdAt": "2026-04-24T06:27:30.270Z"
     },
     {
       "id": "en-infographics-100-technology-topics-grid",
@@ -1440,7 +1471,7 @@
         "width": 1254,
         "height": 1354
       },
-      "createdAt": "2026-04-22T07:26:09.371Z"
+      "createdAt": "2026-04-24T06:27:30.763Z"
     },
     {
       "id": "en-infographics-fitness-training-infographic",
@@ -1470,7 +1501,7 @@
         "width": 1055,
         "height": 1491
       },
-      "createdAt": "2026-04-22T07:26:09.882Z"
+      "createdAt": "2026-04-24T06:27:31.160Z"
     },
     {
       "id": "en-infographics-gaokao-exam-paper-replica",
@@ -1500,7 +1531,7 @@
         "width": 1450,
         "height": 2048
       },
-      "createdAt": "2026-04-22T07:26:10.669Z"
+      "createdAt": "2026-04-24T06:27:31.875Z"
     },
     {
       "id": "en-infographics-three-day-travel-guide-card",
@@ -1531,7 +1562,7 @@
         "width": 940,
         "height": 1672
       },
-      "createdAt": "2026-04-22T07:26:11.294Z"
+      "createdAt": "2026-04-24T06:27:32.425Z"
     },
     {
       "id": "en-infographics-character-relationship-diagram-poster",
@@ -1563,7 +1594,7 @@
         "width": 1122,
         "height": 1402
       },
-      "createdAt": "2026-04-22T07:26:11.899Z"
+      "createdAt": "2026-04-24T06:27:33.189Z"
     },
     {
       "id": "en-character-16-panel-anime-expression-grid",
@@ -1594,7 +1625,7 @@
         "width": 1080,
         "height": 1080
       },
-      "createdAt": "2026-04-22T07:26:17.821Z"
+      "createdAt": "2026-04-24T06:27:38.720Z"
     },
     {
       "id": "en-character-official-character-reference-sheet",
@@ -1626,7 +1657,7 @@
         "width": 720,
         "height": 900
       },
-      "createdAt": "2026-04-22T07:26:17.944Z"
+      "createdAt": "2026-04-24T06:27:38.848Z"
     },
     {
       "id": "en-editing-pet-brand-collaboration-poster",
@@ -1657,7 +1688,7 @@
         "width": 1080,
         "height": 1441
       },
-      "createdAt": "2026-04-22T07:26:21.642Z"
+      "createdAt": "2026-04-24T06:27:43.471Z"
     },
     {
       "id": "en-editing-comic-page-coloring-translation",
@@ -1686,7 +1717,7 @@
         "width": 876,
         "height": 1372
       },
-      "createdAt": "2026-04-22T07:26:27.727Z"
+      "createdAt": "2026-04-24T06:27:47.023Z"
     }
   ]
 }
