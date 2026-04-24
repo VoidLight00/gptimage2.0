@@ -55,3 +55,40 @@
 [2m[19시 2분 20초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/beauty.state.json
 [2m[19시 2분 20초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
 [2m[19시 2분 20초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/beauty
+[2m[20시 0분 9초][0m [1mplan[0m beauty / 뷰티·스킨케어 광고 / count=30 / prefix=B-BEAUTY
+[2m[20시 0분 9초][0m   변수 8개 × 값 [6,3,3,4,4,4,4,4] = 총 조합 55296개
+[2m[20시 0분 9초][0m   대상 30개 / 전체 30개
+[2m[20시 1분 17초][0m   [32m✓[0m B-BEAUTY-0001 (1398KB) — 1/30 · 0.01/s · ETA 1966s
+[2m[20시 2분 4초][0m   [32m✓[0m B-BEAUTY-0002 (1812KB) — 2/30 · 0.02/s · ETA 1603s
+[2m[20시 3분 2초][0m   [32m✓[0m B-BEAUTY-0003 (1313KB) — 3/30 · 0.02/s · ETA 1553s
+[2m[20시 3분 44초][0m   [32m✓[0m B-BEAUTY-0004 (1298KB) — 4/30 · 0.02/s · ETA 1394s
+[2m[20시 5분 18초][0m   [32m✓[0m B-BEAUTY-0005 (1104KB) — 5/30 · 0.02/s · ETA 1547s
+[2m[20시 6분 49초][0m   [32m✓[0m B-BEAUTY-0006 (1243KB) — 6/30 · 0.01/s · ETA 1601s
+[2m[20시 7분 40초][0m   [32m✓[0m B-BEAUTY-0007 (1173KB) — 7/30 · 0.02/s · ETA 1481s
+[2m[20시 8분 37초][0m   [32m✓[0m B-BEAUTY-0008 (1249KB) — 8/30 · 0.02/s · ETA 1396s
+[2m[20시 9분 35초][0m   [32m✓[0m B-BEAUTY-0009 (1092KB) — 9/30 · 0.02/s · ETA 1321s
+[2m[20시 10분 38초][0m   [32m✓[0m B-BEAUTY-0010 (1128KB) — 10/30 · 0.02/s · ETA 1257s
+[2m[20시 11분 14초][0m   [32m✓[0m B-BEAUTY-0011 (1514KB) — 11/30 · 0.02/s · ETA 1149s
+[2m[20시 12분 39초][0m   [32m✓[0m B-BEAUTY-0012 (1479KB) — 12/30 · 0.02/s · ETA 1125s
+[2m[20시 13분 39초][0m   [32m✓[0m B-BEAUTY-0013 (1279KB) — 13/30 · 0.02/s · ETA 1060s
+[2m[20시 14분 16초][0m   [32m✓[0m B-BEAUTY-0014 (1036KB) — 14/30 · 0.02/s · ETA 968s
+[2m[20시 15분 22초][0m   [32m✓[0m B-BEAUTY-0015 (1159KB) — 15/30 · 0.02/s · ETA 913s
+[2m[20시 16분 2초][0m   [32m✓[0m B-BEAUTY-0016 (1407KB) — 16/30 · 0.02/s · ETA 834s
+[2m[20시 16분 45초][0m   [32m✓[0m B-BEAUTY-0017 (1131KB) — 17/30 · 0.02/s · ETA 762s
+[2m[20시 17분 40초][0m   [32m✓[0m B-BEAUTY-0018 (1137KB) — 18/30 · 0.02/s · ETA 701s
+[2m[20시 18분 46초][0m   [32m✓[0m B-BEAUTY-0019 (1415KB) — 19/30 · 0.02/s · ETA 646s
+[2m[20시 20분 13초][0m   [32m✓[0m B-BEAUTY-0020 (1104KB) — 20/30 · 0.02/s · ETA 602s
+[2m[20시 21분 31초][0m   [32m✓[0m B-BEAUTY-0021 (1033KB) — 21/30 · 0.02/s · ETA 549s
+[2m[20시 22분 47초][0m   [32m✓[0m B-BEAUTY-0022 (1230KB) — 22/30 · 0.02/s · ETA 494s
+[2m[20시 23분 46초][0m   [32m✓[0m B-BEAUTY-0023 (1375KB) — 23/30 · 0.02/s · ETA 431s
+[2m[20시 24분 58초][0m   [32m✓[0m B-BEAUTY-0024 (1241KB) — 24/30 · 0.02/s · ETA 372s
+[2m[20시 26분 34초][0m   [32m✓[0m B-BEAUTY-0025 (1624KB) — 25/30 · 0.02/s · ETA 317s
+[2m[20시 27분 18초][0m   [32m✓[0m B-BEAUTY-0026 (1156KB) — 26/30 · 0.02/s · ETA 251s
+[2m[20시 28분 26초][0m   [32m✓[0m B-BEAUTY-0027 (1350KB) — 27/30 · 0.02/s · ETA 189s
+[2m[20시 29분 5초][0m   [32m✓[0m B-BEAUTY-0028 (1346KB) — 28/30 · 0.02/s · ETA 124s
+[2m[20시 30분 3초][0m   [32m✓[0m B-BEAUTY-0029 (1176KB) — 29/30 · 0.02/s · ETA 62s
+[2m[20시 31분 22초][0m   [32m✓[0m B-BEAUTY-0030 (1331KB) — 30/30 · 0.02/s · ETA 0s
+[2m[20시 31분 22초][0m [1mdone[0m beauty: 신규 30 · 누적 30/30 · 에러 0
+[2m[20시 31분 22초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/beauty.state.json
+[2m[20시 31분 22초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[20시 31분 22초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/beauty

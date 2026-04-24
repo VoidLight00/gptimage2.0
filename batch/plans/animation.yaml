@@ -1,0 +1,70 @@
+category: animation
+label: 애니메이션·일러스트 씬
+count: 20
+prefix: B-ANIM
+out_dir: raw/batch/animation
+size: "1024x1024"
+quality: high
+
+# 단일 프레임 애니메이션 씬/일러스트 스틸. "still from an animated film" 컨셉.
+# 1024x1024 정사각 안에서 시네마틱 구도 + 분위기 완성.
+
+template: |
+  Type (유형): single still frame from an animated film, {style_reference} feel.
+  Subject (씬): {scene}.
+  Art style (스타일): {art_style}.
+  Composition (구도): cinematic {composition}. Depth layered — foreground / midground / background clearly separated, atmospheric perspective.
+  Lighting (라이팅): {lighting}.
+  Color palette (팔레트): {palette}.
+  Mood (무드): {mood}.
+  Technical (기술): painted backgrounds in the style of high-end animation studio, subtle texture overlay (gouache / cel), character(s) integrated cleanly, no jittery linework.
+  Negative (금지): no text, no watermark, no ugly CGI glossy plastic, no uncanny valley faces, no photo-realistic skin, no generic anime tropes, no inconsistent light direction.
+
+variables:
+  style_reference:
+    - Studio Ghibli (My Neighbor Totoro, Spirited Away background art)
+    - Makoto Shinkai (Your Name, Weathering With You light treatment)
+    - Cartoon Saloon (Wolfwalkers, Song of the Sea — flat-painted, decorative)
+    - Laika / Irish stop-motion, tactile painted sets
+    - modern Korean animated feature (The King of Pigs tone, Red Shoes palette)
+    - Disney hand-drawn classic era (Lilo & Stitch watercolor backgrounds)
+    - Pixar short-film still, warm soft-shaded 3D painted over
+  scene:
+    - a young girl running along a wooden pier at sunset, wind in her hair, long shadow behind
+    - a cat sitting on a windowsill of a second-floor apartment during summer rain
+    - two friends riding bicycles through a cherry blossom tunnel
+    - an elderly baker arranging loaves at dawn, warm light from the oven
+    - a teen astronaut leaning against a lunar rover, Earth in the distance
+    - a small fox kit peeking from behind a mossy tree in an autumn forest
+    - a lantern festival on a small Korean village river, hundreds of paper lanterns afloat
+    - a robot and a child sharing ice cream on a rooftop at twilight
+    - a library cat napping on a stack of books with a beam of dust-lit sunlight
+    - a lone samurai resting under a flowering plum tree in light snow
+  art_style:
+    - 2D hand-painted backgrounds, cel-shaded characters, gentle film grain
+    - watercolor-textured painted frame, soft edge bleed between color fields
+    - flat graphic decorative style (Cartoon Saloon) with Celtic knot-like detail where fitting
+    - 3D CG lit like 2D, strong color blocking, painted texture overlay
+    - gouache poster-style illustration, visible brush strokes
+  composition:
+    - wide establishing shot, rule of thirds, strong lead space for the character's gaze
+    - low-angle heroic composition, sky dominates upper half
+    - intimate medium shot, soft foreground element framing the subject
+    - dutch-tilt dynamic angle for emotional urgency
+  lighting:
+    - warm golden-hour backlight with long shadows
+    - blue-hour diffused cool light with a single warm practical source
+    - dappled forest light through leaves, bokeh highlights
+    - stormy overcast with rim-light accents
+    - candle / lantern warm glow against night
+  palette:
+    - burnt orange, teal, cream, lavender shadow
+    - cool slate, rose, butter yellow, olive
+    - deep indigo, magenta, gold, pearl
+    - forest green, moss, terracotta, fog gray
+  mood:
+    - nostalgic quiet wonder
+    - tender farewell, bittersweet
+    - joyful first-time discovery
+    - contemplative solitude before a journey
+    - protective gentle warmth

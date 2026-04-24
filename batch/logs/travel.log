@@ -35,3 +35,35 @@
 [2m[19시 2분 38초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/travel.state.json
 [2m[19시 2분 38초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
 [2m[19시 2분 38초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/travel
+[2m[20시 31분 22초][0m [1mplan[0m travel / 여행·호텔 키비주얼 / count=25 / prefix=B-TRAVEL
+[2m[20시 31분 22초][0m   변수 6개 × 값 [10,5,4,4,4,4] = 총 조합 12800개
+[2m[20시 31분 22초][0m   대상 25개 / 전체 25개
+[2m[20시 32분 36초][0m   [32m✓[0m B-TRAVEL-0001 (1774KB) — 1/25 · 0.01/s · ETA 1760s
+[2m[20시 33분 27초][0m   [32m✓[0m B-TRAVEL-0002 (1333KB) — 2/25 · 0.02/s · ETA 1437s
+[2m[20시 34분 36초][0m   [32m✓[0m B-TRAVEL-0003 (1721KB) — 3/25 · 0.02/s · ETA 1421s
+[2m[20시 35분 39초][0m   [32m✓[0m B-TRAVEL-0004 (1196KB) — 4/25 · 0.02/s · ETA 1348s
+[2m[20시 37분 6초][0m   [32m✓[0m B-TRAVEL-0005 (1643KB) — 5/25 · 0.01/s · ETA 1373s
+[2m[20시 38분 8초][0m   [32m✓[0m B-TRAVEL-0006 (1607KB) — 6/25 · 0.01/s · ETA 1284s
+[2m[20시 39분 14초][0m   [32m✓[0m B-TRAVEL-0007 (1609KB) — 7/25 · 0.01/s · ETA 1213s
+[2m[20시 40분 15초][0m   [32m✓[0m B-TRAVEL-0008 (1801KB) — 8/25 · 0.02/s · ETA 1133s
+[2m[20시 43분 1초][0m   [32m✓[0m B-TRAVEL-0009 (1513KB) — 9/25 · 0.01/s · ETA 1243s
+[2m[20시 44분 20초][0m   [32m✓[0m B-TRAVEL-0010 (1675KB) — 10/25 · 0.01/s · ETA 1167s
+[2m[20시 45분 34초][0m   [32m✓[0m B-TRAVEL-0011 (1677KB) — 11/25 · 0.01/s · ETA 1084s
+[2m[20시 46분 56초][0m   [32m✓[0m B-TRAVEL-0012 (1493KB) — 12/25 · 0.01/s · ETA 1012s
+[2m[20시 48분 7초][0m   [32m✓[0m B-TRAVEL-0013 (1695KB) — 13/25 · 0.01/s · ETA 928s
+[2m[20시 49분 19초][0m   [32m✓[0m B-TRAVEL-0014 (1655KB) — 14/25 · 0.01/s · ETA 846s
+[2m[20시 52분 31초][0m   [32m✓[0m B-TRAVEL-0015 (1407KB) — 15/25 · 0.01/s · ETA 846s
+[2m[20시 53분 57초][0m   [32m✓[0m B-TRAVEL-0016 (1688KB) — 16/25 · 0.01/s · ETA 762s
+[2m[20시 55분 14초][0m   [32m✓[0m B-TRAVEL-0017 (1646KB) — 17/25 · 0.01/s · ETA 674s
+[2m[20시 56분 23초][0m   [32m✓[0m B-TRAVEL-0018 (1698KB) — 18/25 · 0.01/s · ETA 584s
+[2m[20시 57분 37초][0m   [32m✓[0m B-TRAVEL-0019 (1702KB) — 19/25 · 0.01/s · ETA 497s
+[2m[20시 59분 47초][0m   [32m✓[0m B-TRAVEL-0020 (1614KB) — 20/25 · 0.01/s · ETA 426s
+[2m[21시 1분 17초][0m   [32m✓[0m B-TRAVEL-0021 (1560KB) — 21/25 · 0.01/s · ETA 342s
+[2m[21시 2분 26초][0m   [32m✓[0m B-TRAVEL-0022 (1856KB) — 22/25 · 0.01/s · ETA 254s
+[2m[21시 3분 24초][0m   [32m✓[0m B-TRAVEL-0023 (1314KB) — 23/25 · 0.01/s · ETA 167s
+[2m[21시 4분 50초][0m   [32m✓[0m B-TRAVEL-0024 (1516KB) — 24/25 · 0.01/s · ETA 84s
+[2m[21시 5분 52초][0m   [32m✓[0m B-TRAVEL-0025 (1404KB) — 25/25 · 0.01/s · ETA 0s
+[2m[21시 5분 52초][0m [1mdone[0m travel: 신규 25 · 누적 25/25 · 에러 0
+[2m[21시 5분 52초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/travel.state.json
+[2m[21시 5분 52초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[21시 5분 52초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/travel

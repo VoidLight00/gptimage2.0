@@ -123,6 +123,24 @@ function buildPrompts(plan: Plan): GenTask[] {
   });
 }
 
+// 업스트림의 usage_limit_reached → resets_in_seconds 를 파싱
+function parseResetsIn(raw: string): number | undefined {
+  const m = raw.match(/resets_in_seconds"\s*:\s*(\d+)/);
+  return m ? parseInt(m[1], 10) : undefined;
+}
+
+async function sleep(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+class RateLimited extends Error {
+  readonly waitSec: number;
+  constructor(waitSec: number, body: string) {
+    super(`rate_limited, wait ${waitSec}s: ${body.slice(0, 160)}`);
+    this.waitSec = waitSec;
+  }
+}
+
 // ---------- meshgate 호출 ----------
 async function generateOne(
   base: string,
@@ -147,6 +165,11 @@ async function generateOne(
 
   const text = await res.text();
   if (!res.ok) {
+    // 429 usage_limit_reached → 별도 예외 (메인 루프에서 sleep)
+    if (res.status === 429 || /usage_limit_reached/.test(text)) {
+      const wait = parseResetsIn(text) ?? 900;
+      throw new RateLimited(wait, text);
+    }
     throw new Error(`HTTP ${res.status}: ${text.slice(0, 200)}`);
   }
   const parsed = JSON.parse(text);
@@ -244,16 +267,48 @@ async function main() {
   let errs = 0;
   const startedAt = Date.now();
 
-  for (const t of selected) {
+  outer: for (const t of selected) {
     if (state.completed[t.id]) continue; // resume skip
     const outPath = join(outRoot, `${t.id}.png`);
+
+    // 최대 5회 시도: 429 만나면 resets_in + 30초 sleep 후 재시도
+    let r: { bytes: number; revised?: string } | undefined;
+    let attempt = 0;
+    while (attempt < 5) {
+      attempt++;
+      try {
+        r = await generateOne(base, key, t, plan, outPath);
+        break;
+      } catch (e) {
+        if (e instanceof RateLimited) {
+          const waitMs = (e.waitSec + 30) * 1000;
+          log(
+            `  ${ANSI.yellow}⏸${ANSI.reset} ${t.id} rate_limit — ${e.waitSec}s 대기 후 재시도 (${attempt}/5)`
+          );
+          await sleep(waitMs);
+          continue;
+        }
+        // 일반 실패 → 상위 catch 로 던짐
+        throw e;
+      }
+    }
+    if (!r) {
+      state.failed[t.id] = {
+        tries: (state.failed[t.id]?.tries ?? 0) + 5,
+        last_error: "rate_limited_after_5_retries",
+      };
+      writeFileSync(stateFile, JSON.stringify(state, null, 2));
+      errs++;
+      log(`  ${ANSI.red}✗${ANSI.reset} ${t.id} — 재시도 5회 모두 rate_limited`);
+      continue outer;
+    }
+
     try {
-      const r = await generateOne(base, key, t, plan, outPath);
       state.completed[t.id] = {
         path: `${plan.out_dir}/${t.id}.png`,
-        bytes: r.bytes,
+        bytes: r!.bytes,
         prompt: t.prompt,
-        revised: r.revised,
+        revised: r!.revised,
       };
       delete state.failed[t.id];
       writeFileSync(stateFile, JSON.stringify(state, null, 2));
@@ -265,9 +320,9 @@ async function main() {
           category: plan.category,
           categoryLabel: plan.label,
           prompt: t.prompt,
-          revisedPrompt: r.revised,
+          revisedPrompt: r!.revised,
           image: `${plan.out_dir}/${t.id}.png`,
-          bytes: r.bytes,
+          bytes: r!.bytes,
           size: plan.size ?? "1024x1024",
           quality: plan.quality ?? "high",
           generatedAt: new Date().toISOString(),
@@ -293,7 +348,7 @@ async function main() {
       const rate = newly / Math.max(elapsed, 1);
       const eta = Math.round((selected.length - done) / Math.max(rate, 0.001));
       log(
-        `  ${ANSI.green}✓${ANSI.reset} ${t.id} (${(r.bytes / 1024).toFixed(0)}KB) — ${done}/${selected.length} · ${rate.toFixed(2)}/s · ETA ${eta}s`
+        `  ${ANSI.green}✓${ANSI.reset} ${t.id} (${(r!.bytes / 1024).toFixed(0)}KB) — ${done}/${selected.length} · ${rate.toFixed(2)}/s · ETA ${eta}s`
       );
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e);

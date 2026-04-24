@@ -35,3 +35,36 @@
 [2m[19시 2분 14초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/crm.state.json
 [2m[19시 2분 14초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
 [2m[19시 2분 14초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/crm
+[2m[22시 39분 47초][0m [1mplan[0m crm / CRM·멤버십 키비주얼 / count=25 / prefix=B-CRM
+[2m[22시 39분 47초][0m   변수 8개 × 값 [8,7,7,4,4,4,4,4] = 총 조합 401408개
+[2m[22시 39분 47초][0m   대상 25개 / 전체 25개
+[2m[22시 40분 44초][0m   [32m✓[0m B-CRM-0001 (1132KB) — 1/25 · 0.02/s · ETA 1347s
+[2m[22시 41분 38초][0m   [32m✓[0m B-CRM-0002 (1155KB) — 2/25 · 0.02/s · ETA 1274s
+[2m[22시 43분 14초][0m   [32m✓[0m B-CRM-0003 (1282KB) — 3/25 · 0.01/s · ETA 1516s
+[2m[22시 44분 39초][0m   [32m✓[0m B-CRM-0004 (1352KB) — 4/25 · 0.01/s · ETA 1533s
+[2m[22시 46분 13초][0m   [32m✓[0m B-CRM-0005 (1378KB) — 5/25 · 0.01/s · ETA 1541s
+[2m[22시 47분 19초][0m   [32m✓[0m B-CRM-0006 (1416KB) — 6/25 · 0.01/s · ETA 1429s
+[2m[22시 48분 2초][0m   [32m✓[0m B-CRM-0007 (1195KB) — 7/25 · 0.01/s · ETA 1271s
+[2m[22시 49분 13초][0m   [32m✓[0m B-CRM-0008 (1826KB) — 8/25 · 0.01/s · ETA 1201s
+[2m[22시 50분 22초][0m   [32m✓[0m B-CRM-0009 (1524KB) — 9/25 · 0.01/s · ETA 1128s
+[2m[22시 51분 25초][0m   [32m✓[0m B-CRM-0010 (682KB) — 10/25 · 0.01/s · ETA 1046s
+[2m[22시 52분 46초][0m   [32m✓[0m B-CRM-0011 (1558KB) — 11/25 · 0.01/s · ETA 991s
+[2m[22시 53분 42초][0m   [32m✓[0m B-CRM-0012 (1364KB) — 12/25 · 0.01/s · ETA 904s
+[2m[22시 54분 39초][0m   [32m✓[0m B-CRM-0013 (1403KB) — 13/25 · 0.01/s · ETA 823s
+[2m[22시 55분 21초][0m   [32m✓[0m B-CRM-0014 (1151KB) — 14/25 · 0.01/s · ETA 734s
+[2m[22시 56분 14초][0m   [32m✓[0m B-CRM-0015 (1116KB) — 15/25 · 0.02/s · ETA 657s
+[2m[22시 57분 50초][0m   [32m✓[0m B-CRM-0016 (1244KB) — 16/25 · 0.01/s · ETA 609s
+[2m[22시 57분 51초][0m   [33m⏸[0m B-CRM-0017 rate_limit — 7343s 대기 후 재시도 (1/5)
+[2m[1시 1분 39초][0m   [32m✓[0m B-CRM-0017 (1427KB) — 17/25 · 0.00/s · ETA 4005s
+[2m[1시 2분 33초][0m   [32m✓[0m B-CRM-0018 (1201KB) — 18/25 · 0.00/s · ETA 3331s
+[2m[1시 3분 27초][0m   [32m✓[0m B-CRM-0019 (1121KB) — 19/25 · 0.00/s · ETA 2722s
+[2m[1시 5분 11초][0m   [32m✓[0m B-CRM-0020 (1424KB) — 20/25 · 0.00/s · ETA 2181s
+[2m[1시 6분 45초][0m   [32m✓[0m B-CRM-0021 (1043KB) — 21/25 · 0.00/s · ETA 1680s
+[2m[1시 8분 11초][0m   [32m✓[0m B-CRM-0022 (1124KB) — 22/25 · 0.00/s · ETA 1214s
+[2m[1시 8분 54초][0m   [32m✓[0m B-CRM-0023 (1166KB) — 23/25 · 0.00/s · ETA 778s
+[2m[1시 9분 29초][0m   [32m✓[0m B-CRM-0024 (1256KB) — 24/25 · 0.00/s · ETA 374s
+[2m[1시 10분 4초][0m   [32m✓[0m B-CRM-0025 (1282KB) — 25/25 · 0.00/s · ETA 0s
+[2m[1시 10분 4초][0m [1mdone[0m crm: 신규 25 · 누적 25/25 · 에러 0
+[2m[1시 10분 4초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/crm.state.json
+[2m[1시 10분 4초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[1시 10분 4초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/crm

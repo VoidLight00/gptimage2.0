@@ -1,50 +1,66 @@
 category: food
-label: F&B·외식
-count: 30
+label: F&B 광고사진
+count: 25
 prefix: B-FOOD
 out_dir: raw/batch/food
 size: "1024x1024"
 quality: high
 
 template: |
-  {format} 포맷의 식음료 브랜드 마케팅 이미지. 메뉴/제품: {dish}.
-  촬영 스타일: {style}. 배경/테이블: {surface}.
-  라이팅: {lighting}. 의도된 구매 전환 상황: {context}.
-  음식의 질감·김·광택이 식욕을 자극하도록, 색 보정은 과하지 않고 자연스럽게.
-  텍스트와 가격 표시 공간은 비워둠.
+  Subject (피사체): {dish}. Textures hyper-real — steam wisps, glossy sauce, crisp edges, dewy herbs.
+  Context (촬영 맥락): Commercial food photography for {usecase}. Shot on medium-format, 100mm macro lens, f/4.5, ISO 200, tripod-locked.
+  Composition (구도): {composition}. {copy_zone}.
+  Lighting (라이팅): {lighting}. Controlled specular on sauce, no blown highlights, careful shadow transitions.
+  Color palette (팔레트): {palette}.
+  Surface & styling (테이블·스타일링): {surface}. {styling}.
+  Post (후보정): color-accurate commercial retouching, warm neutral grade, no yellow cast, no instagram filter, no over-saturation of reds, preserve natural grain of ingredients.
+  Negative (금지): no text, no menu overlay, no packaging mockup, no brand logos, no plastic-looking fake food, no extreme fisheye, no overcrowded frame, no unclean plate edges.
 
 variables:
-  format:
-    - 4:5 세로형 인스타그램 피드
-    - 9:16 릴스 썸네일
-    - 16:9 유튜브 썸네일
-    - 1:1 카드뉴스 첫 장
   dish:
-    - 치즈가 길게 늘어나는 떡볶이와 튀김 세트
-    - 부드러운 크림이 흘러내리는 생크림 케이크 한 조각
-    - 진한 육수가 보이는 설렁탕과 깍두기
-    - 방금 구워진 크루아상과 아이스 아메리카노
-    - 수분이 반짝이는 이슬비빔냉면
-    - 한우 등심 스테이크와 그릴 자국
-    - 라떼 아트가 완성되는 순간의 아이스 라떼
-    - 꽃게장 비빔밥, 반숙 달걀 노른자 터지는 순간
-  style:
-    - 스튜디오 탑뷰 플랫레이
-    - 모락모락 김이 올라오는 동적 샷
-    - 45도 앵글 카페 테이블
-    - 손이 프레임에 들어오는 리얼 씬
-  surface:
-    - 거친 원목 도마와 린넨 냅킨
-    - 화이트 세라믹 접시와 대리석 테이블
-    - 나무 톤 노포 테이블, 반찬 서너 가지 곁들임
-    - 매트 블랙 슬레이트 플레이트
+    - tteokbokki with melted mozzarella stretching mid-pull, crispy tempura tower on the side
+    - Korean seolleongtang in a traditional stone bowl, clear broth, scallion garnish, kkakdugi radish kimchi
+    - fresh-baked croissant with visible flaky layers next to iced americano in a clear glass
+    - bibim naengmyeon with glossy sauce, half boiled egg, pear slices, sesame dusting
+    - hanu sirloin steak medium-rare, grill marks visible, rosemary, flaky salt
+    - cheese-pull Korean fried chicken, soy-garlic glaze, pickled radish cubes
+    - brunch plate — ricotta pancakes, maple syrup drip, berries, dusted sugar
+    - latte art rosetta in a white ceramic cup on a wood counter, ground beans scattered
+    - gejang rice bowl with roe yolks breaking over warm rice
+    - bingsu tower — condensed milk pour, sliced strawberries, matcha dust
+  usecase:
+    - food delivery app performance ad
+    - brunch cafe Instagram feed
+    - hotel all-day-dining weekend CRM email
+    - franchise new-menu launch key visual
+    - premium restaurant printed menu hero shot
+  composition:
+    - 45-degree hero angle, subject dominates lower 60%
+    - top-down flat-lay, generous negative space around plate
+    - extreme macro close-up of steam rising or sauce dripping
+    - eye-level with shallow depth, background melted to bokeh
+  copy_zone:
+    - upper 30% empty for headline
+    - right 40% reserved for price/tagline column
+    - bottom 25% reserved for CTA button space
+    - diagonal top-left corner reserved for logo
   lighting:
-    - 창가 자연광, 역광으로 김과 수증기 강조
-    - 소프트 박스 정면광, 색 재현 충실
-    - 노을빛 텅스텐, 따뜻한 무드
-    - 하이키 광택 없는 디퓨저 라이팅
-  context:
-    - 야식 배달 앱 퍼포먼스 광고
-    - 브런치 카페 인스타그램 피드
-    - 프랜차이즈 신메뉴 런칭 키비주얼
-    - 호텔 올데이다이닝 주말 브런치 CRM
+    - soft window light from camera-left, silver bounce fill right, slight haze backlight
+    - single hard top-rim light to emphasize steam, matte fill below
+    - warm tungsten 2800K ambient with neutral 5500K key for appetite colors
+    - overcast-diffused even illumination, commercial catalog style
+  palette:
+    - warm caramel, charred crust, emerald herb, cream linen
+    - glossy red glaze, gold amber, scallion green, matte black
+    - dairy cream, strawberry, mint leaf, sugar white
+    - iced blue, roasted bean brown, oat cream, walnut wood
+  surface:
+    - rough oak cutting board with linen runner
+    - pristine white ceramic plate on grey marble
+    - rustic ttukbaegi or cast-iron pan on dark wooden table
+    - matte black slate with a hint of flour dust
+  styling:
+    - propwork minimal — one small side dish and a linen napkin only
+    - dynamic action frame — hand in frame holding chopsticks mid-bite
+    - vertical garnish stack for height and scale
+    - clean editorial styling with one sauce splatter on purpose

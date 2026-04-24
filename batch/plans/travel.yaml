@@ -1,49 +1,56 @@
 category: travel
-label: 여행·호텔
-count: 30
+label: 여행·호텔 키비주얼
+count: 25
 prefix: B-TRAVEL
 out_dir: raw/batch/travel
 size: "1024x1024"
 quality: high
 
 template: |
-  {format} 포맷의 여행/호텔 마케팅 키비주얼. 소재: {subject}.
-  장소 분위기: {place}. 시간대와 빛: {time}.
-  핵심 구도: {composition}. 감정 키워드: {mood}.
-  여행 브랜드·OTA·호텔 CRM에 바로 쓰도록, 상업 사진 퀄리티의 사실적 표현.
-  텍스트·로고 공간은 비워두고, 주요 피사체 주변 여백 충분히.
+  Subject (피사체): {scene}.
+  Context (촬영 맥락): Luxury hospitality / travel editorial photography, commissioned for premium hotel or OTA campaign. Medium-format digital, 35mm or 50mm lens, f/5.6, ISO 200, shot handheld with subtle natural micro-motion.
+  Composition (구도): {composition}. Leading lines emphasize place, human presence is implied not explicit. {copy_zone}.
+  Lighting (라이팅): {lighting}.
+  Color palette (팔레트): {palette}.
+  Atmosphere (분위기): {mood}. Sensory details — air temperature, scent, texture of wood/stone/linen implied.
+  Post (후보정): natural film-like contrast, restrained shadow lift, Kodak Portra 400 emulation, no Instagram filters, no artificial bloom.
+  Negative (금지): no text, no logos, no watermarks, no crowds of people, no duplicated windows, no fake-looking CGI surfaces, no over-HDR, no neon oversaturation.
 
 variables:
-  format:
-    - 4:5 세로형 인스타그램 피드
-    - 9:16 릴스 썸네일
-    - 16:9 유튜브 썸네일
-    - 1:1 카드뉴스 첫 장
-  subject:
-    - 제주 오션뷰 객실 창문 너머로 보이는 바다
-    - 한옥 호텔 마당의 돌담과 감나무
-    - 부산 해운대 노을의 루프탑 바
-    - 강릉 안목해변의 카페테라스
-    - 도쿄 뒷골목 이자카야 입구 제등
-    - 치앙마이 올드타운 사원 새벽
-    - 발리 우붓 벼 논 사이 인피니티 풀
-  place:
-    - 프라이빗 부티크 호텔, 따뜻한 우드톤
-    - 미니멀 하이엔드 리조트, 노출콘크리트 + 린넨
-    - 한옥 한채형 스테이, 창호지 너머 빛
-    - 비즈니스 시티 호텔, 시티뷰 창
-  time:
-    - 이른 아침 골든아워, 길게 뻗는 그림자
-    - 늦은 오후 노을, 주황빛 벽면
-    - 파란 시간대의 블루 아워, 실내 램프 켜진 상태
-    - 한낮 맑은 하늘, 선명한 색
+  scene:
+    - ocean-view hotel suite interior with floor-to-ceiling window framing turquoise Jeju water
+    - private hanok stay courtyard with stone walls, persimmon tree, morning mist
+    - rooftop infinity pool at golden hour facing Busan Haeundae skyline
+    - Gangneung Anmok beach cafe terrace with a single coffee cup and open book
+    - narrow Tokyo backstreet izakaya entrance with red lanterns and wet stone pavement at dusk
+    - Chiang Mai old-town temple spire in first morning light, low mist
+    - Bali Ubud rice terrace viewed from infinity pool edge at dawn
+    - Jeju stone-wall path with tangerine trees and a single cyclist silhouette
+    - Seoul hanok-style boutique hotel tea lounge with cast iron teapot and yuja
+    - Okinawa seaside villa deck with plunge pool at blue hour
   composition:
-    - 객실 내부에서 창 너머를 바라보는 시선
-    - 로우앵글 건축 샷
-    - 탑뷰 플랫레이, 여권·카메라·커피 배치
-    - 와이드 랜드스케이프, 수평선 강조
+    - interior vantage looking outward through large window, strong diagonal natural light
+    - low-angle architectural hero shot with sky 2/3 of frame
+    - top-down flat-lay of travel essentials — passport, camera, linen, coffee — subtle brand-ready negative space
+    - wide-angle landscape with horizon line on lower third, foreground object anchors
+    - over-the-shoulder POV walking into the scene
+  copy_zone:
+    - upper 30% sky/wall negative space reserved for headline
+    - left column vertical negative space for logo stack
+    - bottom 25% reserved for tagline and CTA
+    - diagonal corner negative space (upper-right) for stamp-style copy
+  lighting:
+    - early golden-hour, long shadows, warm CTO gel tint
+    - overcast soft skylight, even wrap-around illumination
+    - blue hour with practical interior lamps glowing
+    - midday clear sky with strong directional sun, controlled specular highlights
+  palette:
+    - pacific teal, sandstone, linen white, weathered cedar
+    - persimmon orange, hanji cream, ink gray, bamboo green
+    - neon pink-purple sunset, midnight navy, cold aluminum
+    - terracotta, olive, sun-bleached oak, dusty blue
   mood:
-    - 설레는 출발의 순간
-    - 조용하고 사색적인 휴식
-    - 친구들과 떠나는 활기찬 주말
-    - 특별한 날의 프리미엄 스테이
+    - contemplative solo travel, slow morning ritual
+    - understated luxury couple retreat, whispered intimacy
+    - active weekend with close friends, lively yet tasteful
+    - milestone anniversary stay, cinematic refined elegance

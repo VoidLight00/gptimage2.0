@@ -1,58 +1,63 @@
 category: beauty
-label: 뷰티·스킨케어
-count: 50
+label: 뷰티·스킨케어 광고
+count: 30
 prefix: B-BEAUTY
 out_dir: raw/batch/beauty
 size: "1024x1024"
 quality: high
 
-# 프롬프트 = template * variables 전체 조합.
-# 조합 수가 count를 넘으면 앞에서 잘라서 사용.
-# 한국어 그대로 GPT-Image-2에 전달된다.
+# 1024x1024 정사각 하이엔드 상업 광고.
+# 프롬프트 = 전문 포토그래퍼 디렉션 포맷.
+# 영어 전문용어 + 한국어 맥락 혼합 (gpt-image-2가 가장 안정적으로 해석).
 
 template: |
-  {format} 포맷 광고/콘텐츠 이미지. {brand_tone} 톤앤매너의 {product}.
-  모델: {model_desc}. 배경: {background}.
-  라이팅: {lighting}. 화면 구도: {composition}.
-  화면 안에 제품이 명확히 보이고, 카피/로고 공간은 비워둔 상태로 구성.
-  사진 스타일은 상업 광고 수준, 피부 톤과 질감이 자연스럽고 과도한 보정 없이 고급스럽게.
+  Subject (피사체): {product} centered on the frame, label facing camera, clean dewy surface detail.
+  Context (촬영 맥락): Premium Korean beauty advertising for {target}, shot on medium-format digital with 90mm macro lens, f/4, ISO 100.
+  Composition (구도): {composition}. 주인공 오브젝트가 화면의 55~65% 차지. {copy_zone}.
+  Lighting (라이팅): {lighting}. Subtle catchlight on glass, soft falloff on background.
+  Color palette (팔레트): {palette}. Desaturated mids, gentle highlights, skin-safe color profile.
+  Surface & props (바닥·소품): {surface}.
+  Mood & finishing (무드·후보정): editorial skincare campaign, clean retouching, no heavy dodge & burn, natural pore texture retained, no plastic skin, no HDR halo.
+  Negative (금지): no text, no logo, no watermark, no extra hands, no duplicated bottles, no cartoonish gloss, no oversaturation, no lens distortion.
 
 variables:
-  format:
-    - 4:5 세로형 인스타그램 피드
-    - 9:16 릴스 썸네일
-    - 16:9 유튜브 썸네일
-    - 1:1 카드뉴스 첫 장
-  brand_tone:
-    - 프리미엄 미니멀
-    - 클린 더마
-    - 따뜻한 K-뷰티 감성
-    - 바이오 사이언스 연구소 느낌
-    - 비건 자연주의
   product:
-    - 세라마이드 장벽 세럼 보틀
-    - 히알루론산 저자극 토너 용기
-    - 진정 라인 앰플 한 방울
-    - 비타민C 브라이트닝 세럼
-    - 무기자차 선크림 튜브
-  model_desc:
-    - 20대 후반 한국 여성, 민낯에 가까운 맑은 피부, 정면
-    - 30대 초반 한국 여성, 자연광 아래 측면 크로즈업
-    - 얼굴이 부분적으로 보이는 피부 디테일 컷, 손가락으로 제품 바르는 순간
-    - 연출 없이 제품만 단독으로 놓인 스틸 라이프
-  background:
-    - 아이보리톤 세라믹 테이블, 뒤로 흐려진 아침 욕실
-    - 매트한 베이지 브러시 타일과 리넨 수건
-    - 모노톤 그레이 석재 표면 + 은은한 반사
-    - 맑은 유리 샐러드볼에 물결치는 물 방울
-    - 소프트한 파스텔 핑크 그라디언트 페이퍼 백드롭
-  lighting:
-    - 스튜디오 소프트 박스, 부드럽고 균일한 빛
-    - 창가 자연광 + 얇은 레이스 커튼의 은은한 그림자
-    - 위에서 45도 top-lit, 제품 하이라이트 강조
-    - 노을빛 따뜻한 텅스텐
+    - A {brand} ceramide barrier repair serum in a matte glass dropper bottle, amber tint
+    - A {brand} hyaluronic low-irritation toner in a frosted cylindrical bottle with metallic cap
+    - A {brand} retinol night ampoule in a slim amber apothecary bottle
+    - A {brand} mineral physical sunscreen tube with soft ivory label
+    - A {brand} vitamin-C brightening serum in a transparent glass bottle with dropper
+    - A {brand} centella soothing essence in a pastel-mint frosted bottle
+  brand:
+    - minimalist derma
+    - premium clean-science
+    - modern K-beauty
+  target:
+    - 25-35 여성, 민감성 피부, 수분 장벽 관리 니즈
+    - 30-40 여성, 탄력·광채, 나잇케어
+    - 20대 후반 직장인, 효율 루틴, 출근 전 30초 스킨케어
   composition:
-    - 중앙 정렬 + 상단 3분의 1 카피 공간 확보
-    - 황금비 우측 배치 + 좌측 여백
-    - 로우앵글 제품 샷, 위쪽 하늘 공간 확보
-    - 탑뷰 플랫레이, 주변에 소품 배치
+    - centered hero product with shallow depth of field and blurred spa background
+    - 45-degree elevated hero shot with product slightly right of center
+    - top-down flat-lay with product center, minimal satellite props around
+    - product on a stepped tier with a single falling droplet frozen mid-air
+  copy_zone:
+    - 상단 1/3 여백 (카피/로고 공간)
+    - 좌측 1/3 수직 여백 (세로 카피 공간)
+    - 우측 45% 여백 (우측 정렬 카피)
+    - 중앙 하단 3분의 1 여백 (제품명·태그라인)
+  lighting:
+    - soft north-window light, large silk diffuser camera-left, subtle silver bounce camera-right
+    - controlled studio beauty dish top-lit with black flags side, rim light from back
+    - overcast skylight simulation, giant scrim overhead, barely-there shadows
+    - warm tungsten 3200K accent from upper back + neutral 5500K key front
+  palette:
+    - ivory, warm beige, rose quartz, soft champagne
+    - pale pistachio, off-white, brushed silver, stone gray
+    - dusty peach, linen white, caramel shadow
+    - glacial mint, porcelain, pewter, sheer azure
+  surface:
+    - brushed matte ceramic slab with a single linen napkin fold
+    - raw unpolished travertine with faint vein texture
+    - seamless paper backdrop with subtle gradient, no edges visible
+    - wet-look black slate with a single water droplet reflection

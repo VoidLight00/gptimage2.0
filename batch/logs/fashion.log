@@ -35,3 +35,35 @@
 [2m[19시 1분 54초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/fashion.state.json
 [2m[19시 1분 54초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
 [2m[19시 1분 54초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/fashion
+[2m[21시 34분 8초][0m [1mplan[0m fashion / 패션·라이프스타일 화보 / count=25 / prefix=B-FASHION
+[2m[21시 34분 8초][0m   변수 9개 × 값 [7,4,5,4,4,4,4,4,5] = 총 조합 716800개
+[2m[21시 34분 8초][0m   대상 25개 / 전체 25개
+[2m[21시 35분 11초][0m   [32m✓[0m B-FASHION-0001 (1423KB) — 1/25 · 0.02/s · ETA 1524s
+[2m[21시 38분 6초][0m   [32m✓[0m B-FASHION-0002 (1610KB) — 2/25 · 0.01/s · ETA 2743s
+[2m[21시 40분 56초][0m   [32m✓[0m B-FASHION-0003 (1411KB) — 3/25 · 0.01/s · ETA 2994s
+[2m[21시 43분 54초][0m   [32m✓[0m B-FASHION-0004 (1639KB) — 4/25 · 0.01/s · ETA 3077s
+[2m[21시 46분 58초][0m   [32m✓[0m B-FASHION-0005 (1240KB) — 5/25 · 0.01/s · ETA 3080s
+[2m[21시 49분 59초][0m   [32m✓[0m B-FASHION-0006 (1215KB) — 6/25 · 0.01/s · ETA 3013s
+[2m[21시 51분 27초][0m   [32m✓[0m B-FASHION-0007 (1391KB) — 7/25 · 0.01/s · ETA 2671s
+[2m[21시 55분 6초][0m   [32m✓[0m B-FASHION-0008 (2017KB) — 8/25 · 0.01/s · ETA 2674s
+[2m[21시 58분 15초][0m   [32m✓[0m B-FASHION-0009 (1612KB) — 9/25 · 0.01/s · ETA 2572s
+[2m[22시 0분 59초][0m   [32m✓[0m B-FASHION-0010 (1424KB) — 10/25 · 0.01/s · ETA 2417s
+[2m[22시 2분 30초][0m   [32m✓[0m B-FASHION-0011 (1457KB) — 11/25 · 0.01/s · ETA 2166s
+[2m[22시 5분 32초][0m   [32m✓[0m B-FASHION-0012 (1636KB) — 12/25 · 0.01/s · ETA 2041s
+[2m[22시 8분 40초][0m   [32m✓[0m B-FASHION-0013 (1729KB) — 13/25 · 0.01/s · ETA 1913s
+[2m[22시 9분 50초][0m   [32m✓[0m B-FASHION-0014 (1510KB) — 14/25 · 0.01/s · ETA 1683s
+[2m[22시 11분 3초][0m   [32m✓[0m B-FASHION-0015 (1496KB) — 15/25 · 0.01/s · ETA 1477s
+[2m[22시 14분 31초][0m   [32m✓[0m B-FASHION-0016 (1634KB) — 16/25 · 0.01/s · ETA 1363s
+[2m[22시 18분 51초][0m   [32m✓[0m B-FASHION-0017 (1635KB) — 17/25 · 0.01/s · ETA 1263s
+[2m[22시 22분 6초][0m   [32m✓[0m B-FASHION-0018 (1341KB) — 18/25 · 0.01/s · ETA 1119s
+[2m[22시 25분 19초][0m   [32m✓[0m B-FASHION-0019 (1666KB) — 19/25 · 0.01/s · ETA 970s
+[2m[22시 28분 22초][0m   [32m✓[0m B-FASHION-0020 (1369KB) — 20/25 · 0.01/s · ETA 813s
+[2m[22시 31분 38초][0m   [32m✓[0m B-FASHION-0021 (1420KB) — 21/25 · 0.01/s · ETA 657s
+[2m[22시 32분 49초][0m   [32m✓[0m B-FASHION-0022 (1531KB) — 22/25 · 0.01/s · ETA 480s
+[2m[22시 36분 1초][0m   [32m✓[0m B-FASHION-0023 (1679KB) — 23/25 · 0.01/s · ETA 323s
+[2m[22시 38분 38초][0m   [32m✓[0m B-FASHION-0024 (1637KB) — 24/25 · 0.01/s · ETA 161s
+[2m[22시 39분 47초][0m   [32m✓[0m B-FASHION-0025 (1631KB) — 25/25 · 0.01/s · ETA 0s
+[2m[22시 39분 47초][0m [1mdone[0m fashion: 신규 25 · 누적 25/25 · 에러 0
+[2m[22시 39분 47초][0m   state: /Users/voidlight/projects/gptimage2.0/batch/state/fashion.state.json
+[2m[22시 39분 47초][0m   manifest: /Users/voidlight/projects/gptimage2.0/batch/manifest.jsonl
+[2m[22시 39분 47초][0m   images: /Users/voidlight/projects/gptimage2.0/raw/batch/fashion

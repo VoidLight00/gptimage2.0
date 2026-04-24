@@ -1,0 +1,22 @@
+[2m[1시 10분 4초][0m [1mplan[0m character / 캐릭터 시트 / count=25 / prefix=B-CHAR
+[2m[1시 10분 4초][0m   변수 7개 × 값 [5,8,5,4,4,4,4] = 총 조합 51200개
+[2m[1시 10분 4초][0m   대상 25개 / 전체 25개
+[2m[1시 13분 27초][0m   [32m✓[0m B-CHAR-0001 (1930KB) — 1/25 · 0.00/s · ETA 4885s
+[2m[1시 16분 27초][0m   [32m✓[0m B-CHAR-0002 (1336KB) — 2/25 · 0.01/s · ETA 4402s
+[2m[1시 19분 33초][0m   [32m✓[0m B-CHAR-0003 (1564KB) — 3/25 · 0.01/s · ETA 4174s
+[2m[1시 22분 39초][0m   [32m✓[0m B-CHAR-0004 (1698KB) — 4/25 · 0.01/s · ETA 3967s
+[2m[1시 25분 53초][0m   [32m✓[0m B-CHAR-0005 (614KB) — 5/25 · 0.01/s · ETA 3797s
+[2m[1시 26분 55초][0m   [32m✓[0m B-CHAR-0006 (813KB) — 6/25 · 0.01/s · ETA 3202s
+[2m[1시 28분 7초][0m   [32m✓[0m B-CHAR-0007 (1450KB) — 7/25 · 0.01/s · ETA 2785s
+[2m[1시 29분 41초][0m   [32m✓[0m B-CHAR-0008 (1680KB) — 8/25 · 0.01/s · ETA 2502s
+168 |     // 429 usage_limit_reached → 별도 예외 (메인 루프에서 sleep)
+169 |     if (res.status === 429 || /usage_limit_reached/.test(text)) {
+170 |       const wait = parseResetsIn(text) ?? 900;
+171 |       throw new RateLimited(wait, text);
+172 |     }
+173 |     throw new Error(`HTTP ${res.status}: ${text.slice(0, 200)}`);
+                    ^
+error: HTTP 502: {"error":{"message":"Image generation failed: {\"type\":\"error\",\"error\":{\"type\":\"image_generation_user_error\",\"code\":\"moderation_blocked\",\"message\":\"Your request was rejected by the saf
+      at generateOne (/Users/voidlight/projects/gptimage2.0/batch/runner.ts:173:15)
+      at async main (/Users/voidlight/projects/gptimage2.0/batch/runner.ts:280:19)
+
