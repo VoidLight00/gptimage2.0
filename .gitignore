@@ -11,7 +11,12 @@ tools/.venv/
 tools/__pycache__/
 
 # generated images (regenerable from raw/ or _workspace/rag/media/)
-web/public/images/
+web/public/images/original/
+web/public/images/large/
+web/public/images/medium/
+web/public/images/thumb/
+# prompts3 mirrored thumbs and webp variants — committed so Vercel can serve them
+# (do NOT ignore web/public/images/p3/)
 
 # RAG harness workspace — snapshots, mirrors, normalized data, indexes, qa
 _workspace/
