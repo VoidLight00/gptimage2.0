@@ -1,6 +1,12 @@
-export const metadata = { title: "About — GPTIMAGE 2.0" };
+import { getManifest } from "@/lib/manifest";
+import { SITE_NAME } from "@/lib/site";
+
+export const metadata = { title: `About — ${SITE_NAME}` };
 
 export default function About() {
+  const ko = getManifest("ko");
+  const en = getManifest("en");
+
   return (
     <div className="px-6 md:px-12 py-16 md:py-24">
       <div className="mx-auto max-w-3xl">
@@ -31,8 +37,9 @@ export default function About() {
 
           <div className="pt-8 border-t border-border-subtle font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50 space-y-2">
             <div>Curated by VOIDLIGHT</div>
-            <div>KO section: private dataset · 436 entries</div>
-            <div>EN section: sourced from github.com/ZeroLu/awesome-gpt-image</div>
+            <div>KO section: {ko.totalEntries} entries · {ko.categories.length} categories</div>
+            <div>EN section: {en.totalEntries} entries · {en.categories.length} categories</div>
+            <div>External sources include community-curated CC BY archives</div>
             <div>Design inspired by xAI</div>
             <div>Built with Next.js</div>
           </div>

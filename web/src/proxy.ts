@@ -23,6 +23,10 @@ export function proxy(req: NextRequest) {
     nextUrl.pathname.startsWith("/gate") ||
     nextUrl.pathname.startsWith("/_next") ||
     nextUrl.pathname.startsWith("/api") ||
+    nextUrl.pathname === "/license" ||
+    nextUrl.pathname === "/about" ||
+    nextUrl.pathname === "/robots.txt" ||
+    nextUrl.pathname === "/sitemap.xml" ||
     nextUrl.pathname === "/favicon.ico" ||
     nextUrl.pathname.startsWith("/brand") ||
     nextUrl.pathname.startsWith("/images") ||
@@ -57,5 +61,5 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!_next|favicon.ico).*)"],
 };

@@ -5,6 +5,30 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 
+function getCopy(lang: "ko" | "en" | null) {
+  if (lang === "ko") {
+    return {
+      categories: "카테고리",
+      search: "검색",
+      about: "소개",
+      license: "라이선스",
+      home: "홈",
+      openMenu: "메뉴 열기",
+      closeMenu: "메뉴 닫기",
+    };
+  }
+
+  return {
+    categories: "Categories",
+    search: "Search",
+    about: "About",
+    license: "License",
+    home: "Home",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+  };
+}
+
 export function Nav() {
   const pathname = usePathname() ?? "/";
   const lang: "ko" | "en" | null = pathname.startsWith("/ko")
@@ -12,15 +36,11 @@ export function Nav() {
     : pathname.startsWith("/en")
     ? "en"
     : null;
+  const copy = getCopy(lang);
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuRoute, setMenuRoute] = useState<string | null>(null);
+  const menuOpen = menuRoute === pathname;
 
-  // 라우트 변경 시 메뉴 닫기
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
-  // 메뉴 열린 상태에서 body 스크롤 잠금
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -65,30 +85,28 @@ export function Nav() {
           {/* 데스크톱: 인라인 메뉴 */}
           {lang && (
             <div className="hidden md:flex items-center gap-6 font-sans text-sm ml-auto">
-              <Link href={`/${lang}/c`} className="text-fg">
-                Categories
+              <Link href={`/${lang}/c`} className="text-fg hover:text-fg-70">
+                {copy.categories}
               </Link>
-              <Link href={`/${lang}/search`} className="text-fg">
-                Search
+              <Link href={`/${lang}/search`} className="text-fg hover:text-fg-70">
+                {copy.search}
+              </Link>
+              <Link href="/about" className="text-fg hover:text-fg-70">
+                {copy.about}
+              </Link>
+              <Link href="/license" className="text-fg hover:text-fg-70">
+                {copy.license}
               </Link>
             </div>
-          )}
-          {lang && (
-            <Link
-              href={`/${lang}/c`}
-              className="hidden md:inline-flex items-center px-5 py-2.5 bg-fg text-bg font-mono text-[12px] uppercase tracking-[0.14em] hover:bg-fg/90 transition-colors"
-            >
-              Browse
-            </Link>
           )}
 
           {/* 모바일: 햄버거 */}
           {lang && (
             <button
               type="button"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={menuOpen ? copy.closeMenu : copy.openMenu}
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((v) => !v)}
+              onClick={() => setMenuRoute((current) => (current === pathname ? null : pathname))}
               className="md:hidden w-11 h-11 flex flex-col items-center justify-center gap-[5px] border border-border-strong shrink-0"
             >
               <span
@@ -116,41 +134,51 @@ export function Nav() {
         <div className="md:hidden fixed inset-x-0 top-14 bottom-0 z-30 bg-bg border-t border-border-subtle flex flex-col overflow-y-auto">
           <Link
             href={`/${lang}`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuRoute(null)}
             className="px-6 py-8 border-b border-border-subtle font-mono uppercase tracking-[-0.01em] hover:bg-surface-hover flex items-baseline justify-between"
           >
             <span className="font-light" style={{ fontSize: "clamp(40px, 10vw, 56px)" }}>
-              Home
+              {copy.home}
             </span>
             <span className="text-fg-50 text-[11px] tracking-[0.2em]">{lang.toUpperCase()} →</span>
           </Link>
           <Link
             href={`/${lang}/c`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuRoute(null)}
             className="px-6 py-8 border-b border-border-subtle font-mono uppercase hover:bg-surface-hover flex items-baseline justify-between"
           >
             <span className="font-light" style={{ fontSize: "clamp(40px, 10vw, 56px)" }}>
-              Categories
+              {copy.categories}
             </span>
             <span className="text-fg-50 text-[11px] tracking-[0.2em]">→</span>
           </Link>
           <Link
             href={`/${lang}/search`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuRoute(null)}
             className="px-6 py-8 border-b border-border-subtle font-mono uppercase hover:bg-surface-hover flex items-baseline justify-between"
           >
             <span className="font-light" style={{ fontSize: "clamp(40px, 10vw, 56px)" }}>
-              Search
+              {copy.search}
             </span>
             <span className="text-fg-50 text-[11px] tracking-[0.2em]">→</span>
           </Link>
           <Link
             href="/about"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuRoute(null)}
             className="px-6 py-8 border-b border-border-subtle font-mono uppercase hover:bg-surface-hover flex items-baseline justify-between"
           >
             <span className="font-light" style={{ fontSize: "clamp(40px, 10vw, 56px)" }}>
-              About
+              {copy.about}
+            </span>
+            <span className="text-fg-50 text-[11px] tracking-[0.2em]">→</span>
+          </Link>
+          <Link
+            href="/license"
+            onClick={() => setMenuRoute(null)}
+            className="px-6 py-8 border-b border-border-subtle font-mono uppercase hover:bg-surface-hover flex items-baseline justify-between"
+          >
+            <span className="font-light" style={{ fontSize: "clamp(40px, 10vw, 56px)" }}>
+              {copy.license}
             </span>
             <span className="text-fg-50 text-[11px] tracking-[0.2em]">→</span>
           </Link>

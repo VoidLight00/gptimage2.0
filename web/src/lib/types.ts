@@ -1,24 +1,52 @@
+export type PromptArgument = {
+  key: string;
+  name: string;
+  defaultValue: string;
+  occurrence: number;
+};
+
+export type AttributionData = {
+  license: string;
+  licenseUrl?: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  firstPartyUrl?: string;
+  upstreamChain: string[];
+  indicationOfChanges?: string;
+  rehostedAt?: string;
+};
+
 export type PromptEntry = {
   id: string;
-  language?: "ko" | "en";
-  title?: string;
+  source: "voidlight" | "prompts3" | string;
+  language: "ko" | "en";
+  title?: string | null;
+  description?: string | null;
   prompt: string;
-  negativePrompt?: string;
+  promptBody: string;
+  promptIsStructured: boolean;
+  promptArgs: PromptArgument[];
+  promptArgsUpstream: Array<{ name?: string; default?: string }>;
   category: string;
   categoryLabel: string;
+  taxonomySection: string;
+  taxonomySectionLabel: string;
+  taxonomyPurpose: string[];
   domains: string[];
   formats: string[];
   tags: string[];
   model?: string;
   sourceFolder?: string;
-  sourceUrl?: string;       // EN entries: 원본 X/Twitter·블로그 링크
-  imageSourceUrl?: string;  // EN entries: 원격 이미지 원본 URL
+  sourceUrl?: string;
+  imageSourceUrl?: string;
+  attribution?: AttributionData;
   images: {
     original: string;
     large: string;
     medium: string;
     thumb: string;
     blurDataURL: string;
+    blurhash?: string;
     width: number;
     height: number;
   };

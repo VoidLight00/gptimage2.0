@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { PromptEntry } from "@/lib/types";
+import { SourceBadge } from "@/components/SourceBadge";
 
 export function ImageCard({
   entry,
@@ -25,8 +26,8 @@ export function ImageCard({
           alt={title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          placeholder="blur"
-          blurDataURL={entry.images.blurDataURL}
+          placeholder={entry.images.blurDataURL ? "blur" : "empty"}
+          blurDataURL={entry.images.blurDataURL || undefined}
           className="object-cover"
         />
       </div>
@@ -37,6 +38,9 @@ export function ImageCard({
         <div className="font-mono text-[12px] text-fg line-clamp-2 leading-[1.5]">
           {entry.title ?? entry.prompt}
         </div>
+      </div>
+      <div className="absolute top-2 left-2 transition-opacity">
+        <SourceBadge source={entry.source} license={entry.attribution?.license} />
       </div>
       {entry.domains && entry.domains.length > 0 && (
         <div className="absolute top-2 right-2 flex flex-wrap gap-1 opacity-0 group-hover:opacity-100 transition-opacity">

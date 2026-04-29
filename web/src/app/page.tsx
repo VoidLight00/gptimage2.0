@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { getManifest } from "@/lib/manifest";
+import { SITE_NAME } from "@/lib/site";
 
-export const metadata = { title: "GPTIMAGE 2.0 — Choose Language" };
+export const metadata = { title: `${SITE_NAME} — Choose Language` };
 
 export default function Root() {
   const ko = getManifest("ko");
@@ -73,7 +74,7 @@ export default function Root() {
               EN
             </div>
             <div className="mt-5 md:mt-6 font-sans text-fg-70 text-base md:text-lg">
-              GPT Image 2 · Community
+              English prompt archive
             </div>
             <div className="mt-6 md:mt-10 flex flex-wrap items-baseline gap-x-5 gap-y-2 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-fg-50">
               <div>
@@ -96,8 +97,7 @@ export default function Root() {
         </div>
 
         <p className="mt-10 md:mt-16 max-w-2xl font-sans text-fg-70 leading-relaxed text-[15px] md:text-base">
-          섹션이 완전히 분리되어 있습니다. 한국어 마케팅 콘텐츠는 KO, 영어 커뮤니티 GPT Image 2
-          컬렉션은 EN에서 관리됩니다.
+          섹션이 완전히 분리되어 있습니다. 한국어 중심 아카이브는 KO, 영어 중심 프롬프트 컬렉션은 EN에서 탐색할 수 있습니다.
         </p>
       </div>
     </div>

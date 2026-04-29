@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -7,10 +8,23 @@ import {
   getFormats,
   getManifest,
 } from "@/lib/manifest";
+import { buildCategoryMetadata } from "@/lib/page-metadata";
 import { CategoryFilter } from "@/app/ko/c/[slug]/CategoryFilter";
 
 export function generateStaticParams() {
   return getCategories("en").map((c) => ({ slug: c.slug }));
+}
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  const category = getManifest("en").categories.find((item) => item.slug === slug);
+  if (!category) {
+    return {
+      title: "Not Found · EN — GPTIMAGE 2.0",
+      description: "The requested category could not be found.",
+    };
+  }
+  return buildCategoryMetadata("en", category);
 }
 
 export default async function Page(props: { params: Promise<{ slug: string }> }) {

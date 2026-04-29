@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -7,10 +8,23 @@ import {
   getFormats,
   getManifest,
 } from "@/lib/manifest";
+import { buildCategoryMetadata } from "@/lib/page-metadata";
 import { CategoryFilter } from "./CategoryFilter";
 
 export function generateStaticParams() {
   return getCategories("ko").map((c) => ({ slug: c.slug }));
+}
+
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await props.params;
+  const category = getManifest("ko").categories.find((item) => item.slug === slug);
+  if (!category) {
+    return {
+      title: "Not Found · KO — GPTIMAGE 2.0",
+      description: "요청한 카테고리를 찾을 수 없습니다.",
+    };
+  }
+  return buildCategoryMetadata("ko", category);
 }
 
 export default async function Page(props: { params: Promise<{ slug: string }> }) {
@@ -40,7 +54,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
           href={`/${lang}/c`}
           className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50 hover:text-fg"
         >
-          ← All Categories
+          ← 전체 카테고리
         </Link>
         <div className="flex items-end justify-between mt-8 mb-16 flex-wrap gap-6">
           <h1
@@ -50,12 +64,12 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
             {meta.label}
           </h1>
           <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50">
-            {meta.count} entries
+            {meta.count}개 항목
           </span>
         </div>
         {entries.length === 0 ? (
           <div className="border border-border-subtle bg-surface p-12 font-mono text-[13px] uppercase tracking-[0.14em] text-fg-50">
-            No entries.
+            항목이 없습니다.
           </div>
         ) : (
           <CategoryFilter entries={entries} domains={domains} formats={formats} lang={lang} />

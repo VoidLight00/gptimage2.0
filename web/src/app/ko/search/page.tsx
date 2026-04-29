@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { buildSearchItems } from "@/lib/archive-search";
 import { getManifest } from "@/lib/manifest";
 import { SearchClient } from "./SearchClient";
 
@@ -5,18 +7,7 @@ export const metadata = { title: "Search · KO — GPTIMAGE 2.0" };
 
 export default function Page() {
   const manifest = getManifest("ko");
-  const items = manifest.entries.map((e) => ({
-    id: e.id,
-    prompt: e.prompt,
-    category: e.category,
-    categoryLabel: e.categoryLabel,
-    tags: e.tags,
-    model: e.model ?? "",
-    thumb: e.images.thumb,
-    blur: e.images.blurDataURL,
-    w: e.images.width,
-    h: e.images.height,
-  }));
+  const items = buildSearchItems(manifest.entries);
 
   return (
     <div className="px-6 md:px-12 py-16 md:py-24">
@@ -30,7 +21,9 @@ export default function Page() {
         >
           FIND
         </h1>
-        <SearchClient items={items} lang="ko" />
+        <Suspense fallback={<div className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50">Loading search…</div>}>
+          <SearchClient items={items} lang="ko" />
+        </Suspense>
       </div>
     </div>
   );

@@ -22,6 +22,8 @@ export function Footer() {
             <Link href="/">Home</Link>
             <Link href="/ko">KO</Link>
             <Link href="/en">EN</Link>
+            <Link href="/about">About</Link>
+            <Link href="/license">License</Link>
           </div>
           <div>© {new Date().getFullYear()} VOIDLIGHT · GPTIMAGE 2.0</div>
         </div>

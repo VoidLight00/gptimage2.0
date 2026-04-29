@@ -10,11 +10,21 @@ raw/
 tools/.venv/
 tools/__pycache__/
 
-# generated images (regenerable from raw/)
-web/public/images/original/
-web/public/images/large/
-web/public/images/medium/
-web/public/images/thumb/
+# generated images (regenerable from raw/ or _workspace/rag/media/)
+web/public/images/
 
-# logs
+# RAG harness workspace — snapshots, mirrors, normalized data, indexes, qa
+_workspace/
+
+# python tooling
+tools/rag/__pycache__/
+
+# logs and ephemeral
 web/content/skipped.log
+batch/logs/
+batch/state/
+CLAUDE.md
+
+# legacy backups (kept locally, not committed)
+web/content/*.backup-pre-*
+web/content/prompts.merged.json
