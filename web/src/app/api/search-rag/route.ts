@@ -3,6 +3,9 @@ import { buildSearchItems, type SearchItem } from "@/lib/archive-search";
 import { getManifest, LANGS, type Lang } from "@/lib/manifest";
 
 export const runtime = "nodejs";
+// allow Vercel Edge Cache to honor the response Cache-Control header
+// (s-maxage=60, stale-while-revalidate=300)
+export const revalidate = 60;
 
 type CorpusItem = SearchItem;
 
