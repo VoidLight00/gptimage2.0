@@ -13,10 +13,16 @@ function expected(): string | null {
   return process.env.SITE_PASSWORD?.trim() || null;
 }
 
+function passthroughWithPath(req: NextRequest) {
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("x-pathname", req.nextUrl.pathname);
+  return NextResponse.next({ request: { headers: requestHeaders } });
+}
+
 export function proxy(req: NextRequest) {
   const { nextUrl } = req;
   const pass = expected();
-  if (!pass) return NextResponse.next(); // 미설정 시 우회
+  if (!pass) return passthroughWithPath(req); // 미설정 시 우회
 
   // /gate, _next 등 항상 통과
   if (
@@ -32,7 +38,7 @@ export function proxy(req: NextRequest) {
     nextUrl.pathname.startsWith("/images") ||
     nextUrl.pathname.startsWith("/images-en")
   ) {
-    return NextResponse.next();
+    return passthroughWithPath(req);
   }
 
   // URL 쿼리 ?cmd=xxx 로 접근 시 쿠키 세팅
@@ -52,7 +58,7 @@ export function proxy(req: NextRequest) {
 
   // 쿠키 확인
   const cookie = req.cookies.get(COOKIE)?.value;
-  if (cookie === pass) return NextResponse.next();
+  if (cookie === pass) return passthroughWithPath(req);
 
   // 게이트로 리다이렉트
   const gate = new URL("/gate", nextUrl.origin);

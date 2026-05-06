@@ -16,21 +16,38 @@ function sectionName(lang: SiteLang) {
   return lang.toUpperCase();
 }
 
-export function buildRootMetadata(): Metadata {
+export function resolveLangFromPath(pathname: string): SiteLang {
+  return pathname.startsWith("/en") ? "en" : "ko";
+}
+
+const ROOT_DESCRIPTIONS: Record<SiteLang, { long: string; short: string }> = {
+  ko: {
+    long: "VOIDLIGHT가 큐레이팅한 GPT 이미지 프롬프트와 결과물, 출처 정보를 한자리에 모은 아카이브.",
+    short: "VOIDLIGHT가 큐레이팅한 GPT 이미지 프롬프트 아카이브.",
+  },
+  en: {
+    long: "A curated archive of GPT image prompts paired with generated results and attribution by VOIDLIGHT.",
+    short: "A curated archive of GPT image prompts by VOIDLIGHT.",
+  },
+};
+
+export function buildRootMetadata(lang: SiteLang = "ko"): Metadata {
+  const copy = ROOT_DESCRIPTIONS[lang];
   return {
     metadataBase: new URL(getSiteUrl()),
     title: `${SITE_NAME} — PROMPT ARCHIVE`,
-    description: "A curated archive of GPT image prompts paired with generated results and attribution by VOIDLIGHT.",
+    description: copy.long,
     openGraph: {
       title: SITE_NAME,
-      description: "A curated archive of GPT image prompts by VOIDLIGHT.",
+      description: copy.short,
       type: "website",
       url: absoluteUrl("/"),
+      locale: lang === "ko" ? "ko_KR" : "en_US",
     },
     twitter: {
       card: "summary_large_image",
       title: SITE_NAME,
-      description: "A curated archive of GPT image prompts by VOIDLIGHT.",
+      description: copy.short,
     },
   };
 }
