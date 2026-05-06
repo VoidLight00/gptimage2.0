@@ -76,7 +76,6 @@ const rawManifests: Record<Lang, RawManifest> = {
 };
 
 const cache: Partial<Record<Lang, ArchiveManifest>> = {};
-const PLACEHOLDER_IMAGE = "/brand/voidlight-original.png";
 const PLACEHOLDER_WIDTH = 2464;
 const PLACEHOLDER_HEIGHT = 2508;
 
@@ -108,9 +107,10 @@ function getCategoryLabel(entry: RawNormalizedEntry, lang: Lang) {
   return entry.taxonomy?.section_label_en ?? entry.taxonomy?.section_label ?? entry.taxonomy?.section ?? "Other";
 }
 
-function getImageVariants(entry: RawNormalizedEntry) {
+function getImageVariants(entry: RawNormalizedEntry, categorySlug: string) {
   const variants = entry.media?.variants ?? {};
-  const fullKey = entry.media?.full?.key ?? PLACEHOLDER_IMAGE;
+  const fallback = getMasterIcon(categorySlug);
+  const fullKey = entry.media?.full?.key ?? fallback;
   const thumbKey = entry.media?.thumb?.key ?? variants.w320 ?? fullKey;
 
   return {
@@ -128,7 +128,7 @@ function getImageVariants(entry: RawNormalizedEntry) {
 function mapNormalizedEntry(entry: RawNormalizedEntry, lang: Lang): PromptEntry {
   const promptBody = entry.prompt?.body ?? "";
   const category = entry.taxonomy?.section ?? "other";
-  const images = getImageVariants(entry);
+  const images = getImageVariants(entry, category);
 
   return {
     id: entry.id,
