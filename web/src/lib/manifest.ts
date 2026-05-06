@@ -1,5 +1,6 @@
 import promptsKo from "../../content/prompts.json";
 import promptsEn from "../../content/prompts.en.json";
+import { MASTER_TAXONOMY } from "./master-taxonomy";
 import type { ArchiveManifest, CategoryMeta, PromptArgument, PromptEntry, TagMeta } from "./types";
 
 export type Lang = "ko" | "en";
@@ -175,16 +176,28 @@ function mapNormalizedEntry(entry: RawNormalizedEntry, lang: Lang): PromptEntry 
   };
 }
 
-function buildCategories(entries: PromptEntry[]) {
+const PLACEHOLDER_COVER = "/brand/voidlight-original.png";
+
+function buildCategories(entries: PromptEntry[], lang: Lang) {
   const categories = new Map<string, CategoryMeta>();
+
+  for (const master of MASTER_TAXONOMY) {
+    categories.set(master.slug, {
+      slug: master.slug,
+      label: master[lang],
+      count: 0,
+      cover: PLACEHOLDER_COVER,
+    });
+  }
 
   entries.forEach((entry) => {
     const current = categories.get(entry.category);
+    const isSeed = (current?.count ?? 0) === 0;
     categories.set(entry.category, {
       slug: entry.category,
-      label: entry.categoryLabel,
+      label: current?.label ?? entry.categoryLabel,
       count: (current?.count ?? 0) + 1,
-      cover: current?.cover ?? entry.images.thumb,
+      cover: isSeed ? entry.images.thumb : current?.cover ?? entry.images.thumb,
     });
   });
 
@@ -221,7 +234,7 @@ export function getManifest(lang: Lang): ArchiveManifest {
     generatedAt: rawManifest.generatedAt,
     totalEntries: entries.length,
     skippedCount: rawManifest.skippedCount ?? 0,
-    categories: buildCategories(entries),
+    categories: buildCategories(entries, lang),
     domains: buildTagMeta(entries, "domains"),
     formats: buildTagMeta(entries, "formats"),
     entries,
