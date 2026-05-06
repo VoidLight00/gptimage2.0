@@ -19,3 +19,7 @@ export function getMasterLabel(slug: string, lang: "ko" | "en") {
   const item = MASTER_TAXONOMY.find((m) => m.slug === slug);
   return item ? item[lang] : slug;
 }
+
+export function getMasterIcon(slug: string) {
+  return `/brand/master-icons/${slug}.svg`;
+}

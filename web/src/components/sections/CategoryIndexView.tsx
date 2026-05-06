@@ -52,7 +52,13 @@ export function CategoryIndexView({
                 className="group border border-border-subtle hover:border-border-strong bg-surface overflow-hidden"
               >
                 <div className="relative aspect-[4/3] bg-surface">
-                  {category.cover ? (
+                  {category.cover?.endsWith(".svg") ? (
+                    <img
+                      src={category.cover}
+                      alt={category.label}
+                      className="absolute inset-0 w-full h-full object-contain p-12 md:p-16 opacity-30 transition-opacity duration-300 group-hover:opacity-50"
+                    />
+                  ) : category.cover ? (
                     <Image
                       src={category.cover}
                       alt={category.label}

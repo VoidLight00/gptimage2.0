@@ -1,6 +1,6 @@
 import promptsKo from "../../content/prompts.json";
 import promptsEn from "../../content/prompts.en.json";
-import { MASTER_TAXONOMY } from "./master-taxonomy";
+import { MASTER_TAXONOMY, getMasterIcon } from "./master-taxonomy";
 import type { ArchiveManifest, CategoryMeta, PromptArgument, PromptEntry, TagMeta } from "./types";
 
 export type Lang = "ko" | "en";
@@ -176,8 +176,6 @@ function mapNormalizedEntry(entry: RawNormalizedEntry, lang: Lang): PromptEntry 
   };
 }
 
-const PLACEHOLDER_COVER = "/brand/voidlight-original.png";
-
 function buildCategories(entries: PromptEntry[], lang: Lang) {
   const categories = new Map<string, CategoryMeta>();
 
@@ -186,7 +184,7 @@ function buildCategories(entries: PromptEntry[], lang: Lang) {
       slug: master.slug,
       label: master[lang],
       count: 0,
-      cover: PLACEHOLDER_COVER,
+      cover: getMasterIcon(master.slug),
     });
   }
 
