@@ -21,7 +21,7 @@ export type SearchItem = {
   createdAt: string;
 };
 
-export type SearchSort = "latest" | "title";
+export type SearchSort = "relevance" | "latest" | "title";
 
 export type SearchFilterOption = {
   value: string;
@@ -30,7 +30,10 @@ export type SearchFilterOption = {
 };
 
 export function normalizeSearchSort(value?: string | null): SearchSort {
-  return value === "title" ? "title" : "latest";
+  if (value === "latest" || value === "title") {
+    return value;
+  }
+  return "relevance";
 }
 
 export function mapEntryToSearchItem(entry: PromptEntry): SearchItem {
@@ -74,7 +77,10 @@ export function sortSearchItems(items: SearchItem[], sort: SearchSort) {
   if (sort === "title") {
     return items.toSorted(compareTitle);
   }
-  return items.toSorted(compareLatestFirst);
+  if (sort === "latest") {
+    return items.toSorted(compareLatestFirst);
+  }
+  return items;
 }
 
 export function getSourceCounts(items: SearchItem[]) {

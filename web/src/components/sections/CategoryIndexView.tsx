@@ -52,19 +52,17 @@ export function CategoryIndexView({
                 className="group border border-border-subtle hover:border-border-strong bg-surface overflow-hidden"
               >
                 <div className="relative aspect-[4/3] bg-surface">
-                  {category.cover?.endsWith(".svg") ? (
-                    <img
-                      src={category.cover}
-                      alt={category.label}
-                      className="absolute inset-0 w-full h-full object-contain p-12 md:p-16 opacity-30 transition-opacity duration-300 group-hover:opacity-50"
-                    />
-                  ) : category.cover ? (
+                  {category.cover ? (
                     <Image
                       src={category.cover}
                       alt={category.label}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      className={
+                        category.cover.endsWith(".svg")
+                          ? "object-contain p-12 md:p-16 opacity-30 transition-opacity duration-300 group-hover:opacity-50"
+                          : "object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      }
                     />
                   ) : null}
                   <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-transparent" />
@@ -75,6 +73,11 @@ export function CategoryIndexView({
                     <div className="mt-2 font-sans text-2xl md:text-3xl tracking-tight text-fg line-clamp-2">
                       {category.label}
                     </div>
+                    {category.description && (
+                      <div className="mt-1.5 font-sans text-[12px] leading-[1.5] text-fg-50 line-clamp-1">
+                        {category.description}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-4 p-4 md:p-5 border-t border-border-subtle font-mono text-[11px] uppercase tracking-[0.14em] text-fg-50">

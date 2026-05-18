@@ -12,9 +12,11 @@ function getCopy(lang: "ko" | "en") {
         categories: "카테고리",
         updated: "업데이트",
         latest: "최신 프롬프트",
-        featuredCategories: "카테고리",
+        featuredCategories: "주요 카테고리",
         viewAll: "전체 보기 →",
         categoryEntries: "개 항목",
+        heroSub:
+          "GPT 이미지 생성 프롬프트와 결과물을 카테고리별로 아카이빙합니다. 프롬프트가 존재하는 작업물만 수록되며, 재사용 가능한 레시피로 제공됩니다.",
       }
     : {
         browse: "Browse Archive",
@@ -22,10 +24,12 @@ function getCopy(lang: "ko" | "en") {
         entries: "Entries",
         categories: "Categories",
         updated: "Updated",
-        latest: "Latest",
-        featuredCategories: "Categories",
+        latest: "Latest Prompts",
+        featuredCategories: "Featured Categories",
         viewAll: "View All →",
         categoryEntries: "entries",
+        heroSub:
+          "Curated GPT Image prompts with browseable categories, reusable prompt recipes, and source attribution built into every entry.",
       };
 }
 
@@ -40,7 +44,7 @@ export function SectionHome({
 }) {
   const copy = getCopy(lang);
   const categories = manifest.categories;
-  const featuredCategories = categories.slice(0, 6);
+  const featuredCategories = categories.filter((c) => c.count > 0).slice(0, 6);
 
   return (
     <div>
@@ -66,9 +70,7 @@ export function SectionHome({
             <span className="text-fg-50">{lang === "ko" ? "한국어" : "WORLD"}</span>
           </h1>
           <p className="mt-8 md:mt-12 max-w-xl font-sans text-base md:text-lg text-fg-70 leading-relaxed">
-            {lang === "ko"
-              ? "수백 개의 GPT 이미지와 그 프롬프트를 카테고리별로 아카이빙합니다. 프롬프트가 존재하는 작업물만 수록됩니다."
-              : "Curated GPT Image prompts with browseable categories, reusable prompt recipes, and source attribution built into every entry."}
+            {copy.heroSub}
           </p>
           <div className="mt-8 md:mt-12 flex flex-wrap gap-3">
             <Link
@@ -95,7 +97,7 @@ export function SectionHome({
             <div>
               <div className="text-fg-50 text-[10px] md:text-[11px] tracking-[0.2em]">{copy.categories}</div>
               <div className="text-fg text-3xl md:text-6xl mt-2 md:mt-3 font-light tracking-tight">
-                {categories.length}
+                {categories.filter((c) => c.count > 0).length}
               </div>
             </div>
             <div>
@@ -155,17 +157,28 @@ export function SectionHome({
                         alt={category.label}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        className={
+                          category.cover.endsWith(".svg")
+                            ? "object-contain p-12 md:p-16 opacity-30 transition-opacity duration-300 group-hover:opacity-50"
+                            : "object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        }
                       />
                     ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                       <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-50">
-                        {lang === "ko" ? `${category.count}${copy.categoryEntries}` : `${category.count} ${copy.categoryEntries}`}
+                        {lang === "ko"
+                          ? `${category.count}${copy.categoryEntries}`
+                          : `${category.count} ${copy.categoryEntries}`}
                       </div>
                       <div className="mt-2 font-sans text-2xl md:text-3xl tracking-tight text-fg line-clamp-2">
                         {category.label}
                       </div>
+                      {category.description && (
+                        <div className="mt-1.5 font-sans text-[12px] leading-[1.5] text-fg-50 line-clamp-1">
+                          {category.description}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Link>

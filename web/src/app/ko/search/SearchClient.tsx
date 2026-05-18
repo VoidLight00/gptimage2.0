@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams, type ReadonlyURLSearchParams } from "next/navigation";
 import Fuse from "fuse.js";
+import { CopyPromptButton } from "@/components/CopyPromptButton";
 import { SourceBadge } from "@/components/SourceBadge";
 import { SourceToggle } from "@/components/SourceToggle";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -22,6 +23,13 @@ import {
   type SearchSort,
 } from "@/lib/archive-search";
 
+const PAGE_SIZE = 48;
+
+const SUGGESTED_QUERIES = {
+  ko: ["광고", "카드뉴스", "인포그래픽", "손글씨", "캐릭터", "포스터", "UI", "제품 상세"],
+  en: ["advertising", "social card", "infographic", "handwriting", "character", "poster", "UI", "product detail"],
+} as const;
+
 function getCopy(lang: "ko" | "en") {
   return lang === "ko"
     ? {
@@ -34,9 +42,13 @@ function getCopy(lang: "ko" | "en") {
         domain: "도메인",
         format: "포맷",
         sort: "정렬",
+        relevance: "관련도순",
         latest: "최신순",
         title: "제목순",
         clear: "필터 초기화",
+        loadMore: "더 보기",
+        suggestions: "추천 검색어",
+        showing: (visible: number, total: number) => `${visible} / ${total}개 표시`,
       }
     : {
         placeholder: "Search prompts, titles, tags, categories",
@@ -48,9 +60,13 @@ function getCopy(lang: "ko" | "en") {
         domain: "Domain",
         format: "Format",
         sort: "Sort",
+        relevance: "Relevance",
         latest: "Latest",
         title: "Title",
         clear: "Clear filters",
+        loadMore: "Load more",
+        suggestions: "Suggested searches",
+        showing: (visible: number, total: number) => `Showing ${visible} of ${total}`,
       };
 }
 
@@ -130,6 +146,7 @@ function SearchClientBody({
   const [domain, setDomain] = useState(initialState.domain);
   const [format, setFormat] = useState(initialState.format);
   const [sort, setSort] = useState<SearchSort>(initialState.sort);
+  const [visibleState, setVisibleState] = useState({ key: "", count: PAGE_SIZE });
 
   const debouncedQuery = useDebounce(query, 180);
 
@@ -150,11 +167,25 @@ function SearchClientBody({
   );
 
   const searchedItems = useMemo(() => {
-    if (!debouncedQuery.trim()) {
+    const normalizedQuery = debouncedQuery.trim().toLocaleLowerCase();
+    if (!normalizedQuery) {
       return items;
     }
 
-    return fuse.search(debouncedQuery.trim()).map((result) => result.item);
+    const exactItems = items.filter((item) => {
+      const searchable = [item.title, item.prompt, item.categoryLabel, item.tags.join(" ")]
+        .filter(Boolean)
+        .join(" ")
+        .toLocaleLowerCase();
+      return searchable.includes(normalizedQuery);
+    });
+    const exactIds = new Set(exactItems.map((item) => item.id));
+    const fuzzyItems = fuse
+      .search(normalizedQuery)
+      .map((result) => result.item)
+      .filter((item) => !exactIds.has(item.id));
+
+    return [...exactItems, ...fuzzyItems];
   }, [debouncedQuery, fuse, items]);
 
   const categoryOptions = useMemo(() => getSearchCategoryOptions(searchedItems), [searchedItems]);
@@ -173,7 +204,10 @@ function SearchClientBody({
   );
 
   const sortedItems = useMemo(() => sortSearchItems(filteredItems, sort), [filteredItems, sort]);
-  const visibleItems = sortedItems.slice(0, 48);
+  const visibleKey = [debouncedQuery, source, category ?? "", domain ?? "", format ?? "", sort].join("");
+  const effectiveVisibleCount = visibleState.key === visibleKey ? visibleState.count : PAGE_SIZE;
+  const visibleItems = sortedItems.slice(0, effectiveVisibleCount);
+  const hasMore = effectiveVisibleCount < sortedItems.length;
   const counts = useMemo(() => getSourceCounts(searchedItems), [searchedItems]);
   const activeFilters = [source !== "all", Boolean(category), Boolean(domain), Boolean(format)].filter(Boolean).length;
 
@@ -213,7 +247,7 @@ function SearchClientBody({
       params.delete("format");
     }
 
-    if (sort === "latest") {
+    if (sort === "relevance") {
       params.delete("sort");
     } else {
       params.set("sort", sort);
@@ -225,13 +259,20 @@ function SearchClientBody({
     }
   }, [category, debouncedQuery, domain, format, pathname, router, searchParamsString, sort, source]);
 
+  const applySuggestedQuery = (value: string) => {
+    setQuery(value);
+    setSort("relevance");
+  };
+
   const clearFilters = () => {
     setSource("all");
     setCategory(null);
     setDomain(null);
     setFormat(null);
-    setSort("latest");
+    setSort("relevance");
   };
+
+  const showSuggestions = !debouncedQuery.trim() && activeFilters === 0;
 
   return (
     <div>
@@ -241,8 +282,7 @@ function SearchClientBody({
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder={copy.placeholder}
-          className="w-full bg-transparent border-b border-border-strong px-0 py-4 md:py-5 font-sans text-xl md:text-3xl text-fg placeholder:text-fg-30 focus:outline-none focus:border-fg"
-          autoFocus
+          className="w-full bg-transparent border-b border-border-strong px-0 py-4 md:py-5 font-sans text-xl md:text-3xl text-fg placeholder:text-fg-50 focus:outline-none focus:border-fg"
           autoComplete="off"
           autoCapitalize="off"
           autoCorrect="off"
@@ -251,13 +291,31 @@ function SearchClientBody({
         />
 
         <div className="flex items-center justify-between gap-4 flex-wrap">
-          <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50">
+          <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-70" role="status" aria-live="polite">
             {debouncedQuery.trim()
               ? `${sortedItems.length} ${copy.matches}`
               : `${items.length} ${copy.total}`}
           </div>
           <SourceToggle value={source} counts={counts} onChange={setSource} lang={lang} />
         </div>
+
+        {showSuggestions && (
+          <div className="space-y-3 border border-border-subtle bg-surface p-4 md:p-5">
+            <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-70">{copy.suggestions}</div>
+            <div className="flex flex-wrap gap-2">
+              {SUGGESTED_QUERIES[lang].map((suggestion) => (
+                <button
+                  key={suggestion}
+                  type="button"
+                  onClick={() => applySuggestedQuery(suggestion)}
+                  className="min-h-[38px] border border-border-strong px-3 py-2 font-mono text-[10px] uppercase tracking-[0.12em] text-fg-70 hover:bg-fg hover:text-bg focus:bg-fg focus:text-bg"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3 md:gap-4">
           <FilterSelect
@@ -289,6 +347,7 @@ function SearchClientBody({
               onChange={(event) => setSort(normalizeSearchSort(event.target.value))}
               className="min-h-[44px] border border-border-strong bg-bg px-4 py-3 font-mono text-[12px] uppercase tracking-[0.12em] text-fg focus:outline-none focus:border-fg"
             >
+              <option value="relevance">{copy.relevance}</option>
               <option value="latest">{copy.latest}</option>
               <option value="title">{copy.title}</option>
             </select>
@@ -308,42 +367,66 @@ function SearchClientBody({
       </div>
 
       {visibleItems.length > 0 ? (
-        <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
-          {visibleItems.map((item) => {
-            const title = item.title ?? item.prompt;
-            return (
-              <Link
-                key={item.id}
-                href={`/${lang}/p/${item.id}`}
-                className="group block border border-border-subtle hover:border-border-strong"
-              >
-                <div className="relative w-full bg-surface" style={{ aspectRatio: `${item.w}/${item.h}` }}>
-                  <Image
-                    src={item.thumb}
-                    alt={title}
-                    fill
-                    sizes="(max-width: 640px) 50vw, 300px"
-                    placeholder={item.blur ? "blur" : "empty"}
-                    blurDataURL={item.blur || undefined}
-                    className="object-cover"
-                  />
+        <>
+          <div className="mt-8 md:mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+            {visibleItems.map((item) => {
+              const title = item.title ?? item.prompt;
+              return (
+                <div key={item.id} className="group relative border border-border-subtle hover:border-border-strong focus-within:border-fg">
+                  <Link href={`/${lang}/p/${item.id}`} className="block">
+                    <div className="relative w-full bg-surface" style={{ aspectRatio: `${item.w}/${item.h}` }}>
+                      <Image
+                        src={item.thumb}
+                        alt={title}
+                        fill
+                        sizes="(max-width: 640px) 50vw, 300px"
+                        placeholder={item.blur ? "blur" : "empty"}
+                        blurDataURL={item.blur || undefined}
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-2.5 md:p-3">
+                      <div className="flex items-center justify-between gap-2 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-fg-70">
+                        <div className="truncate">{item.categoryLabel}</div>
+                        <SourceBadge source={item.source} license={item.license} />
+                      </div>
+                      <div className="mt-2 line-clamp-2 font-sans text-[12px] md:text-[13px] leading-[1.5] text-fg">
+                        {title}
+                      </div>
+                      <div className="mt-1 line-clamp-2 font-sans text-[11px] md:text-[12px] leading-[1.5] text-fg-70">
+                        {item.prompt}
+                      </div>
+                    </div>
+                  </Link>
+                  <div className="px-2.5 pb-2.5 md:px-3 md:pb-3">
+                    <CopyPromptButton prompt={item.prompt} lang={lang} className="w-full min-h-[36px] text-[9px]" />
+                  </div>
                 </div>
-                <div className="p-2.5 md:p-3">
-                  <div className="flex items-center justify-between gap-2 font-mono text-[10px] md:text-[11px] uppercase tracking-[0.12em] text-fg-50">
-                    <div className="truncate">{item.categoryLabel}</div>
-                    <SourceBadge source={item.source} license={item.license} />
-                  </div>
-                  <div className="mt-2 line-clamp-2 font-sans text-[12px] md:text-[13px] leading-[1.5] text-fg">
-                    {title}
-                  </div>
-                  <div className="mt-1 line-clamp-2 font-sans text-[11px] md:text-[12px] leading-[1.5] text-fg-60">
-                    {item.prompt}
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+          {(hasMore || sortedItems.length > PAGE_SIZE) && (
+            <div className="mt-10 flex flex-col items-center gap-4">
+              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-50">
+                {copy.showing(visibleItems.length, sortedItems.length)}
+              </div>
+              {hasMore && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    setVisibleState({
+                      key: visibleKey,
+                      count: effectiveVisibleCount + PAGE_SIZE,
+                    })
+                  }
+                  className="min-h-[48px] px-8 border border-border-strong font-mono text-[12px] uppercase tracking-[0.14em] text-fg-70 hover:bg-surface-hover"
+                >
+                  {copy.loadMore}
+                </button>
+              )}
+            </div>
+          )}
+        </>
       ) : (
         <div className="mt-10 md:mt-12 border border-border-subtle bg-surface p-10 md:p-12">
           <div className="font-mono text-[13px] uppercase tracking-[0.14em] text-fg-50">{copy.noResults}</div>

@@ -47,6 +47,9 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
     .filter((f) => formatCounts[f.slug])
     .map((f) => ({ ...f, count: formatCounts[f.slug] }));
 
+  const topDomains = domains.slice(0, 4);
+  const topFormats = formats.slice(0, 3);
+
   return (
     <div className="px-6 md:px-12 py-16 md:py-24">
       <div className="mx-auto max-w-[1400px]">
@@ -56,16 +59,45 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
         >
           ← All Categories
         </Link>
-        <div className="flex items-end justify-between mt-8 mb-16 flex-wrap gap-6">
-          <h1
-            className="font-mono font-light uppercase"
-            style={{ fontSize: "clamp(40px, 8vw, 128px)", letterSpacing: "-0.02em" }}
-          >
-            {meta.label}
-          </h1>
-          <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50">
-            {meta.count} entries
-          </span>
+        <div className="mt-8 mb-6">
+          <div className="flex items-end justify-between flex-wrap gap-4 mb-4">
+            <h1
+              className="font-mono font-light uppercase"
+              style={{ fontSize: "clamp(40px, 8vw, 128px)", letterSpacing: "-0.02em" }}
+            >
+              {meta.label}
+            </h1>
+            <span className="font-mono text-[12px] uppercase tracking-[0.14em] text-fg-50">
+              {meta.count} entries
+            </span>
+          </div>
+          {meta.description && (
+            <p className="font-sans text-[14px] md:text-base text-fg-70 leading-relaxed max-w-2xl mb-5">
+              {meta.description}
+            </p>
+          )}
+          {(topDomains.length > 0 || topFormats.length > 0) && (
+            <div className="flex flex-wrap gap-2 mb-10">
+              {topDomains.map((d) => (
+                <span
+                  key={d.slug}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 border border-border-subtle font-mono text-[10px] uppercase tracking-[0.12em] text-fg-60"
+                >
+                  {d.slug}
+                  <span className="text-fg-30">{d.count}</span>
+                </span>
+              ))}
+              {topFormats.map((f) => (
+                <span
+                  key={f.slug}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 border border-border-strong font-mono text-[10px] uppercase tracking-[0.12em] text-fg-50"
+                >
+                  {f.label}
+                  <span className="text-fg-30">{f.count}</span>
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         {entries.length === 0 ? (
           <div className="border border-border-subtle bg-surface p-12 font-mono text-[13px] uppercase tracking-[0.14em] text-fg-50">

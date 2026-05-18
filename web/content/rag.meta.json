@@ -1,14 +1,12 @@
 {
   "run_id": "20260428-151811-prompts3",
-  "generatedAt": "2026-04-28T16:31:57.412Z",
+  "generatedAt": "2026-05-18T09:01:00Z",
   "indexReady": false,
   "mode": "fallback",
   "blockedReason": "Embedding index not active; using split manifest fallback corpus.",
-  "entryCount": 2722,
-  "koEntryCount": 588,
+  "entryCount": 2731,
+  "koEntryCount": 597,
   "enEntryCount": 2134,
   "dimensions": null,
-  "binary": null,
-  "oursRemoved": true,
-  "lastFilterAt": "2026-04-29T08:35:58.851715Z"
+  "binary": null
 }

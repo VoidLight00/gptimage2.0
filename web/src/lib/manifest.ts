@@ -1,6 +1,6 @@
 import promptsKo from "../../content/prompts.json";
 import promptsEn from "../../content/prompts.en.json";
-import { MASTER_TAXONOMY, getMasterIcon } from "./master-taxonomy";
+import { MASTER_TAXONOMY, getMasterDescription, getMasterIcon, getMasterPriority } from "./master-taxonomy";
 import type { ArchiveManifest, CategoryMeta, PromptArgument, PromptEntry, TagMeta } from "./types";
 
 export type Lang = "ko" | "en";
@@ -115,8 +115,8 @@ function getImageVariants(entry: RawNormalizedEntry, categorySlug: string) {
 
   return {
     original: variants.original ?? variants.w1920 ?? fullKey,
-    large: variants.large ?? variants.w1920 ?? variants.w1024 ?? fullKey,
-    medium: variants.medium ?? variants.w1024 ?? variants.w640 ?? fullKey,
+    large: variants.large ?? variants.w1920 ?? fullKey,
+    medium: variants.medium ?? variants.w1920 ?? variants.w320 ?? fullKey,
     thumb: variants.thumb ?? variants.w320 ?? thumbKey,
     width: entry.media?.full?.w ?? PLACEHOLDER_WIDTH,
     height: entry.media?.full?.h ?? PLACEHOLDER_HEIGHT,
@@ -183,6 +183,7 @@ function buildCategories(entries: PromptEntry[], lang: Lang) {
     categories.set(master.slug, {
       slug: master.slug,
       label: master[lang],
+      description: getMasterDescription(master.slug, lang),
       count: 0,
       cover: getMasterIcon(master.slug),
     });
@@ -194,12 +195,16 @@ function buildCategories(entries: PromptEntry[], lang: Lang) {
     categories.set(entry.category, {
       slug: entry.category,
       label: current?.label ?? entry.categoryLabel,
+      description: current?.description,
       count: (current?.count ?? 0) + 1,
       cover: isSeed ? entry.images.thumb : current?.cover ?? entry.images.thumb,
     });
   });
 
-  return Array.from(categories.values()).sort((a, b) => b.count - a.count || a.slug.localeCompare(b.slug));
+  return Array.from(categories.values()).sort((a, b) => {
+    if (b.count !== a.count) return b.count - a.count;
+    return getMasterPriority(a.slug) - getMasterPriority(b.slug);
+  });
 }
 
 function buildTagMeta(entries: PromptEntry[], kind: "domains" | "formats") {

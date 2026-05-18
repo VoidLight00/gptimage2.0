@@ -20,37 +20,59 @@ const SOURCE_FILES = {
   master: "prompts.master.json",
 } as const;
 
+const CURATED_KO_FILE = "curated.ko.json";
+
 type Lang = "ko" | "en";
 
 type RawEntry = {
   id: string;
   source?: string;
+  source_url?: string | null;
   language?: Lang;
   title?: string | null;
+  description?: string | null;
   tags?: string[];
   published_at?: string;
   prompt?: {
     body?: string;
+    is_structured?: boolean;
+    args?: Array<{ name?: string; default?: string }>;
+    args_upstream?: Array<{ name?: string; default?: string }>;
   };
   taxonomy?: {
     section?: string;
     section_label?: string;
     section_label_ko?: string;
     section_label_en?: string;
+    purpose?: string[];
     domain?: string[];
     format?: string[];
+    upstream_categories?: string[];
   };
   attribution?: {
     license?: string;
+    license_url?: string;
+    source_name?: string;
+    source_url?: string;
+    first_party_url?: string;
+    upstream_chain?: string[];
+    indication_of_changes?: string;
+    rehosted_at?: string;
   };
   media?: {
     full?: { key?: string; w?: number; h?: number };
     thumb?: { key?: string };
     blurDataURL?: string;
+    blurhash?: string;
     variants?: {
+      large?: string;
+      medium?: string;
       thumb?: string;
-      w320?: string;
       original?: string;
+      w320?: string;
+      w640?: string;
+      w1024?: string;
+      w1920?: string;
     };
   };
 };
@@ -98,8 +120,85 @@ function readManifest(fileName: string) {
   return readJsonFile<RawManifest>(getArtifactPath(fileName));
 }
 
-function copyManifest(sourceFile: string, targetFile: string) {
-  fs.copyFileSync(getArtifactPath(sourceFile), getContentPath(targetFile));
+function readContentManifest(fileName: string) {
+  return readJsonFile<RawManifest>(getContentPath(fileName));
+}
+
+function readCuratedKoEntries() {
+  const curatedPath = getContentPath(CURATED_KO_FILE);
+  if (!fs.existsSync(curatedPath)) {
+    return [];
+  }
+
+  return readJsonFile<RawManifest>(curatedPath).entries;
+}
+
+function withoutRemovedOursEntries(manifest: RawManifest): RawManifest {
+  const entries = manifest.entries.filter((entry) => !entry.id.startsWith("ours-"));
+  return {
+    ...manifest,
+    totalEntries: entries.length,
+    entries,
+  };
+}
+
+function withPrependedEntries(manifest: RawManifest, entriesToPrepend: RawEntry[]): RawManifest {
+  if (entriesToPrepend.length === 0) {
+    return manifest;
+  }
+
+  const prependIds = new Set(entriesToPrepend.map((entry) => entry.id));
+  const entries = [...entriesToPrepend, ...manifest.entries.filter((entry) => !prependIds.has(entry.id))];
+  return {
+    ...manifest,
+    generatedAt: entriesToPrepend[0]?.published_at ?? manifest.generatedAt,
+    totalEntries: entries.length,
+    entries,
+  };
+}
+
+function assertUniqueEntryIds(label: string, entries: RawEntry[]) {
+  const seenIds = new Set<string>();
+  const duplicateIds = new Set<string>();
+
+  entries.forEach((entry) => {
+    if (seenIds.has(entry.id)) {
+      duplicateIds.add(entry.id);
+      return;
+    }
+    seenIds.add(entry.id);
+  });
+
+  if (duplicateIds.size > 0) {
+    throw new Error(`${label} contains duplicate ids: ${Array.from(duplicateIds).join(", ")}`);
+  }
+}
+
+function assertDisjointEntryIds(leftLabel: string, leftEntries: RawEntry[], rightLabel: string, rightEntries: RawEntry[]) {
+  const leftIds = new Set(leftEntries.map((entry) => entry.id));
+  const overlappingIds = new Set(rightEntries.filter((entry) => leftIds.has(entry.id)).map((entry) => entry.id));
+
+  if (overlappingIds.size > 0) {
+    throw new Error(`${leftLabel} and ${rightLabel} contain overlapping ids: ${Array.from(overlappingIds).join(", ")}`);
+  }
+}
+
+function buildMergedManifest(koManifest: RawManifest, enManifest: RawManifest): RawManifest {
+  assertUniqueEntryIds("ko manifest", koManifest.entries);
+  assertUniqueEntryIds("en manifest", enManifest.entries);
+  assertDisjointEntryIds("ko manifest", koManifest.entries, "en manifest", enManifest.entries);
+
+  const entries = [...koManifest.entries, ...enManifest.entries];
+  return {
+    generatedAt: koManifest.generatedAt,
+    totalEntries: entries.length,
+    skippedCount: koManifest.skippedCount + enManifest.skippedCount,
+    entries,
+  };
+}
+
+function writeManifest(targetFile: string, manifest: RawManifest) {
+  writeCompactJson(getContentPath(targetFile), manifest);
 }
 
 function resolveCategoryLabel(entry: RawEntry, lang: Lang) {
@@ -114,6 +213,7 @@ function resolveThumb(entry: RawEntry) {
     entry.media?.thumb?.key ??
     entry.media?.variants?.thumb ??
     entry.media?.variants?.w320 ??
+    entry.media?.variants?.w1920 ??
     entry.media?.full?.key ??
     entry.media?.variants?.original ??
     PLACEHOLDER_IMAGE
@@ -166,19 +266,18 @@ function writeJson(filePath: string, value: unknown) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function writeCompactJson(filePath: string, value: unknown) {
+  fs.writeFileSync(filePath, `${JSON.stringify(value)}\n`);
+}
+
 function main() {
-  const koManifest = readManifest(SOURCE_FILES.ko);
-  const enManifest = readManifest(SOURCE_FILES.en);
-  const masterManifest = readManifest(SOURCE_FILES.master);
+  const curatedKoEntries = readCuratedKoEntries();
+  const koManifest = withPrependedEntries(withoutRemovedOursEntries(readManifest(SOURCE_FILES.ko)), curatedKoEntries);
+  const enManifest = readContentManifest("prompts.en.json");
+  const masterManifest = buildMergedManifest(koManifest, enManifest);
 
-  const splitTotal = koManifest.totalEntries + enManifest.totalEntries;
-  if (splitTotal !== masterManifest.totalEntries) {
-    throw new Error(`split totals do not match master total: ${splitTotal} !== ${masterManifest.totalEntries}`);
-  }
-
-  copyManifest(SOURCE_FILES.ko, "prompts.json");
-  copyManifest(SOURCE_FILES.en, "prompts.en.json");
-  copyManifest(SOURCE_FILES.master, "prompts.merged.json");
+  writeManifest("prompts.json", koManifest);
+  writeManifest("prompts.merged.json", masterManifest);
 
   const searchItems = [...toSearchItems(koManifest, "ko"), ...toSearchItems(enManifest, "en")].toSorted((a, b) => {
     if (a.createdAt === b.createdAt) {
@@ -187,7 +286,7 @@ function main() {
     return a.createdAt < b.createdAt ? 1 : -1;
   });
 
-  writeJson(getContentPath("rag.search.json"), searchItems);
+  writeCompactJson(getContentPath("rag.search.json"), searchItems);
   writeJson(getContentPath("rag.meta.json"), {
     run_id: resolveRunId(),
     generatedAt: masterManifest.generatedAt,
@@ -204,7 +303,7 @@ function main() {
   fs.writeFileSync(getContentPath("skipped.log"), "");
 
   console.log(`synced prompts.json: ${koManifest.totalEntries}`);
-  console.log(`synced prompts.en.json: ${enManifest.totalEntries}`);
+  console.log(`using prompts.en.json: ${enManifest.totalEntries}`);
   console.log(`synced prompts.merged.json: ${masterManifest.totalEntries}`);
   console.log(`generated rag.search.json: ${searchItems.length}`);
 }
