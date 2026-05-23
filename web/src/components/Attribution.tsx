@@ -13,20 +13,32 @@ function safeExternalUrl(value?: string) {
   }
 }
 
-export function Attribution({ attribution }: { attribution?: AttributionData }) {
-  if (!attribution || attribution.license === "internal") {
-    return <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-fg-50">© VOIDLIGHT</p>;
+function getLicenseLabel(value: string) {
+  if (value === "internal") {
+    return "VOIDLIGHT first-party";
   }
 
-  const sourceUrl = safeExternalUrl(attribution.sourceUrl);
-  const licenseUrl = safeExternalUrl(attribution.licenseUrl);
-  const firstPartyUrl = safeExternalUrl(attribution.firstPartyUrl);
+  const normalized = value.replace(/\s+/g, " ").trim();
+  return normalized.length > 80 ? `${normalized.slice(0, 77)}…` : normalized;
+}
+
+export function Attribution({ attribution }: { attribution?: AttributionData }) {
+  const data: AttributionData = attribution ?? {
+    license: "internal",
+    sourceName: "VOIDLIGHT",
+    upstreamChain: [],
+  };
+  const isInternal = data.license === "internal";
+  const licenseLabel = getLicenseLabel(data.license);
+  const sourceUrl = isInternal ? undefined : safeExternalUrl(data.sourceUrl);
+  const licenseUrl = safeExternalUrl(data.licenseUrl);
+  const firstPartyUrl = safeExternalUrl(data.firstPartyUrl);
 
   return (
     <aside className="border-t border-border-subtle pt-4 space-y-3">
       <div className="flex flex-wrap gap-x-6 gap-y-2">
         <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-50 mb-1">Source</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-50 mb-1">{isInternal ? "Creator" : "Source"}</div>
           {sourceUrl ? (
             <a
               href={sourceUrl}
@@ -34,10 +46,10 @@ export function Attribution({ attribution }: { attribution?: AttributionData }) 
               rel="noreferrer noopener"
               className="font-sans text-[13px] text-fg-70 hover:text-fg border-b border-border-subtle"
             >
-              {attribution.sourceName ?? sourceUrl}
+              {data.sourceName ?? sourceUrl}
             </a>
           ) : (
-            <span className="font-sans text-[13px] text-fg-70">{attribution.sourceName}</span>
+            <span className="font-sans text-[13px] text-fg-70">{data.sourceName ?? "VOIDLIGHT"}</span>
           )}
         </div>
         <div>
@@ -49,10 +61,10 @@ export function Attribution({ attribution }: { attribution?: AttributionData }) 
               rel="noreferrer noopener"
               className="font-sans text-[13px] text-fg-70 hover:text-fg border-b border-border-subtle"
             >
-              {attribution.license}
+              {licenseLabel}
             </a>
           ) : (
-            <span className="font-sans text-[13px] text-fg-70">{attribution.license}</span>
+            <span className="font-sans text-[13px] text-fg-70">{licenseLabel}</span>
           )}
         </div>
       </div>
@@ -69,14 +81,14 @@ export function Attribution({ attribution }: { attribution?: AttributionData }) 
           </a>
         </div>
       )}
-      {(attribution.upstreamChain?.length ?? 0) > 1 && (
+      {data.upstreamChain.length > 1 && (
         <div>
           <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-fg-50 mb-1">Upstream</div>
-          <div className="font-sans text-[13px] text-fg-60 break-all">{attribution.upstreamChain.join(" → ")}</div>
+          <div className="font-sans text-[13px] text-fg-60 break-all">{data.upstreamChain.join(" → ")}</div>
         </div>
       )}
-      {attribution.indicationOfChanges && (
-        <div className="font-sans text-[12px] text-fg-50 italic">{attribution.indicationOfChanges}</div>
+      {data.indicationOfChanges && (
+        <div className="font-sans text-[12px] text-fg-50 italic">{data.indicationOfChanges}</div>
       )}
     </aside>
   );
