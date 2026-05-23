@@ -12,6 +12,10 @@ function allowedPasswords() {
     .filter(Boolean);
 }
 
+function cookieValue(value: string) {
+  return encodeURIComponent(value);
+}
+
 function isAllowed(value: string) {
   return allowedPasswords().includes(value);
 }
@@ -24,7 +28,7 @@ async function attempt(formData: FormData) {
     redirect(`/gate?next=${encodeURIComponent(next)}&err=1`);
   }
   const jar = await cookies();
-  jar.set("gptimage-cmd", raw, {
+  jar.set("gptimage-cmd", cookieValue(raw), {
     maxAge: 60 * 60 * 24 * 30,
     httpOnly: true,
     sameSite: "lax",

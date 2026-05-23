@@ -16,8 +16,14 @@ function allowedPasswords() {
     .filter(Boolean);
 }
 
+function cookieValue(value: string) {
+  return encodeURIComponent(value);
+}
+
 function isAllowed(value?: string) {
-  return !!value && allowedPasswords().includes(value);
+  if (!value) return false;
+  const decoded = decodeURIComponent(value);
+  return allowedPasswords().includes(decoded);
 }
 
 export function proxy(req: NextRequest) {
@@ -47,7 +53,7 @@ export function proxy(req: NextRequest) {
   if (cmd && isAllowed(cmd)) {
     const url = new URL(nextUrl.pathname, nextUrl.origin);
     const res = NextResponse.redirect(url);
-    res.cookies.set(COOKIE, cmd, {
+    res.cookies.set(COOKIE, cookieValue(cmd), {
       maxAge: MAX_AGE,
       httpOnly: true,
       sameSite: "lax",
