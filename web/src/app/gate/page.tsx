@@ -5,16 +5,26 @@ import GateForm from "./GateForm";
 export const metadata = { title: "ACCESS — GPTIMAGE 2.0" };
 export const dynamic = "force-dynamic";
 
+function allowedPasswords() {
+  return [process.env.SITE_PASSWORD, process.env.SITE_PASSWORDS]
+    .flatMap((value) => value?.split(/[\n,]/) ?? [])
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function isAllowed(value: string) {
+  return allowedPasswords().includes(value);
+}
+
 async function attempt(formData: FormData) {
   "use server";
   const raw = String(formData.get("cmd") || "").trim();
   const next = String(formData.get("next") || "/");
-  const expected = process.env.SITE_PASSWORD?.trim();
-  if (!expected || raw !== expected) {
+  if (!isAllowed(raw)) {
     redirect(`/gate?next=${encodeURIComponent(next)}&err=1`);
   }
   const jar = await cookies();
-  jar.set("gptimage-cmd", expected, {
+  jar.set("gptimage-cmd", raw, {
     maxAge: 60 * 60 * 24 * 30,
     httpOnly: true,
     sameSite: "lax",
@@ -32,7 +42,7 @@ export default async function GatePage(props: {
   const err = sp.err === "1";
 
   // 설정 안 됐으면 바로 홈으로
-  if (!process.env.SITE_PASSWORD?.trim()) redirect("/");
+  if (allowedPasswords().length === 0) redirect("/");
 
   return (
     <div className="min-h-[100vh] flex items-center justify-center px-4 py-16 bg-bg">

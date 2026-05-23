@@ -9,14 +9,21 @@ import type { NextRequest } from "next/server";
 const COOKIE = "gptimage-cmd";
 const MAX_AGE = 60 * 60 * 24 * 30; // 30일
 
-function expected(): string | null {
-  return process.env.SITE_PASSWORD?.trim() || null;
+function allowedPasswords() {
+  return [process.env.SITE_PASSWORD, process.env.SITE_PASSWORDS]
+    .flatMap((value) => value?.split(/[\n,]/) ?? [])
+    .map((value) => value.trim())
+    .filter(Boolean);
+}
+
+function isAllowed(value?: string) {
+  return !!value && allowedPasswords().includes(value);
 }
 
 export function proxy(req: NextRequest) {
   const { nextUrl } = req;
-  const pass = expected();
-  if (!pass) return NextResponse.next(); // 미설정 시 우회
+  const passwords = allowedPasswords();
+  if (passwords.length === 0) return NextResponse.next(); // 미설정 시 우회
 
   // /gate, _next 등 항상 통과
   if (
@@ -36,11 +43,11 @@ export function proxy(req: NextRequest) {
   }
 
   // URL 쿼리 ?cmd=xxx 로 접근 시 쿠키 세팅
-  const cmd = nextUrl.searchParams.get("cmd");
-  if (cmd && cmd === pass) {
+  const cmd = nextUrl.searchParams.get("cmd")?.trim();
+  if (cmd && isAllowed(cmd)) {
     const url = new URL(nextUrl.pathname, nextUrl.origin);
     const res = NextResponse.redirect(url);
-    res.cookies.set(COOKIE, pass, {
+    res.cookies.set(COOKIE, cmd, {
       maxAge: MAX_AGE,
       httpOnly: true,
       sameSite: "lax",
@@ -52,7 +59,7 @@ export function proxy(req: NextRequest) {
 
   // 쿠키 확인
   const cookie = req.cookies.get(COOKIE)?.value;
-  if (cookie === pass) return NextResponse.next();
+  if (isAllowed(cookie)) return NextResponse.next();
 
   // 게이트로 리다이렉트
   const gate = new URL("/gate", nextUrl.origin);
