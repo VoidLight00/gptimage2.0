@@ -4,8 +4,8 @@
   "indexReady": false,
   "mode": "fallback",
   "blockedReason": "Embedding index not active; using split manifest fallback corpus.",
-  "entryCount": 2831,
-  "koEntryCount": 697,
+  "entryCount": 3231,
+  "koEntryCount": 1097,
   "enEntryCount": 2134,
   "dimensions": null,
   "binary": null

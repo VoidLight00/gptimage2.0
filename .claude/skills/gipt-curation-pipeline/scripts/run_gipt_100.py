@@ -255,31 +255,140 @@ def tags_for(item: dict) -> list[str]:
     return list(dict.fromkeys([*subject_words[:3], *words]))[:8]
 
 
-def make_items() -> list[dict]:
+BASE_CATEGORY_ORDER = [slug for slug, _count in CATEGORY_PLAN]
+
+SUBJECT_MODIFIERS = [
+    "프리미엄", "모던", "로컬", "스마트", "미니멀", "친환경", "시네마틱", "에디토리얼",
+    "하이엔드", "데일리", "어반", "슬로우", "컴팩트", "웰니스", "크리에이터", "커뮤니티",
+]
+
+SUBJECT_NOUNS = [
+    "브랜드 캠페인", "제품 키비주얼", "서비스 온보딩", "상세페이지 히어로", "소셜 썸네일",
+    "교육 다이어그램", "전시 포스터", "앱 대시보드", "캐릭터 마스코트", "라이프스타일 컷",
+    "패키지 디자인", "공간 콘셉트", "커머스 배너", "뉴스레터 커버", "워크숍 포스터",
+    "로컬 지도", "푸드 비주얼", "뷰티 무드보드", "테크 랜딩", "문화 아카이브",
+]
+
+SUBJECT_CONTEXTS = [
+    "성수동", "제주", "한강", "부산", "북촌", "남산", "판교", "연남동", "광화문", "강릉",
+    "을지로", "해운대", "전주", "대전", "수원", "송도", "여의도", "춘천", "문래", "망원",
+]
+
+DOMAIN_BY_CATEGORY = {
+    "ad-key-visual": "marketing",
+    "product-detail": "commerce",
+    "social-card": "lifestyle",
+    "card-news": "education",
+    "infographic": "education",
+    "poster": "culture",
+    "character-avatar": "brand",
+    "uiux-app": "digital",
+    "editorial-fashion": "fashion",
+    "comic-illustration": "illustration",
+    "game-asset": "game",
+    "other": "concept",
+}
+
+FORMAT_BY_CATEGORY = {
+    "ad-key-visual": "ar-1-1",
+    "product-detail": "ar-4-5",
+    "social-card": "ar-1-1",
+    "card-news": "ar-4-5",
+    "infographic": "ar-3-2",
+    "poster": "ar-9-16",
+    "character-avatar": "ar-1-1",
+    "uiux-app": "ar-16-9",
+    "editorial-fashion": "ar-4-5",
+    "comic-illustration": "ar-1-1",
+    "game-asset": "ar-1-1",
+    "other": "ar-1-1",
+}
+
+USE_CASE_BY_CATEGORY = {
+    "ad-key-visual": "광고 키비주얼",
+    "product-detail": "커머스 상세",
+    "social-card": "소셜 콘텐츠",
+    "card-news": "정보 카드뉴스",
+    "infographic": "교육 인포그래픽",
+    "poster": "포스터",
+    "character-avatar": "브랜드 캐릭터",
+    "uiux-app": "디지털 UI",
+    "editorial-fashion": "에디토리얼 화보",
+    "comic-illustration": "일러스트 콘셉트",
+    "game-asset": "게임 에셋",
+    "other": "콘셉트 비주얼",
+}
+
+
+def generated_topic(index: int, existing_subjects: set[str]) -> tuple[str, str, str, str, str]:
+    offset = index - 101
+    category = BASE_CATEGORY_ORDER[offset % len(BASE_CATEGORY_ORDER)]
+    modifier = SUBJECT_MODIFIERS[(offset // len(BASE_CATEGORY_ORDER)) % len(SUBJECT_MODIFIERS)]
+    noun = SUBJECT_NOUNS[(offset * 3 + offset // 7) % len(SUBJECT_NOUNS)]
+    context = SUBJECT_CONTEXTS[(offset * 5 + offset // 11) % len(SUBJECT_CONTEXTS)]
+    subject = f"{context} {modifier} {noun}"
+    cycle = 2
+    while subject in existing_subjects:
+        subject = f"{context} {modifier} {noun} {cycle}"
+        cycle += 1
+    return category, subject, DOMAIN_BY_CATEGORY[category], FORMAT_BY_CATEGORY[category], USE_CASE_BY_CATEGORY[category]
+
+
+def build_item(idx: int, category: str, subject: str, domain: str, fmt: str, use_case: str) -> dict:
+    item = {
+        "id": f"GIPT-KO-{idx:04d}",
+        "subject": subject,
+        "domain": domain,
+        "format": fmt,
+        "use_case": use_case,
+        "category": category,
+        "categoryLabel": CATEGORY_LABELS.get(category, "기타"),
+    }
+    item["title"] = f"{subject} {use_case}"
+    item["description"] = description_for(item)
+    item["prompt"] = prompt_for(item, idx)
+    item["negativePrompt"] = "텍스트, 로고, 워터마크, 유명 브랜드, 유명인, 저작권 캐릭터, 깨진 한글, 저해상도"
+    item["tags"] = tags_for(item)
+    return item
+
+
+def make_items(target: int) -> list[dict]:
     items: list[dict] = []
     idx = 1
+    existing_subjects: set[str] = set()
     for category, count in CATEGORY_PLAN:
         for subject, domain, fmt, use_case in TOPICS[category][:count]:
-            item = {
-                "id": f"GIPT-KO-{idx:04d}",
-                "subject": subject,
-                "domain": domain,
-                "format": fmt,
-                "use_case": use_case,
-                "category": category,
-                "categoryLabel": CATEGORY_LABELS.get(category, "기타"),
-            }
-            item["title"] = f"{subject} {use_case}"
-            item["description"] = description_for(item)
-            item["prompt"] = prompt_for(item, idx)
-            item["negativePrompt"] = "텍스트, 로고, 워터마크, 유명 브랜드, 유명인, 저작권 캐릭터, 깨진 한글, 저해상도"
-            item["tags"] = tags_for(item)
+            item = build_item(idx, category, subject, domain, fmt, use_case)
             items.append(item)
+            existing_subjects.add(subject)
             idx += 1
-    if len(items) != 100:
-        raise RuntimeError(f"expected 100 items, got {len(items)}")
+    while len(items) < target:
+        category, subject, domain, fmt, use_case = generated_topic(idx, existing_subjects)
+        item = build_item(idx, category, subject, domain, fmt, use_case)
+        items.append(item)
+        existing_subjects.add(subject)
+        idx += 1
+    if len(items) != target:
+        raise RuntimeError(f"expected {target} items, got {len(items)}")
     return items
 
+
+
+
+def expand_ids(raw: str) -> set[str]:
+    ids: set[str] = set()
+    for part in raw.split(","):
+        value = part.strip()
+        if not value:
+            continue
+        match = re.fullmatch(r"(?:GIPT-KO-)?(\d+)-(?:GIPT-KO-)?(\d+)", value)
+        if match:
+            start, end = sorted((int(match.group(1)), int(match.group(2))))
+            ids.update(f"GIPT-KO-{index:04d}" for index in range(start, end + 1))
+        else:
+            number = re.fullmatch(r"\d+", value)
+            ids.add(f"GIPT-KO-{int(value):04d}" if number else value)
+    return ids
 
 def ensure_dirs() -> None:
     for rel in ["research", "taxonomy", "prompts", "qa", "images", "ingest", "logs"]:
@@ -363,13 +472,12 @@ def preflight_conversion() -> None:
     cached_png = next(iter(sorted(raw_dir.glob("*.png"))), None) if raw_dir.exists() else None
     with tempfile.TemporaryDirectory() as temp_dir:
         temp_root = Path(temp_dir)
-        source = temp_root / "preflight.png"
         if cached_png:
+            source = temp_root / "preflight.png"
             source.write_bytes(cached_png.read_bytes())
         else:
-            source.write_bytes(base64.b64decode(
-                "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR42mNk+M8AAAICAQBogwH1AAAAAElFTkSuQmCC"
-            ))
+            source = temp_root / "preflight.svg"
+            source.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect width="8" height="8" fill="#111827"/></svg>')
         outputs = {
             1024: temp_root / "original.webp",
             960: temp_root / "large.webp",
@@ -470,11 +578,14 @@ def merge_curated(entries: list[dict], apply: bool) -> None:
     curated_path.write_text(json.dumps(merged, ensure_ascii=False, separators=(",", ":")) + "\n")
 
 
-def write_plan(items: list[dict]) -> None:
+def write_plan(items: list[dict], target: int) -> None:
+    counts = {slug: 0 for slug in CATEGORY_LABELS}
+    for item in items:
+        counts[item["category"]] = counts.get(item["category"], 0) + 1
     write_json(WORKSPACE / "taxonomy" / "category-plan.json", {
         "run_id": RUN_ID,
-        "target": 100,
-        "categories": [{"slug": slug, "count": count, "label": CATEGORY_LABELS.get(slug, "기타")} for slug, count in CATEGORY_PLAN],
+        "target": target,
+        "categories": [{"slug": slug, "count": count, "label": CATEGORY_LABELS.get(slug, "기타")} for slug, count in counts.items() if count],
     })
     write_jsonl(WORKSPACE / "taxonomy" / "topic-seeds.jsonl", items)
     batches = [items[i:i + 20] for i in range(0, len(items), 20)]
@@ -496,20 +607,30 @@ def main() -> int:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--ids", default="")
     parser.add_argument("--concurrency", type=int, default=2)
+    parser.add_argument("--target", type=int, default=100)
+    parser.add_argument("--run-id", default="")
     args = parser.parse_args()
 
+    global RUN_ID, WORKSPACE, IMAGE_PUBLIC_ROOT
+    if args.run_id:
+        RUN_ID = args.run_id
+    elif args.target != 100:
+        RUN_ID = f"{datetime.now(timezone.utc).strftime('%Y%m%d')}-gipt-ko-{args.target}"
+    WORKSPACE = PROJECT_ROOT / "_workspace" / "gipt-curation" / RUN_ID
+    IMAGE_PUBLIC_ROOT = WEB_ROOT / "public" / "images" / "gipt" / RUN_ID
+
     ensure_dirs()
-    items = make_items()
-    selected_ids = {value.strip() for value in args.ids.split(",") if value.strip()}
+    items = make_items(args.target)
+    selected_ids = expand_ids(args.ids)
     work_items = [item for item in items if not selected_ids or item["id"] in selected_ids]
-    write_plan(items)
+    write_plan(items, args.target)
     if args.plan_only:
-        write_json(WORKSPACE / "RUN_MANIFEST.json", {"run_id": RUN_ID, "status": "planned", "target": 100})
+        write_json(WORKSPACE / "RUN_MANIFEST.json", {"run_id": RUN_ID, "status": "planned", "target": args.target})
         return 0
 
     preflight_conversion()
     if args.preflight_only:
-        write_json(WORKSPACE / "RUN_MANIFEST.json", {"run_id": RUN_ID, "status": "preflight-pass", "target": 100})
+        write_json(WORKSPACE / "RUN_MANIFEST.json", {"run_id": RUN_ID, "status": "preflight-pass", "target": args.target})
         return 0
 
     if not args.generate:
@@ -544,8 +665,9 @@ def main() -> int:
     passed_items = [item for item in items if item["id"] in passed_ids]
     result_by_id = {row["id"]: row for row in all_results}
     entries = [raw_entry(item, result_by_id[item["id"]]) for item in passed_items]
+    target_complete = len(entries) == args.target
     write_json(WORKSPACE / "qa" / "image-qa.json", {
-        "status": "pass" if len(entries) == 100 and not errors else "needs-review",
+        "status": "pass" if target_complete and not errors else "needs-review",
         "checked": len(all_results),
         "passed": len(entries),
         "failed": len(errors),
@@ -554,8 +676,8 @@ def main() -> int:
     merge_curated(entries, args.apply)
     write_json(WORKSPACE / "RUN_MANIFEST.json", {
         "run_id": RUN_ID,
-        "status": "applied" if args.apply and len(entries) == 100 else "generated",
-        "target": 100,
+        "status": "applied" if args.apply and target_complete else "generated",
+        "target": args.target,
         "generated": len(all_results),
         "applied_entries": len(entries) if args.apply else 0,
         "errors": errors,
