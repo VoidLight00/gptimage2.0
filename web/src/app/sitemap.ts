@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getCategories, getManifest } from "@/lib/manifest";
+import { getManifest } from "@/lib/manifest";
 import { absoluteUrl } from "@/lib/site";
 
 function getLastModified() {
@@ -7,15 +7,12 @@ function getLastModified() {
   return generatedAt ?? new Date().toISOString();
 }
 
+// Private archive: sitemap exposes only the public-facing pages.
+// Gated content (/ko, /en, categories, prompt detail) is intentionally omitted
+// so search engines never get a URL inventory of the password-protected archive.
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = getLastModified();
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: absoluteUrl("/"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 1,
-    },
+  return [
     {
       url: absoluteUrl("/about"),
       lastModified,
@@ -28,62 +25,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    {
-      url: absoluteUrl("/ko"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: absoluteUrl("/en"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: absoluteUrl("/ko/search"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.7,
-    },
-    {
-      url: absoluteUrl("/en/search"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.7,
-    },
-    {
-      url: absoluteUrl("/ko/c"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    {
-      url: absoluteUrl("/en/c"),
-      lastModified,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
   ];
-
-  const categoryRoutes = (["ko", "en"] as const).flatMap((lang) =>
-    getCategories(lang).map((category) => ({
-      url: absoluteUrl(`/${lang}/c/${category.slug}`),
-      lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    }))
-  );
-
-  const promptRoutes = (["ko", "en"] as const).flatMap((lang) =>
-    getManifest(lang).entries.map((entry) => ({
-      url: absoluteUrl(`/${lang}/p/${entry.id}`),
-      lastModified: entry.createdAt || lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-      images: entry.images.large ? [absoluteUrl(entry.images.large)] : undefined,
-    }))
-  );
-
-  return [...staticRoutes, ...categoryRoutes, ...promptRoutes];
 }

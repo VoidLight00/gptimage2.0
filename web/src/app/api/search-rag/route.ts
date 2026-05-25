@@ -3,9 +3,9 @@ import { buildSearchItems, type SearchItem } from "@/lib/archive-search";
 import { getManifest, LANGS, type Lang } from "@/lib/manifest";
 
 export const runtime = "nodejs";
-// allow Vercel Edge Cache to honor the response Cache-Control header
-// (s-maxage=60, stale-while-revalidate=300)
-export const revalidate = 60;
+// Private archive content: never store on shared/edge caches so password-gated
+// search results can't leak across cookie boundaries.
+export const revalidate = 0;
 
 type CorpusItem = SearchItem;
 
@@ -129,7 +129,8 @@ export async function GET(request: NextRequest) {
       },
       {
         headers: {
-          "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
+          "Cache-Control": "private, no-store",
+          "X-Robots-Tag": "noindex, nofollow",
         },
       },
     );
